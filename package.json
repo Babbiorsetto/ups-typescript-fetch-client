@@ -1,0 +1,19 @@
+{
+  "name": "@babbiorsetto/ups-typescript-fetch-client",
+  "version": "0.0.1",
+  "description": "Client for the UPS API auto-generated from the OpenAPI definition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alessandro Rubino",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.2",
+    "node-fetch": "^2.6.9"
+  }
+}
