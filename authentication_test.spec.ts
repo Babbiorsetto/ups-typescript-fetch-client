@@ -10,7 +10,7 @@
  * Do not edit the file manually.
  */
 
-import * as api from "./api"
+import * as api from "./authentication"
 import { Configuration } from "./configuration"
 
 const config: Configuration = {}

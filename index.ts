@@ -11,5 +11,4 @@
  * Do not edit the file manually.
  */
 
-export * from "./api";
 export * from "./configuration";
