@@ -33,6 +33,26 @@ describe("UPSApi", () => {
         expect(shipping.shipment).toBeDefined();
     });
 
+    it("Creates sub-apis with the correct URL", () => {
+        jest.doMock("./rating", () => ({
+            DefaultApi: jest.fn(),
+        }));
+        const mockedCstr = require("./rating").DefaultApi as jest.Mock;
+        mockedCstr.mockImplementation(() => {});
+        const apiConstructor = require("./ups-api").UPSApi as typeof UPSApi;
+
+        const url = "https://test.com";
+        const api = new apiConstructor(
+            {
+                client_id: "abcd",
+                client_secret: "sayItQuiet",
+            },
+            url
+        );
+        api.rating();
+        expect(mockedCstr.mock.calls[0][1]).toBe(url);
+    });
+
     it("Caches sub-apis to only create one instance", () => {
         const rating1 = api.rating();
         const rating2 = api.rating();
