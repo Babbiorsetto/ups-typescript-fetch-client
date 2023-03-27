@@ -11,4 +11,4 @@
  * Do not edit the file manually.
  */
 
-export * from "./configuration";
+export { ClientCredentialsConfigurationParams } from "./configuration";

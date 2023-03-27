@@ -63,3 +63,8 @@ export class Configuration {
         this.basePath = param.basePath;
     }
 }
+
+export interface ClientCredentialsConfigurationParams {
+    client_id: string;
+    client_secret: string;
+}
