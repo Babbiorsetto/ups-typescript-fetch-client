@@ -8,9 +8,9 @@ type ApiConstructorsType =
 type ApiType = ratingApi.DefaultApi | shippingApi.DefaultApi;
 
 export class UPSApi {
-    configuration: ClientCredentialsConfigurationParams;
-    baseURL: string;
-    apis = new Map<ApiConstructorsType, ApiType>();
+    private configuration: ClientCredentialsConfigurationParams;
+    private baseURL: string;
+    private apis = new Map<ApiConstructorsType, ApiType>();
 
     constructor(
         configuration: ClientCredentialsConfigurationParams,
