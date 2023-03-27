@@ -68,6 +68,24 @@ describe("UPSApi", () => {
             expect(mockedRatingConstructor.mock.calls[0][1]).toBe(url);
         });
 
+        it("Creates authentication with the corect parameters", () => {
+            mockedAuthentication.mockImplementation(() => {});
+            const apiConstructor = require("./ups-api").UPSApi as typeof UPSApi;
+
+            const url = "https://hello.com";
+            const credentials = { client_id: "id", client_secret: "secret" };
+            new apiConstructor(credentials, url);
+
+            expect(mockedAuthentication).toHaveBeenCalledWith(
+                { username: "id", password: "secret" },
+                url
+            );
+        });
+
+        it.todo(
+            "Gives sub-apis an accessToken function that provides access tokens",
+            () => {}
+        );
     });
 
     it("Caches sub-apis to only create one instance", () => {

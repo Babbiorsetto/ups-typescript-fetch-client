@@ -1,4 +1,5 @@
 import { ClientCredentialsConfigurationParams } from "./configuration";
+import * as authenticationApi from "./authentication";
 import * as ratingApi from "./rating";
 import * as shippingApi from "./shipping";
 
@@ -11,6 +12,7 @@ export class UPSApi {
     private configuration: ClientCredentialsConfigurationParams;
     private baseURL: string;
     private apis = new Map<ApiConstructorsType, ApiType>();
+    private authenticationApi: authenticationApi.DefaultApi;
 
     constructor(
         configuration: ClientCredentialsConfigurationParams,
@@ -18,6 +20,13 @@ export class UPSApi {
     ) {
         this.configuration = configuration;
         this.baseURL = baseURL;
+        this.authenticationApi = new authenticationApi.DefaultApi(
+            {
+                username: configuration.client_id,
+                password: configuration.client_secret,
+            },
+            baseURL
+        );
     }
 
     _getApi(classConstructor: ApiConstructorsType) {
