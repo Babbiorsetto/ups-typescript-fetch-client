@@ -12,6 +12,12 @@ describe("UPSApi", () => {
         };
         const UPSApiImported = require("./ups-api").UPSApi;
         api = new UPSApiImported(config, "https://test.domain.com/test");
+        // make sure every time a module is required, it is loaded from scratch
+        jest.resetModules();
+    });
+
+    afterEach(() => {
+        jest.restoreAllMocks();
     });
 
     it("Can be instantiated", () => {
