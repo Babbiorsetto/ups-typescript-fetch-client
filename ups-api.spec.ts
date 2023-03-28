@@ -153,7 +153,7 @@ describe("UPSApi", () => {
         it("Multiple calls to sub-apis reuse the same token", async () => {
             mockGenerateToken.mockImplementation(async () => ({
                 accessToken: "abcd",
-                issuedAt: new Date().toISOString(),
+                issuedAt: new Date().valueOf().toString(),
                 expiresIn: "60",
             }));
             const apiConstructor = require("./ups-api").UPSApi as typeof UPSApi;

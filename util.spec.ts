@@ -7,7 +7,7 @@ describe("util", () => {
 
         beforeEach(() => {
             token = {
-                issuedAt: new Date().toISOString(),
+                issuedAt: new Date().valueOf().toString(),
                 expiresIn: "3600",
             };
         });
@@ -15,7 +15,9 @@ describe("util", () => {
         it("Returns true if a token is expired", () => {
             const millisecondsAgo = 30 * 1000;
             token = {
-                issuedAt: new Date(Date.now() - millisecondsAgo).toISOString(),
+                issuedAt: new Date(Date.now() - millisecondsAgo)
+                    .valueOf()
+                    .toString(),
                 expiresIn: "15",
             };
             expect(isTokenExpired(token)).toBe(true);
