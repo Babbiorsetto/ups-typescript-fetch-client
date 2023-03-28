@@ -76,7 +76,7 @@ export class UPSApi {
         };
         const api = apiInfo.api;
         if (apiInfo.new) {
-            api.rate = this._wrapWithAuthentication(api.rate);
+            api.rate = this._wrapWithAuthentication(api.rate.bind(api));
         }
         return api;
     }
@@ -88,9 +88,13 @@ export class UPSApi {
         };
         const api = apiInfo.api;
         if (apiInfo.new) {
-            api.shipment = this._wrapWithAuthentication(api.shipment);
-            api.voidShipment = this._wrapWithAuthentication(api.voidShipment);
-            api.labelRecovery = this._wrapWithAuthentication(api.labelRecovery);
+            api.shipment = this._wrapWithAuthentication(api.shipment.bind(api));
+            api.voidShipment = this._wrapWithAuthentication(
+                api.voidShipment.bind(api)
+            );
+            api.labelRecovery = this._wrapWithAuthentication(
+                api.labelRecovery.bind(api)
+            );
         }
         return api;
     }
