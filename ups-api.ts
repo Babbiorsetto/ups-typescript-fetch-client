@@ -36,7 +36,7 @@ export class UPSApi {
             return api;
         }
         api = new classConstructor(
-            { accessToken: this._getToken },
+            { accessToken: this._getToken.bind(this) },
             this.baseURL
         );
         this.apis.set(classConstructor, api);
