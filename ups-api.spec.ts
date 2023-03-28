@@ -18,6 +18,7 @@ describe("UPSApi", () => {
 
     afterEach(() => {
         jest.restoreAllMocks();
+        jest.resetModules();
     });
 
     it("Can be instantiated", () => {
@@ -50,7 +51,11 @@ describe("UPSApi", () => {
         });
 
         it("Creates sub-apis with the correct parameters", () => {
-            mockedRatingConstructor.mockImplementation(() => {});
+            mockedRatingConstructor.mockImplementation(() => {
+                return {
+                    rate: jest.fn(),
+                };
+            });
             const apiConstructor = require("./ups-api").UPSApi as typeof UPSApi;
 
             const url = "https://test.com";
@@ -163,6 +168,8 @@ describe("UPSApi", () => {
             //@ts-ignore
             await shipping.shipment();
             expect(mockGenerateToken).toHaveBeenCalledTimes(1);
+            expect(mockRate).toHaveBeenCalledTimes(1);
+            expect(mockShipment).toHaveBeenCalledTimes(1);
         });
     });
 
