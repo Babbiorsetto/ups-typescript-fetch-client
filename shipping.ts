@@ -147,13 +147,13 @@ export interface AdjustedHeightUnitOfMeasurement {
      * @type {string}
      * @memberof AdjustedHeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof AdjustedHeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Adjusted Height value for the handling unit.  Height Adjustment is done only when Handling unit type is SKD = Skid or PLT = Pallet.
@@ -181,31 +181,31 @@ export interface AlternateDeliveryAddressAddress {
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Attention Name.
@@ -248,7 +248,7 @@ export interface BillReceiverAddress {
      * @type {string}
      * @memberof BillReceiverAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
 }
 /**
  * UPS account number.  Must be the same UPS account number as the one provided in Shipper/ShipperNumber.   Either this element or one of the sibling elements CreditCard or AlternatePaymentMethod must be provided, but all of them may not be provided.
@@ -271,31 +271,31 @@ export interface BillShipperCreditCard {
      * @type {string}
      * @memberof BillShipperCreditCard
      */
-    type: string;
+    Type: string;
     /**
      * Credit Card number.
      * @type {string}
      * @memberof BillShipperCreditCard
      */
-    number: string;
+    Number: string;
     /**
      * Format is MMYYYY where MM is the 2 digit month and YYYY is the 4 digit year.  Valid month values are 01-12 and valid year values are Present Year � (Present Year + 10 years)
      * @type {string}
      * @memberof BillShipperCreditCard
      */
-    expirationDate: string;
+    ExpirationDate: string;
     /**
      * Three or four digits that can be found either on top of credit card number or on the back of credit card. Number of digits varies for different type of credit card.  Valid values are 3 or 4 digits. It is required to provide the security code if credit card information is provided and when the ShipFrom countries or territories are other than the below mentioned countries or territories. Argentina, Bahamas, Costa Rica, Dominican Republic, Guatemala, Panama, Puerto Rico and Russia.
      * @type {string}
      * @memberof BillShipperCreditCard
      */
-    securityCode: string;
+    SecurityCode: string;
     /**
      *
      * @type {CreditCardAddress}
      * @memberof BillShipperCreditCard
      */
-    address?: CreditCardAddress;
+    Address?: CreditCardAddress;
 }
 /**
  * The UPS account number of the third party shipper.  The account must be a valid UPS account number that is active.   For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account, or a drop shipper account.   All other accounts must be either a daily pickup account, an occasional account, a drop shipper account, or a non-shipping account.
@@ -313,13 +313,13 @@ export interface BillThirdPartyAddress {
      * @type {string}
      * @memberof BillThirdPartyAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof BillThirdPartyAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Posta Elettronica Certificata (PEC) which is the recipient code for the customers certified electronic mail value.
@@ -342,13 +342,13 @@ export interface BillingWeightUnitOfMeasurement {
      * @type {string}
      * @memberof BillingWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof BillingWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Billing weight. Higher of the actual shipment weight versus the shipment dimensional weight.  When using a negotiated divisor different from the published UPS divisor (139 for inches and 5,000 for cm), the weight returned is based on the published divisor. Rates, however, are based on the negotiated divisor.
@@ -406,13 +406,13 @@ export interface CN22ContentCN22ContentWeight {
      * @type {CN22ContentWeightUnitOfMeasurement}
      * @memberof CN22ContentCN22ContentWeight
      */
-    unitOfMeasurement: CN22ContentWeightUnitOfMeasurement;
+    UnitOfMeasurement: CN22ContentWeightUnitOfMeasurement;
     /**
      * Total weight of the content. Pounds and Ounces are allowed up to 2 decimals.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof CN22ContentCN22ContentWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Container for UOM.
@@ -425,13 +425,13 @@ export interface CN22ContentWeightUnitOfMeasurement {
      * @type {string}
      * @memberof CN22ContentWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof CN22ContentWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Total weight of the content. Pounds and Ounces are allowed up to 2 decimals.  Required if the CN22 form container is present.
@@ -449,43 +449,43 @@ export interface CN22FormCN22Content {
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentQuantity: string;
+    CN22ContentQuantity: string;
     /**
      * Detailed description of the content.  If the combined MI package and CN22 label is requested, only the first 30 characters will appear on the combined label.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentDescription: string;
+    CN22ContentDescription: string;
     /**
      *
      * @type {CN22ContentCN22ContentWeight}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentWeight: CN22ContentCN22ContentWeight;
+    CN22ContentWeight: CN22ContentCN22ContentWeight;
     /**
      * Total value of the items associated with this content.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentTotalValue: string;
+    CN22ContentTotalValue: string;
     /**
      * Currently only USD is supported.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentCurrencyCode: string;
+    CN22ContentCurrencyCode: string;
     /**
      * Country or Territory of Origin from where the CN22 contents originated.
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentCountryOfOrigin?: string;
+    CN22ContentCountryOfOrigin?: string;
     /**
      * The tariff number associated with the CN22 contents.
      * @type {string}
      * @memberof CN22FormCN22Content
      */
-    cN22ContentTariffNumber?: string;
+    CN22ContentTariffNumber?: string;
 }
 /**
  * Required if CN22Type is OTHER.  Required if the CN22 form container is present.
@@ -538,13 +538,13 @@ export interface CODCODAmount {
      * @type {string}
      * @memberof CODCODAmount
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * COD Amount.  Valid values: 0.01 USD to 50000.00 USD
      * @type {string}
      * @memberof CODCODAmount
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * For valid values refer to:�Rating and Shipping COD Supported Countries or Territories in the Appendix.
@@ -562,13 +562,13 @@ export interface CODTurnInPageImage {
      * @type {ImageImageFormat}
      * @memberof CODTurnInPageImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 Encoded PDF Image.
      * @type {string}
      * @memberof CODTurnInPageImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Freight Classification. Freight class partially determines the freight rate for the article.  Required for Ground Freight Pricing Shipments only.
@@ -586,13 +586,13 @@ export interface CommodityNMFC {
      * @type {string}
      * @memberof CommodityNMFC
      */
-    primeCode: string;
+    PrimeCode: string;
     /**
      * Specifies the Commodity�s NMFC sub code.  Needs to be provided when the SubCode associated with the PrimeCode is other than 00. UPS defaults the sub value to 00 if not provided. If provided the Sub Code should be associated with the PrimeCode of the NMFC.
      * @type {string}
      * @memberof CommodityNMFC
      */
-    subCode?: string;
+    SubCode?: string;
 }
 /**
  * The forwarding agent is the company or person acting as agent in the trans-shipping of freight to the destination country or territory.  Applicable for EEI form only.
@@ -605,19 +605,19 @@ export interface ContactsForwardAgent {
      * @type {string}
      * @memberof ContactsForwardAgent
      */
-    companyName: string;
+    CompanyName: string;
     /**
      * Tax ID of the Forwarding agent. Valid Values: (Below values are applicable for EEIFilingOption Code =3) 94-308351500  13-168669100     Applicable for EEI form only.
      * @type {string}
      * @memberof ContactsForwardAgent
      */
-    taxIdentificationNumber: string;
+    TaxIdentificationNumber: string;
     /**
      *
      * @type {ForwardAgentAddress}
      * @memberof ContactsForwardAgent
      */
-    address: ForwardAgentAddress;
+    Address: ForwardAgentAddress;
 }
 /**
  * The intermediate consignee is the person or company in the importing country or territory that makes final delivery to the ultimate consignee.  Applicable for EEI form only.
@@ -630,13 +630,13 @@ export interface ContactsIntermediateConsignee {
      * @type {string}
      * @memberof ContactsIntermediateConsignee
      */
-    companyName: string;
+    CompanyName: string;
     /**
      *
      * @type {IntermediateConsigneeAddress}
      * @memberof ContactsIntermediateConsignee
      */
-    address: IntermediateConsigneeAddress;
+    Address: IntermediateConsigneeAddress;
 }
 /**
  * Information of the producer. The NAFTA Certificate of Origin must be completed, signed, and dated by the exporter.  When the Certificate is completed by the producer for use by the exporter, it must be completed, signed, and dated by the producer. The date must be the date the Certificate was completed and signed.  Applies to NAFTA CO.  Required for NAFTA CO forms.
@@ -649,43 +649,43 @@ export interface ContactsProducer {
      * @type {string}
      * @memberof ContactsProducer
      */
-    option?: string;
+    Option?: string;
     /**
      * Company Name or the Individual name of the Producer.  Applies to NAFTA CO.  Only applicable when producer option is empty or not present. Conditionally required for: NAFTA CO, when Producer option is not specified.
      * @type {string}
      * @memberof ContactsProducer
      */
-    companyName?: string;
+    CompanyName?: string;
     /**
      * Tax ID of the Producer.  Applies to NAFTA CO. Only applicable when producer option is empty or not present
      * @type {string}
      * @memberof ContactsProducer
      */
-    taxIdentificationNumber?: string;
+    TaxIdentificationNumber?: string;
     /**
      *
      * @type {ProducerAddress}
      * @memberof ContactsProducer
      */
-    address?: ProducerAddress;
+    Address?: ProducerAddress;
     /**
      * Contact name at the Producer location.  Applies to NAFTA CO.
      * @type {string}
      * @memberof ContactsProducer
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      *
      * @type {ProducerPhone}
      * @memberof ContactsProducer
      */
-    phone?: ProducerPhone;
+    Phone?: ProducerPhone;
     /**
      * Producer email address.  Applies to NAFTA CO.
      * @type {string}
      * @memberof ContactsProducer
      */
-    eMailAddress?: string;
+    EMailAddress?: string;
 }
 /**
  * SoldTo Container. The Sold To party�s country code must be the same as the Ship To party�s country code with the exception of Canada and satellite countries.  Applies to Invoice and NAFTA CO Forms. Required if Invoice or NAFTA CO (International Form) is requested.
@@ -698,43 +698,43 @@ export interface ContactsSoldTo {
      * @type {string}
      * @memberof ContactsSoldTo
      */
-    name: string;
+    Name: string;
     /**
      * Sold to contact name.
      * @type {string}
      * @memberof ContactsSoldTo
      */
-    attentionName: string;
+    AttentionName: string;
     /**
      * SoldTo Tax Identification Number.
      * @type {string}
      * @memberof ContactsSoldTo
      */
-    taxIdentificationNumber?: string;
+    TaxIdentificationNumber?: string;
     /**
      *
      * @type {SoldToPhone}
      * @memberof ContactsSoldTo
      */
-    phone?: SoldToPhone;
+    Phone?: SoldToPhone;
     /**
      * The text associated with the code will be printed in the sold to section of the NAFTA CO form.  The values indicate the following: 01 � Unknown.  Applies to NAFTA CO form. Possible Values are 01 and 02.
      * @type {string}
      * @memberof ContactsSoldTo
      */
-    option?: string;
+    Option?: string;
     /**
      *
      * @type {SoldToAddress}
      * @memberof ContactsSoldTo
      */
-    address: SoldToAddress;
+    Address: SoldToAddress;
     /**
      * SoldTo email address.
      * @type {string}
      * @memberof ContactsSoldTo
      */
-    eMailAddress?: string;
+    EMailAddress?: string;
 }
 /**
  * The ultimate consignee is the person or company who receives the goods for end-use or the person or company listed on the export license. This is the end-user of the goods.  Applicable for EEI form only.
@@ -747,19 +747,19 @@ export interface ContactsUltimateConsignee {
      * @type {string}
      * @memberof ContactsUltimateConsignee
      */
-    companyName: string;
+    CompanyName: string;
     /**
      *
      * @type {UltimateConsigneeAddress}
      * @memberof ContactsUltimateConsignee
      */
-    address: UltimateConsigneeAddress;
+    Address: UltimateConsigneeAddress;
     /**
      *
      * @type {UltimateConsigneeUltimateConsigneeType}
      * @memberof ContactsUltimateConsignee
      */
-    ultimateConsigneeType?: UltimateConsigneeUltimateConsigneeType;
+    UltimateConsigneeType?: UltimateConsigneeUltimateConsigneeType;
 }
 /**
  * Base 64 encoded html, EPL2, ZPL or SPL image.�     Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -777,13 +777,13 @@ export interface ControlLogReceiptImageFormat {
      * @type {string}
      * @memberof ControlLogReceiptImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the image format.
      * @type {string}
      * @memberof ControlLogReceiptImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Container to hold the Credit card Billing Address.  It is required to provide billing address if credit card information is provided and when the ShipFrom country or territory is the US, PR, and CA.
@@ -796,31 +796,31 @@ export interface CreditCardAddress {
      * @type {string}
      * @memberof CreditCardAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof CreditCardAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof CreditCardAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof CreditCardAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof CreditCardAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Format is MMYYYY where MM is the 2 digit month and YYYY is the 4 digit year.  Valid month values are 01-12 and valid year values are Present Year � (Present Year + 10 years)
@@ -888,13 +888,13 @@ export interface DDTCInformationUnitOfMeasurement {
      * @type {string}
      * @memberof DDTCInformationUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof DDTCInformationUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Date of signing the declaration form.  Valid format is YYYYMMDD.
@@ -947,13 +947,13 @@ export interface DeclaredValueType {
      * @type {string}
      * @memberof DeclaredValueType
      */
-    code: string;
+    Code: string;
     /**
      * A description of the code for the Handling Unit type.
      * @type {string}
      * @memberof DeclaredValueType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Delivery Confirmation Control number associated with the delivery confirmation for the package.  Valid for forward shipments only.
@@ -976,13 +976,13 @@ export interface DimWeightUnitOfMeasurement {
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Actual package weight.  Weight accepted for letters/envelopes.
@@ -1010,13 +1010,13 @@ export interface DimensionsUnitOfMeasurement {
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * The width of the line item used to determine dimensional weight.
@@ -1059,13 +1059,13 @@ export interface DryIceDryIceWeight {
      * @type {DryIceWeightUnitOfMeasurement}
      * @memberof DryIceDryIceWeight
      */
-    unitOfMeasurement: DryIceWeightUnitOfMeasurement;
+    UnitOfMeasurement: DryIceWeightUnitOfMeasurement;
     /**
      * Dry Ice Weight.  Cannot be more than package weight. Should be more than 0.0. Valid characters are 0-9 and \".\" (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including \".\" and can hold up to 1 decimal place.
      * @type {string}
      * @memberof DryIceDryIceWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. Relevant only in CFR regulation set. If present it is used to designate the dry Ice is for any medical use and rates are adjusted for DryIce weight more than 2.5 Kgs or 5.7 Lbs.
@@ -1088,13 +1088,13 @@ export interface DryIceWeightUnitOfMeasurement {
      * @type {string}
      * @memberof DryIceWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof DryIceWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Dry Ice Weight.  Cannot be more than package weight. Should be more than 0.0. Valid characters are 0-9 and \".\" (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including \".\" and can hold up to 1 decimal place.
@@ -1127,31 +1127,31 @@ export interface EEIFilingOptionShipperFiled {
      * @type {string}
      * @memberof EEIFilingOptionShipperFiled
      */
-    code: string;
+    Code: string;
     /**
      * Description of ShipperFiled Code.  Applicable for EEI form.
      * @type {string}
      * @memberof EEIFilingOptionShipperFiled
      */
-    description?: string;
+    Description?: string;
     /**
      * Input for Shipper Filed option A and AES Direct. The format is available from AESDirect website.  Valid and Required for Shipper Filed option A. EEI form only.
      * @type {string}
      * @memberof EEIFilingOptionShipperFiled
      */
-    preDepartureITNNumber?: string;
+    PreDepartureITNNumber?: string;
     /**
      * Input for Shipper Filed option B. 30.2(d)(2), 30.26(a), 30.36, 30.37(a), 30.37(b), 30.37(c), 30.37(d), 30.37(e), 30.37(f), 30.37(h), 30.37(i), 30.30(j), 30.37(k), 30.37(i), 30.37(j), 30.37(k), 30.37(l), 30.37(m), 30.37(n), 30.37(o), 30.37(p), 30.37(q), 30.37(r), 30.37(s), 30.37(t), 30.37(u), 30.37(x), 30.37(y)(1), 30.37(y)(2), 30.37(y)(3), 30.37(y)(4), 30.37(y)(5), 30.37(y)(6), 30.39, 30.40(a), 30.40(b), 30.40(c), 30.40(d), 30.8(b)  Valid and Required for Shipper Filed option B. EEI form only.
      * @type {string}
      * @memberof EEIFilingOptionShipperFiled
      */
-    exemptionLegend?: string;
+    ExemptionLegend?: string;
     /**
      * Shipment Reference Number for use during interaction with AES. Valid for EEI form for Shipper Filed option 'C' and AES Direct Filed.
      * @type {string}
      * @memberof EEIFilingOptionShipperFiled
      */
-    eEIShipmentReferenceNumber?: string;
+    EEIShipmentReferenceNumber?: string;
 }
 /**
  * Indicates the EEI UPS Filed option. (option 3)  Applicable for EEI form.
@@ -1177,49 +1177,49 @@ export interface EEIInformationDDTCInformation {
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    iTARExemptionNumber?: string;
+    ITARExemptionNumber?: string;
     /**
      * Digit numeric code (e.g. 01-18, 20 or 21). Indicates the U.S. Munitions List (USML) category article, service or related technical data as it applies to the article reported.  Applies to EEI form only. It is required for EEIFilingOption code 3.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    uSMLCategoryCode?: string;
+    USMLCategoryCode?: string;
     /**
      * Presence/Absent indicator. Certification by the U.S. exporter that the exporter is an eligible party to participate in the defense trade.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    eligiblePartyIndicator?: string;
+    EligiblePartyIndicator?: string;
     /**
      * It is a unique registration code assigned to the registrant. The DDTC registration code consist of a letter prefix, M (assigned to a manufacturer and/or exporter) or K (assigned to a broker), followed by four or five digits (e.g. K-1234 or M12345).  It is required for EEIFilingOption code 3.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    registrationNumber?: string;
+    RegistrationNumber?: string;
     /**
      * Export Quantity.  Applies to EEI form only. It is required for EEIFilingOption code 3. Only positive integer value is valid.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    quantity?: string;
+    Quantity?: string;
     /**
      *
      * @type {DDTCInformationUnitOfMeasurement}
      * @memberof EEIInformationDDTCInformation
      */
-    unitOfMeasurement?: DDTCInformationUnitOfMeasurement;
+    UnitOfMeasurement?: DDTCInformationUnitOfMeasurement;
     /**
      * Presence/ Absence Indicator.  Applies to EEI form only.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    significantMilitaryEquipmentIndicator?: string;
+    SignificantMilitaryEquipmentIndicator?: string;
     /**
      * Approved Community Member Number (ACM). It is required to be provided along with ITARExemptionNumber for some License code (SGB and SAU). The ACM# for the United Kingdom (License code SGB) must begin with UK followed by 9 numbers.  The ACM# for Australia (License Code SAU) must begin with DTT followed by 8 numbers.  Applies to EEI form only.  It is required for EEIFilingOption code 1A and 3.
      * @type {string}
      * @memberof EEIInformationDDTCInformation
      */
-    aCMNumber?: string;
+    ACMNumber?: string;
 }
 /**
  * Required for EEI form id it is a SDL product. Valid values: LC, LV, SS,MS, GS, DP, HR, UG, IC, SC, DD, HH, SR, TE,TL, IS, CR, GP, RJ, TP, IP, IR, DB, CH, RS, OS  Applies to EEI form only. Required if EEIFilingOption code 3 specified for EEI form.
@@ -1237,25 +1237,25 @@ export interface EEIInformationLicense {
      * @type {string}
      * @memberof EEIInformationLicense
      */
-    number?: string;
+    Number?: string;
     /**
      * The standard license code published by US government.  Refer to EEI License Codes in the Appendix for valid values.  Applies to EEI form only. It is required for EEIFilingOption code 3. It is optionally required for all other filing types; however, it is used to categorize each product as SDL or non-SDL.  It is also used to identify which piece of information is applicable.
      * @type {string}
      * @memberof EEIInformationLicense
      */
-    code?: string;
+    Code?: string;
     /**
      * The export monetary amount allowed per license. Required for a licensable product when the EEI form is selected. Format: Whole numbers only.  Applies to EEI form only. Required if EEIFilingOption code 1A (only for SDL shipments) or 3.
      * @type {string}
      * @memberof EEIInformationLicense
      */
-    licenseLineValue?: string;
+    LicenseLineValue?: string;
     /**
      * Product ECCN Number issued by BIS (Bureau of Industry and Security). If the license number is a commerce license, ECCN must be provided. The format is #A### or EAR99  Applies to EEI forms only. It is required for EEIFilingOption code 3. ECCN is required one of the following License Exception Codes is entered: CIV, CTP, ENC, GBS, KMI, LVS, TSR
      * @type {string}
      * @memberof EEIInformationLicense
      */
-    eCCNNumber?: string;
+    ECCNNumber?: string;
 }
 /**
  * The destination email address of the receiver returns notification email.
@@ -1323,13 +1323,13 @@ export interface FRSPaymentInformationAddress {
      * @type {string}
      * @memberof FRSPaymentInformationAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof FRSPaymentInformationAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Container to hold the Ground Freight Pricing payment type information.  It is required if the request has Ground Freight Pricing shipment indicator.
@@ -1347,13 +1347,13 @@ export interface FRSShipmentDataFreightDensityRate {
      * @type {string}
      * @memberof FRSShipmentDataFreightDensityRate
      */
-    density: string;
+    Density: string;
     /**
      * Total Cubic feet is returned if the Shipper is eligible for Density based rate.   Valid values are 0 to 99999.999
      * @type {string}
      * @memberof FRSShipmentDataFreightDensityRate
      */
-    totalCubicFeet: string;
+    TotalCubicFeet: string;
 }
 /**
  * Handling Unit for Density based rating container.
@@ -1366,25 +1366,25 @@ export interface FRSShipmentDataHandlingUnits {
      * @type {string}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    quantity: string;
+    Quantity: string;
     /**
      *
      * @type {HandlingUnitsType}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    type: HandlingUnitsType;
+    Type: HandlingUnitsType;
     /**
      *
      * @type {HandlingUnitsDimensions}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    dimensions: HandlingUnitsDimensions;
+    Dimensions: HandlingUnitsDimensions;
     /**
      *
      * @type {HandlingUnitsAdjustedHeight}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    adjustedHeight?: HandlingUnitsAdjustedHeight;
+    AdjustedHeight?: HandlingUnitsAdjustedHeight;
 }
 /**
  * Transportation charges container. Ground Freight Pricing transportation charges. These are only returned for Ground Freight Pricing enabled shipper account number when the user includes the FRSShipmentIndicator in the request.
@@ -1397,25 +1397,25 @@ export interface FRSShipmentDataTransportationCharges {
      * @type {TransportationChargesGrossCharge}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    grossCharge: TransportationChargesGrossCharge;
+    GrossCharge: TransportationChargesGrossCharge;
     /**
      *
      * @type {TransportationChargesDiscountAmount}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    discountAmount: TransportationChargesDiscountAmount;
+    DiscountAmount: TransportationChargesDiscountAmount;
     /**
      * It indicates the shipment level discount percentage for transportation charges.
      * @type {string}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    discountPercentage: string;
+    DiscountPercentage: string;
     /**
      *
      * @type {TransportationChargesNetCharge}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    netCharge: TransportationChargesNetCharge;
+    NetCharge: TransportationChargesNetCharge;
 }
 /**
  * Code that indicates the type of form.�   Applicable only for ShipmentResponse and ShipAcceptResponse.  Valid values: 01 - All Requested International Forms.
@@ -1448,13 +1448,13 @@ export interface FormImage {
      * @type {ImageImageFormat}
      * @memberof FormImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 Encoded PDF Image.
      * @type {string}
      * @memberof FormImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Address information of the Forwarding agent.  Applicable for EEI form only.
@@ -1467,37 +1467,37 @@ export interface ForwardAgentAddress {
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s town code.
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    town?: string;
+    Town?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof ForwardAgentAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Company Name or the Individual name of the Forwarding agent.  Applicable for EEI form only.
@@ -1525,13 +1525,13 @@ export interface FreightDensityInfoAdjustedHeight {
      * @type {string}
      * @memberof FreightDensityInfoAdjustedHeight
      */
-    value: string;
+    Value: string;
     /**
      *
      * @type {AdjustedHeightUnitOfMeasurement}
      * @memberof FreightDensityInfoAdjustedHeight
      */
-    unitOfMeasurement: AdjustedHeightUnitOfMeasurement;
+    UnitOfMeasurement: AdjustedHeightUnitOfMeasurement;
 }
 /**
  * The presence of the AdjustedHeightIndicator indicates that allow the height reduction adjustment for density based rate request.
@@ -1549,19 +1549,19 @@ export interface FreightDensityInfoHandlingUnits {
      * @type {string}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    quantity: string;
+    Quantity: string;
     /**
      *
      * @type {HandlingUnitsType}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    type: HandlingUnitsType;
+    Type: HandlingUnitsType;
     /**
      *
      * @type {HandlingUnitsDimensions}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    dimensions: HandlingUnitsDimensions;
+    Dimensions: HandlingUnitsDimensions;
 }
 /**
  * Density is returned if the Shipper is eligible for Density based rate.   Valid values are 0 to 999.9
@@ -1589,19 +1589,19 @@ export interface FreightShipmentInformationFreightDensityInfo {
      * @type {string}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    adjustedHeightIndicator?: string;
+    AdjustedHeightIndicator?: string;
     /**
      *
      * @type {FreightDensityInfoAdjustedHeight}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    adjustedHeight?: FreightDensityInfoAdjustedHeight;
+    AdjustedHeight?: FreightDensityInfoAdjustedHeight;
     /**
      *
      * @type {Array<FreightDensityInfoHandlingUnits>}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    handlingUnits?: Array<FreightDensityInfoHandlingUnits>;
+    HandlingUnits?: Array<FreightDensityInfoHandlingUnits>;
 }
 /**
  * Gross charges currency code.
@@ -1629,13 +1629,13 @@ export interface HandlingUnitsAdjustedHeight {
      * @type {string}
      * @memberof HandlingUnitsAdjustedHeight
      */
-    value: string;
+    Value: string;
     /**
      *
      * @type {AdjustedHeightUnitOfMeasurement}
      * @memberof HandlingUnitsAdjustedHeight
      */
-    unitOfMeasurement: AdjustedHeightUnitOfMeasurement;
+    UnitOfMeasurement: AdjustedHeightUnitOfMeasurement;
 }
 /**
  * Dimension of the HandlingUnit container for density based pricing.
@@ -1648,25 +1648,25 @@ export interface HandlingUnitsDimensions {
      * @type {DimensionsUnitOfMeasurement}
      * @memberof HandlingUnitsDimensions
      */
-    unitOfMeasurement: DimensionsUnitOfMeasurement;
+    UnitOfMeasurement: DimensionsUnitOfMeasurement;
     /**
      * The length of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    length: string;
+    Length: string;
     /**
      * The width of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    width: string;
+    Width: string;
     /**
      * The height of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    height: string;
+    Height: string;
 }
 /**
  * Handling Unit Quantity for Density based rating.
@@ -1684,13 +1684,13 @@ export interface HandlingUnitsType {
      * @type {string}
      * @memberof HandlingUnitsType
      */
-    code: string;
+    Code: string;
     /**
      * A description of the code for the Handling Unit type.
      * @type {string}
      * @memberof HandlingUnitsType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * The type of regulated good for an ADR package where ADR is for Europe to Europe ground movement.
@@ -1873,13 +1873,13 @@ export interface HighValueReportImage {
      * @type {ImageImageFormat}
      * @memberof HighValueReportImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 Encoded PDF Image.
      * @type {string}
      * @memberof HighValueReportImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Code representing the format in which the High Value Report is generated.   Valid values: PDF = pdf
@@ -1907,13 +1907,13 @@ export interface ImageImageFormat {
      * @type {string}
      * @memberof ImageImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the image format.
      * @type {string}
      * @memberof ImageImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * For Exchange Forward Shipment, by default Label will have Exchange Routing instruction Text as EXCHANGE-LIKE ITEM ONLY. If code value is: 01- EXCHANGE-LIKE ITEM ONLY, 02- EXCHANGE-DRIVER INSTRUCTIONS INSIDE.
@@ -1941,37 +1941,37 @@ export interface IntermediateConsigneeAddress {
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s town code.
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    town?: string;
+    Town?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof IntermediateConsigneeAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Company Name or the Individual name of the Intermediate consignee.  Applicable for EEI form only.
@@ -1994,13 +1994,13 @@ export interface InternationalFormsBlanketPeriod {
      * @type {string}
      * @memberof InternationalFormsBlanketPeriod
      */
-    beginDate: string;
+    BeginDate: string;
     /**
      * End Date of the blanket period. It is the date upon which the blanket period expires.  Applies to NAFTA CO form only. Required for NAFTA CO. Format is yyyyMMdd.  This is not valid for a paperless shipment.
      * @type {string}
      * @memberof InternationalFormsBlanketPeriod
      */
-    endDate: string;
+    EndDate: string;
 }
 /**
  * Container for the CN22 form.  Required if the customer wants to use the UPS generated CN22.
@@ -2013,43 +2013,43 @@ export interface InternationalFormsCN22Form {
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    labelSize: string;
+    LabelSize: string;
     /**
      * Number of label per page. Currently 1 per page is supported.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    printsPerPage: string;
+    PrintsPerPage: string;
     /**
      * Valid Values are pdf, png, gif, zpl, star, epl2 and spl.   Required if the CN22 form container is present.
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    labelPrintType: string;
+    LabelPrintType: string;
     /**
      * Valid values:  1 = GIFT 2 = DOCUMENTS 3 = COMMERCIAL SAMPLE 4 = OTHER  Required if the CN22 form container is present.
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    cN22Type: string;
+    CN22Type: string;
     /**
      * Required if CN22Type is OTHER.  Required if the CN22 form container is present.
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    cN22OtherDescription?: string;
+    CN22OtherDescription?: string;
     /**
      * String will replace default \"Fold Here\" text displayed on the label.
      * @type {string}
      * @memberof InternationalFormsCN22Form
      */
-    foldHereText?: string;
+    FoldHereText?: string;
     /**
      *
      * @type {CN22FormCN22Content}
      * @memberof InternationalFormsCN22Form
      */
-    cN22Content: CN22FormCN22Content;
+    CN22Content: CN22FormCN22Content;
 }
 /**
  * The four-character Standard Carrier Alpha Code (SCAC) for vessel, rail, and truck shipments. For air shipment, enter the two or three character International Air Transport Association (IATA) code.  Applies to EEI forms only. No Validations.
@@ -2072,31 +2072,31 @@ export interface InternationalFormsContacts {
      * @type {ContactsForwardAgent}
      * @memberof InternationalFormsContacts
      */
-    forwardAgent?: ContactsForwardAgent;
+    ForwardAgent?: ContactsForwardAgent;
     /**
      *
      * @type {ContactsUltimateConsignee}
      * @memberof InternationalFormsContacts
      */
-    ultimateConsignee?: ContactsUltimateConsignee;
+    UltimateConsignee?: ContactsUltimateConsignee;
     /**
      *
      * @type {ContactsIntermediateConsignee}
      * @memberof InternationalFormsContacts
      */
-    intermediateConsignee?: ContactsIntermediateConsignee;
+    IntermediateConsignee?: ContactsIntermediateConsignee;
     /**
      *
      * @type {ContactsProducer}
      * @memberof InternationalFormsContacts
      */
-    producer?: ContactsProducer;
+    Producer?: ContactsProducer;
     /**
      *
      * @type {ContactsSoldTo}
      * @memberof InternationalFormsContacts
      */
-    soldTo?: ContactsSoldTo;
+    SoldTo?: ContactsSoldTo;
 }
 /**
  * If present indicates that the goods are containerized. This applies to vessel shipments only.  Applies to EEI forms only.
@@ -2124,7 +2124,7 @@ export interface InternationalFormsDiscount {
      * @type {string}
      * @memberof InternationalFormsDiscount
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * EEI Filing option.  Applicable for EEI form and is required.
@@ -2137,31 +2137,31 @@ export interface InternationalFormsEEIFilingOption {
      * @type {string}
      * @memberof InternationalFormsEEIFilingOption
      */
-    code: string;
+    Code: string;
     /**
      * Email Address where the notification is sent. Valid for UPS filed (option 3), Shipper filed (option 1- A , 1-C)  Applicable for EEI form.
      * @type {string}
      * @memberof InternationalFormsEEIFilingOption
      */
-    eMailAddress?: string;
+    EMailAddress?: string;
     /**
      * Optional Description of Filing Code.  Applicable for EEI form.
      * @type {string}
      * @memberof InternationalFormsEEIFilingOption
      */
-    description?: string;
+    Description?: string;
     /**
      *
      * @type {EEIFilingOptionUPSFiled}
      * @memberof InternationalFormsEEIFilingOption
      */
-    uPSFiled?: EEIFilingOptionUPSFiled;
+    UPSFiled?: EEIFilingOptionUPSFiled;
     /**
      *
      * @type {EEIFilingOptionShipperFiled}
      * @memberof InternationalFormsEEIFilingOption
      */
-    shipperFiled?: EEIFilingOptionShipperFiled;
+    ShipperFiled?: EEIFilingOptionShipperFiled;
 }
 /**
  * The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)
@@ -2199,7 +2199,7 @@ export interface InternationalFormsFreightCharges {
      * @type {string}
      * @memberof InternationalFormsFreightCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * This is an empty tag. Presence of the indicator for EEI form means shipment contains hazardous material.
@@ -2222,7 +2222,7 @@ export interface InternationalFormsInsuranceCharges {
      * @type {string}
      * @memberof InternationalFormsInsuranceCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Date when the Invoice is created. Ideally this is the same as the ship date.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and optional for Partial Invoice. Required for Invoice form for forward shipments. For shipment with return service, the user input will be ignored, and the field will be blank on the invoice. Format is yyyyMMdd.
@@ -2255,13 +2255,13 @@ export interface InternationalFormsOtherCharges {
      * @type {string}
      * @memberof InternationalFormsOtherCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * Description of what the other charges are for.  Applies to Invoice and Partial Invoice forms only. Required for Complete Invoice and Optional for Partial Invoice forms.
      * @type {string}
      * @memberof InternationalFormsOtherCharges
      */
-    description: string;
+    Description: string;
 }
 /**
  * The application will automatically provide a copy of the invoice or NAFTA/CO with each response regardless of whether the user has enabled Paperless account. The user now has the option to print or ignore the copy provided.
@@ -2304,121 +2304,121 @@ export interface InternationalFormsProduct {
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    description: string;
+    Description: string;
     /**
      *
      * @type {ProductUnit}
      * @memberof InternationalFormsProduct
      */
-    unit?: ProductUnit;
+    Unit?: ProductUnit;
     /**
      * 6-to-15-alphanumeric commodity code. Customs uses this code to determine what duties should be assessed on the commodity.  Applies to Invoice, Partial Invoice and NAFTA CO. Required for NAFTA CO and optional for Partial Invoice. Should be at least 6 alphanumeric. For NAFTA CO: For each good described in Description of Goods field, identify the H.S. tariff classification to six digits. If the good is subject to a specific rule of origin in Annex 401 that requires eight digits, identify to eight digits, using the H.S. tariff classification of the country or territory into whose territory the good is imported.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    commodityCode?: string;
+    CommodityCode?: string;
     /**
      * The part number or reference number for the product contained in the invoice line, as indicated on the customs invoice.  Applies to Invoice and Partial Invoice. Required for Invoice forms and optional for Partial Invoice.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    partNumber?: string;
+    PartNumber?: string;
     /**
      * The country or territory in which the good was manufactured, produced or grown. For detailed information on country or territory of origin, certificate of origin, rules of origin, and any related matters, please refer to the U.S. Customs and Border Protection Web site at www.customs.gov or contact your country or territory's Customs authority.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    originCountryCode?: string;
+    OriginCountryCode?: string;
     /**
      * If present, JNT will be used as the origin of country or territory code on the NAFTA form and the Product/Origincountry or territoryCode tag will be ignored.  Applies to NAFTA CO only.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    jointProductionIndicator?: string;
+    JointProductionIndicator?: string;
     /**
      * For each good described in the Description of Goods field, where the good is subject to a regional value content (RVC) requirement, indicate NC if the RVC is calculated according to the net cost method; otherwise, indicate NO. If the RVC is calculated over a period of time then indicate �NC with begin/end date� by passing code �ND�  Applies to NAFTA CO only. Required for NAFTA CO.  Valid values: NC, ND and NO.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    netCostCode?: string;
+    NetCostCode?: string;
     /**
      *
      * @type {ProductNetCostDateRange}
      * @memberof InternationalFormsProduct
      */
-    netCostDateRange?: ProductNetCostDateRange;
+    NetCostDateRange?: ProductNetCostDateRange;
     /**
      * Indicates the criterion (A through F) for each good described in the Description of Goods field if applicable.   The rules of origin are contained in Chapter Four and Annex 401.   Additional rules are described in Annex 703.2 (certain agricultural goods), Annex 300-B, Appendix 6 (certain textile goods) and Annex 308.1 (certain automatic data processing goods and their parts).  Applies to NAFTA CO only.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    preferenceCriteria?: string;
+    PreferenceCriteria?: string;
     /**
      * Indicate the following:  Yes - If shipper is the producer of the good. If not, state 02, 03, and 04 depending on whether this certificate was based upon:   No [1] - Knowledge of whether the good qualifies as an originating good.  No [2] - Reliance on the producers written representation (other than a Certificate of Origin) that the good qualifies as an originating good.  No [3] - A completed and signed Certificate for the good voluntarily provided to the exporter by the producer.  Applicable for NAFTA CO and is required. Valid values: Yes, No [1], No [2], and No [3].
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    producerInfo?: string;
+    ProducerInfo?: string;
     /**
      * Any special marks, codes, and numbers that may appear on package.  Applies to CO Only.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    marksAndNumbers?: string;
+    MarksAndNumbers?: string;
     /**
      * The total number of packages, cartons, or containers for the commodity.  Applicable for CO and is required. Should be numeric. Valid characters are 0 -9.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    numberOfPackagesPerCommodity?: string;
+    NumberOfPackagesPerCommodity?: string;
     /**
      *
      * @type {ProductProductWeight}
      * @memberof InternationalFormsProduct
      */
-    productWeight?: ProductProductWeight;
+    ProductWeight?: ProductProductWeight;
     /**
      * Includes the following information for used self-propelled vehicles as defined in Customs regulations 19 CFR 192.1: The unique Vehicle Identification Number (VIN) in the proper format. Or The Product Identification Number (PIN) for those used self-propelled vehicles for which there are no VINs.  Or the Vehicle Title Number.  Applies to EEI forms only.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    vehicleID?: string;
+    VehicleID?: string;
     /**
      *
      * @type {ProductScheduleB}
      * @memberof InternationalFormsProduct
      */
-    scheduleB?: ProductScheduleB;
+    ScheduleB?: ProductScheduleB;
     /**
      * Code indicating Domestic: Exports that have been produced, manufactured, or grown in the United States or Puerto Rico. This includes imported merchandise which has been enhanced in value or changed from the form in which imported by further manufacture or processing in the United States or Puerto Rico. Foreign: Merchandise that has entered the United States and is being exported again in the same condition as when imported.   Applies to EEI forms only. Required for EEI form.  Valid values:  D: Domestic; F: Foreign.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    exportType?: string;
+    ExportType?: string;
     /**
      * This amount will always be USD.  Applies to EEI forms only. Required for EEI form. Valid characters are 0-9 and �.� (Decimal point). Limit to 2 digit after the decimal. The maximum length of the field is 15 including �.� and can hold up to 2 decimal places.  Note: This value is calculated based on the Product/Unit/Value and /Product/Unit/Number (Number of Units * Price per Unit). If the total value is incorrect it will be replaced by the actual calculated total value.
      * @type {string}
      * @memberof InternationalFormsProduct
      */
-    sEDTotalValue?: string;
+    SEDTotalValue?: string;
     /**
      *
      * @type {ProductExcludeFromForm}
      * @memberof InternationalFormsProduct
      */
-    excludeFromForm?: ProductExcludeFromForm;
+    ExcludeFromForm?: ProductExcludeFromForm;
     /**
      *
      * @type {ProductPackingListInfo}
      * @memberof InternationalFormsProduct
      */
-    packingListInfo?: ProductPackingListInfo;
+    PackingListInfo?: ProductPackingListInfo;
     /**
      *
      * @type {ProductEEIInformation}
      * @memberof InternationalFormsProduct
      */
-    eEIInformation?: ProductEEIInformation;
+    EEIInformation?: ProductEEIInformation;
 }
 /**
  * The customer's order reference number.  Applies to Invoice and Partial Invoice forms only.
@@ -2456,31 +2456,31 @@ export interface InternationalFormsUPSPremiumCareForm {
      * @type {string}
      * @memberof InternationalFormsUPSPremiumCareForm
      */
-    shipmentDate: string;
+    ShipmentDate: string;
     /**
      * Size of UPS Premium Care Form.  Valid values:  01 = A4 Size 02 = Letter Size
      * @type {string}
      * @memberof InternationalFormsUPSPremiumCareForm
      */
-    pageSize: string;
+    PageSize: string;
     /**
      * Format of UPS Premium Care Form.  Valid values:  01 = PNG 02 = PDF
      * @type {string}
      * @memberof InternationalFormsUPSPremiumCareForm
      */
-    printType: string;
+    PrintType: string;
     /**
      * Number of Copies of UPS Premium Care Form.  Valid value is 02.
      * @type {string}
      * @memberof InternationalFormsUPSPremiumCareForm
      */
-    numOfCopies: string;
+    NumOfCopies: string;
     /**
      *
      * @type {UPSPremiumCareFormLanguageForUPSPremiumCare}
      * @memberof InternationalFormsUPSPremiumCareForm
      */
-    languageForUPSPremiumCare: UPSPremiumCareFormLanguageForUPSPremiumCare;
+    LanguageForUPSPremiumCare: UPSPremiumCareFormLanguageForUPSPremiumCare;
 }
 /**
  * Data container for DocumentID(s).  Required if Form Type is 07.
@@ -2493,7 +2493,7 @@ export interface InternationalFormsUserCreatedForm {
      * @type {string}
      * @memberof InternationalFormsUserCreatedForm
      */
-    documentID: string;
+    DocumentID: string;
 }
 /**
  * Invoice Line Total currency type.
@@ -2541,7 +2541,7 @@ export interface LABELRECOVERYRequestWrapper {
      * @type {LabelRecoveryRequest}
      * @memberof LABELRECOVERYRequestWrapper
      */
-    labelRecoveryRequest: LabelRecoveryRequest;
+    LabelRecoveryRequest: LabelRecoveryRequest;
 }
 /**
  * N/A
@@ -2554,7 +2554,7 @@ export interface LABELRECOVERYResponseWrapper {
      * @type {LabelRecoveryResponse}
      * @memberof LABELRECOVERYResponseWrapper
      */
-    labelRecoveryResponse: LabelRecoveryResponse;
+    LabelRecoveryResponse: LabelRecoveryResponse;
 }
 /**
  * Container for COD Turnin Page Image.
@@ -2567,13 +2567,13 @@ export interface LRCODTurnInPageImage {
      * @type {ImageImageFormat}
      * @memberof LRCODTurnInPageImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 encoded High Value Report image.
      * @type {string}
      * @memberof LRCODTurnInPageImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Container tag for the International Forms image.
@@ -2586,13 +2586,13 @@ export interface LRFormImage {
      * @type {ImageImageFormat}
      * @memberof LRFormImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 encoded High Value Report image.
      * @type {string}
      * @memberof LRFormImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Required if TrackingNumber or Mail Innovations Tracking Number is not populated. Customer supplied reference number. Supports up to 2 customer supplied combinations of Reference code- value combinations.
@@ -2610,7 +2610,7 @@ export interface LRRequestTransactionReference {
      * @type {string}
      * @memberof LRRequestTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * Response Status container
@@ -2623,13 +2623,13 @@ export interface LRResponseResponseStatus {
      * @type {string}
      * @memberof LRResponseResponseStatus
      */
-    code: string;
+    Code: string;
     /**
      * Describes Response Status Code. Returns the text \"Success\"
      * @type {string}
      * @memberof LRResponseResponseStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * Transaction Reference Container
@@ -2642,7 +2642,7 @@ export interface LRResponseTransactionReference {
      * @type {string}
      * @memberof LRResponseTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * Container for the email message.
@@ -2655,43 +2655,43 @@ export interface LabelDeliveryEMail {
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    eMailAddress: string;
+    EMailAddress: string;
     /**
      * The e-mail address where an undeliverable email message is sent if the Receiver Return Notification email is undeliverable.  Defaults to FromEMailAddress.� Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    undeliverableEMailAddress?: string;
+    UndeliverableEMailAddress?: string;
     /**
      * The email address listed in the Reply To field of the message header, includes name and e-mail address of sender. The \"From\" field of the message header contains pkginfo@ups.com.  Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    fromEMailAddress?: string;
+    FromEMailAddress?: string;
     /**
      * The name the receiver return notification will appear to be from.  Defaults to the Shipper Name.� Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    fromName?: string;
+    FromName?: string;
     /**
      * User defined text that will be included in the email.  Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    memo?: string;
+    Memo?: string;
     /**
      * The eMails subject. Defaults to the UPS Receiver Return Notification plus the shipment ID.  Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    subject?: string;
+    Subject?: string;
     /**
      * Specifies a reference code and reference number to display in the subject of the Receiver Return Notification.�   When the subject code is provided, the subject will contain the following: UPS Receiver Return Notification.�   The reference code (the reference code will be mapped to the corresponding ANSI value) Plus the reference number.  The valid subject codes are: 01 - Shipment Reference Number 1,  02 - Shipment Reference Number 2,   03 - package Reference Number 1,  04 - package Reference Number 2, 05 - package Reference Number 3, 06 - package Reference Number 4, 07 - package Reference Number 5, 08 - Subject Text (Return Notification only).  If the subject code tag is not provided and the subject text is provided, the subject of the notification will be the subject text.�   If the subject text is provided, and subject code tag exists, then the subject code value must be 08.   If the subject code is 08, the subject text must exist. If a subject code is provided that refers to a nonexistent reference number, the subject will default to the tracking number.� Only allowed at the first package.
      * @type {string}
      * @memberof LabelDeliveryEMail
      */
-    subjectCode?: string;
+    SubjectCode?: string;
 }
 /**
  * Indicates the Label Recovery and Receipt Recovery URL links are to be returned in the XML Response. Valid for following shipment - Print/Electronic Return Label Print/Electronic Import Control Label Forward shipment except for Mail Innovations Forward
@@ -2744,7 +2744,7 @@ export interface LabelImageLabelImageFormat {
      * @type {string}
      * @memberof LabelImageLabelImageFormat
      */
-    code: string;
+    Code: string;
 }
 /**
  * PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular.   The PDF417 image will be returned when the shipment is trans-border and the service option is one of the following: Standard Express, Saver Express Plus. The image is Base 64 encoded and only returned for GIF image format.
@@ -2777,55 +2777,55 @@ export interface LabelRecoveryRequest {
      * @type {LabelRecoveryRequestRequest}
      * @memberof LabelRecoveryRequest
      */
-    request: LabelRecoveryRequestRequest;
+    Request: LabelRecoveryRequestRequest;
     /**
      *
      * @type {LabelRecoveryRequestLabelSpecification}
      * @memberof LabelRecoveryRequest
      */
-    labelSpecification?: LabelRecoveryRequestLabelSpecification;
+    LabelSpecification?: LabelRecoveryRequestLabelSpecification;
     /**
      *
      * @type {LabelRecoveryRequestTranslate}
      * @memberof LabelRecoveryRequest
      */
-    translate?: LabelRecoveryRequestTranslate;
+    Translate?: LabelRecoveryRequestTranslate;
     /**
      *
      * @type {LabelRecoveryRequestLabelDelivery}
      * @memberof LabelRecoveryRequest
      */
-    labelDelivery?: LabelRecoveryRequestLabelDelivery;
+    LabelDelivery?: LabelRecoveryRequestLabelDelivery;
     /**
      * Small Package Tracking Number. Required if Mail Innovations Tracking Number or ReferenceNumber/Value and ShipperNumber is not provided.  If only TrackingNumber is provided, the request will be treated as Small Package Shipment. Label Recovery will return label for Small Package Tracking Number. If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.
      * @type {string}
      * @memberof LabelRecoveryRequest
      */
-    trackingNumber?: string;
+    TrackingNumber?: string;
     /**
      * Mail Innovations Tracking Number.  Required if Tracking Number or ReferenceNumber/Value is not populated.  If only MailInnovationsTrackingNumber is provided, the request will be treated as Single Mail Innovations Return Shipment. Label Recovery will return label for Mail Innovations Return Tracking Number. If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.
      * @type {string}
      * @memberof LabelRecoveryRequest
      */
-    mailInnovationsTrackingNumber?: string;
+    MailInnovationsTrackingNumber?: string;
     /**
      *
      * @type {LabelRecoveryRequestReferenceValues}
      * @memberof LabelRecoveryRequest
      */
-    referenceValues?: LabelRecoveryRequestReferenceValues;
+    ReferenceValues?: LabelRecoveryRequestReferenceValues;
     /**
      * Represents 5 character ISO Locale that allows the user to request Reference Number Code on Label, Label instructions, Receipt instructions (if available for given tracking number) and High Value Report (if available for given tracking number) in desired language.  Locale is specified by the combination of language code and country or territory code - 2 character language code and 2 character country code seperated by an underscore ('_') character. Example - de_DE. Please refer to Appendix for supported values for Locale.  Either Translate container or Locale element can be present in a given request. Both can't be requested together in same request.
      * @type {string}
      * @memberof LabelRecoveryRequest
      */
-    locale?: string;
+    Locale?: string;
     /**
      *
      * @type {LabelRecoveryRequestUPSPremiumCareForm}
      * @memberof LabelRecoveryRequest
      */
-    uPSPremiumCareForm?: LabelRecoveryRequestUPSPremiumCareForm;
+    UPSPremiumCareForm?: LabelRecoveryRequestUPSPremiumCareForm;
 }
 /**
  * Container for the Label Delivery accessorial. One Label Delivery per shipment.
@@ -2838,13 +2838,13 @@ export interface LabelRecoveryRequestLabelDelivery {
      * @type {string}
      * @memberof LabelRecoveryRequestLabelDelivery
      */
-    labelLinkIndicator?: string;
+    LabelLinkIndicator?: string;
     /**
      * Not Used. If this tag is present, resend the Label Delivery notification email.
      * @type {string}
      * @memberof LabelRecoveryRequestLabelDelivery
      */
-    resendEMailIndicator?: string;
+    ResendEMailIndicator?: string;
 }
 /**
  * Container that is used to define the properties required by the user to print and/ or display the UPS shipping label.  Required for the shipment without return service, or shipment with PRL return service.
@@ -2857,19 +2857,19 @@ export interface LabelRecoveryRequestLabelSpecification {
      * @type {string}
      * @memberof LabelRecoveryRequestLabelSpecification
      */
-    hTTPUserAgent?: string;
+    HTTPUserAgent?: string;
     /**
      *
      * @type {LabelSpecificationLabelImageFormat}
      * @memberof LabelRecoveryRequestLabelSpecification
      */
-    labelImageFormat?: LabelSpecificationLabelImageFormat;
+    LabelImageFormat?: LabelSpecificationLabelImageFormat;
     /**
      *
      * @type {LabelSpecificationLabelStockSize}
      * @memberof LabelRecoveryRequestLabelSpecification
      */
-    labelStockSize?: LabelSpecificationLabelStockSize;
+    LabelStockSize?: LabelSpecificationLabelStockSize;
 }
 /**
  * Represents 5 character ISO Locale that allows the user to request Reference Number Code on Label, Label instructions, Receipt instructions (if available for given tracking number) and High Value Report (if available for given tracking number) in desired language.  Locale is specified by the combination of language code and country or territory code - 2 character language code and 2 character country code seperated by an underscore ('_') character. Example - de_DE. Please refer to Appendix for supported values for Locale.  Either Translate container or Locale element can be present in a given request. Both can't be requested together in same request.
@@ -2892,13 +2892,13 @@ export interface LabelRecoveryRequestReferenceValues {
      * @type {ReferenceValuesReferenceNumber}
      * @memberof LabelRecoveryRequestReferenceValues
      */
-    referenceNumber: ReferenceValuesReferenceNumber;
+    ReferenceNumber: ReferenceValuesReferenceNumber;
     /**
      * Required if ReferenceNumber/Value is populated. Shippers six digit account number. Must be six alphanumeric characters. Must be associated with the Internet account used to login.
      * @type {string}
      * @memberof LabelRecoveryRequestReferenceValues
      */
-    shipperNumber: string;
+    ShipperNumber: string;
 }
 /**
  * Request Container.  N/A
@@ -2911,19 +2911,19 @@ export interface LabelRecoveryRequestRequest {
      * @type {string}
      * @memberof LabelRecoveryRequestRequest
      */
-    subVersion?: string;
+    SubVersion?: string;
     /**
      * Request option is no longer used.
      * @type {string}
      * @memberof LabelRecoveryRequestRequest
      */
-    requestOption?: string;
+    RequestOption?: string;
     /**
      *
      * @type {LRRequestTransactionReference}
      * @memberof LabelRecoveryRequestRequest
      */
-    transactionReference?: LRRequestTransactionReference;
+    TransactionReference?: LRRequestTransactionReference;
 }
 /**
  * Small Package Tracking Number. Required if Mail Innovations Tracking Number or ReferenceNumber/Value and ShipperNumber is not provided.  If only TrackingNumber is provided, the request will be treated as Small Package Shipment. Label Recovery will return label for Small Package Tracking Number. If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.
@@ -2941,19 +2941,19 @@ export interface LabelRecoveryRequestTranslate {
      * @type {string}
      * @memberof LabelRecoveryRequestTranslate
      */
-    languageCode: string;
+    LanguageCode: string;
     /**
      * Valid dialect codes are:  CA - Canada GB - Great Britain US - United States 97  Not Applicable
      * @type {string}
      * @memberof LabelRecoveryRequestTranslate
      */
-    dialectCode: string;
+    DialectCode: string;
     /**
      * Used to specify what will be translated.  Valid code:  01 = label direction instructions and receipt
      * @type {string}
      * @memberof LabelRecoveryRequestTranslate
      */
-    code: string;
+    Code: string;
 }
 /**
  * UPS Premium Care Form container.  Default is PDF when container is not provided.    Valid only for Canada to Canada movements. UPS Premium Care Form will be returned in  both US English and Canadian French language.
@@ -2966,13 +2966,13 @@ export interface LabelRecoveryRequestUPSPremiumCareForm {
      * @type {string}
      * @memberof LabelRecoveryRequestUPSPremiumCareForm
      */
-    pageSize: string;
+    PageSize: string;
     /**
      * Format of UPS Premium Care Form.  Valid values:  01 = PNG 02 = PDF
      * @type {string}
      * @memberof LabelRecoveryRequestUPSPremiumCareForm
      */
-    printType: string;
+    PrintType: string;
 }
 /**
  * Response for the Label recovery request  Validates the date range and label being present. Also if the shipment is return or not
@@ -2985,43 +2985,43 @@ export interface LabelRecoveryResponse {
      * @type {LabelRecoveryResponseResponse}
      * @memberof LabelRecoveryResponse
      */
-    response: LabelRecoveryResponseResponse;
+    Response: LabelRecoveryResponseResponse;
     /**
      * Tracking number of the leading package in the shipment
      * @type {string}
      * @memberof LabelRecoveryResponse
      */
-    shipmentIdentificationNumber?: string;
+    ShipmentIdentificationNumber?: string;
     /**
      *
      * @type {Array<LabelRecoveryResponseLabelResults>}
      * @memberof LabelRecoveryResponse
      */
-    labelResults: Array<LabelRecoveryResponseLabelResults>;
+    LabelResults: Array<LabelRecoveryResponseLabelResults>;
     /**
      *
      * @type {LabelRecoveryResponseCODTurnInPage}
      * @memberof LabelRecoveryResponse
      */
-    cODTurnInPage?: LabelRecoveryResponseCODTurnInPage;
+    CODTurnInPage?: LabelRecoveryResponseCODTurnInPage;
     /**
      *
      * @type {LabelRecoveryResponseForm}
      * @memberof LabelRecoveryResponse
      */
-    form?: LabelRecoveryResponseForm;
+    Form?: LabelRecoveryResponseForm;
     /**
      *
      * @type {LabelRecoveryResponseHighValueReport}
      * @memberof LabelRecoveryResponse
      */
-    highValueReport?: LabelRecoveryResponseHighValueReport;
+    HighValueReport?: LabelRecoveryResponseHighValueReport;
     /**
      *
      * @type {Array<LabelRecoveryResponseTrackingCandidate>}
      * @memberof LabelRecoveryResponse
      */
-    trackingCandidate?: Array<LabelRecoveryResponseTrackingCandidate>;
+    TrackingCandidate?: Array<LabelRecoveryResponseTrackingCandidate>;
 }
 /**
  * Container for COD Turnin Page.
@@ -3034,7 +3034,7 @@ export interface LabelRecoveryResponseCODTurnInPage {
      * @type {LRCODTurnInPageImage}
      * @memberof LabelRecoveryResponseCODTurnInPage
      */
-    image: LRCODTurnInPageImage;
+    Image: LRCODTurnInPageImage;
 }
 /**
  * Container tag for the International Forms. Currently, represents Commercial Invoice for Electronic Returns Label and Electronic Import Control Label.  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Returned for request with SubVersion greater than or equal to 1707.
@@ -3047,7 +3047,7 @@ export interface LabelRecoveryResponseForm {
      * @type {FormImage}
      * @memberof LabelRecoveryResponseForm
      */
-    image: FormImage;
+    Image: FormImage;
 }
 /**
  * Container tag for the High Value Report for Electronic Returns Label and Electronic Import Control Label.  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Returned for request with SubVersion greater than or equal to 1707.
@@ -3060,7 +3060,7 @@ export interface LabelRecoveryResponseHighValueReport {
      * @type {HighValueReportImage}
      * @memberof LabelRecoveryResponseHighValueReport
      */
-    image: HighValueReportImage;
+    Image: HighValueReportImage;
 }
 /**
  * Container that stores the label results. Information containing the results of the user's Label Recovery Request.
@@ -3073,37 +3073,37 @@ export interface LabelRecoveryResponseLabelResults {
      * @type {string}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    trackingNumber?: string;
+    TrackingNumber?: string;
     /**
      *
      * @type {LabelResultsLabelImage}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    labelImage?: LabelResultsLabelImage;
+    LabelImage?: LabelResultsLabelImage;
     /**
      * Mail Innovations Tracking Number.  Applicable for Single Mail Innovations Returns and Dual Mail Innovations Returns shipment. Returned only if MailInnovationsTrackingNumber is provided in request.
      * @type {string}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    mailInnovationsTrackingNumber?: string;
+    MailInnovationsTrackingNumber?: string;
     /**
      *
      * @type {LabelResultsMailInnovationsLabelImage}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    mailInnovationsLabelImage?: LabelResultsMailInnovationsLabelImage;
+    MailInnovationsLabelImage?: LabelResultsMailInnovationsLabelImage;
     /**
      *
      * @type {LabelResultsReceipt}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    receipt?: LabelResultsReceipt;
+    Receipt?: LabelResultsReceipt;
     /**
      *
      * @type {LabelResultsForm}
      * @memberof LabelRecoveryResponseLabelResults
      */
-    form?: LabelResultsForm;
+    Form?: LabelResultsForm;
 }
 /**
  * Response Container
@@ -3116,19 +3116,19 @@ export interface LabelRecoveryResponseResponse {
      * @type {LRResponseResponseStatus}
      * @memberof LabelRecoveryResponseResponse
      */
-    responseStatus: LRResponseResponseStatus;
+    ResponseStatus: LRResponseResponseStatus;
     /**
      *
      * @type {ResponseAlert}
      * @memberof LabelRecoveryResponseResponse
      */
-    alert?: ResponseAlert;
+    Alert?: ResponseAlert;
     /**
      *
      * @type {LRResponseTransactionReference}
      * @memberof LabelRecoveryResponseResponse
      */
-    transactionReference?: LRResponseTransactionReference;
+    TransactionReference?: LRResponseTransactionReference;
 }
 /**
  * Tracking number of the leading package in the shipment
@@ -3146,25 +3146,25 @@ export interface LabelRecoveryResponseTrackingCandidate {
      * @type {string}
      * @memberof LabelRecoveryResponseTrackingCandidate
      */
-    trackingNumber: string;
+    TrackingNumber: string;
     /**
      * Destination postal code candidate
      * @type {string}
      * @memberof LabelRecoveryResponseTrackingCandidate
      */
-    destinationPostalCode?: string;
+    DestinationPostalCode?: string;
     /**
      * Destination country or territory code candidate, like US = USA, CA = Canada  Must be valid ups country or territory code
      * @type {string}
      * @memberof LabelRecoveryResponseTrackingCandidate
      */
-    destinationCountryCode?: string;
+    DestinationCountryCode?: string;
     /**
      *
      * @type {TrackingCandidatePickupDateRange}
      * @memberof LabelRecoveryResponseTrackingCandidate
      */
-    pickupDateRange?: TrackingCandidatePickupDateRange;
+    PickupDateRange?: TrackingCandidatePickupDateRange;
 }
 /**
  * Container tag for the International Forms. Currently, represents UPS Premium Care Form for Electronic Returns Label and Electronic Import Control Label. UPS  Premium Care Form for Forward shipment if Subverion is 1903 or greater  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Applies only for Canada domestic shipments. Returned for request with SubVersion greater than or equal to 1707.  UPS  Premium Care Form for Forward shipment if Subverion is 1903 or greater
@@ -3177,7 +3177,7 @@ export interface LabelResultsForm {
      * @type {LRFormImage}
      * @memberof LabelResultsForm
      */
-    image: LRFormImage;
+    Image: LRFormImage;
 }
 /**
  * The elements needed to render a label on a printer or in a browser. Specifies the format in which GraphicImage is represented. If LabelImageFormat is GIF, LabelImage contains GraphicImage and HTMLImage. Otherwise, it contains only GraphicImage. If LabelImageFormat is PDF, LabelImage is only returned at the first package result. If entered in the request, the response mirrors, else the default values are returned.  Returned only if TrackingNumber or Combination of Reference Number and Shipper Number present in request.
@@ -3190,31 +3190,31 @@ export interface LabelResultsLabelImage {
      * @type {LabelImageLabelImageFormat}
      * @memberof LabelResultsLabelImage
      */
-    labelImageFormat: LabelImageLabelImageFormat;
+    LabelImageFormat: LabelImageLabelImageFormat;
     /**
      * Base 64 encoded graphic image.
      * @type {string}
      * @memberof LabelResultsLabelImage
      */
-    graphicImage: string;
+    GraphicImage: string;
     /**
      * Base 64 encoded html browser image rendering software. This is only returned for GIF image formats.
      * @type {string}
      * @memberof LabelResultsLabelImage
      */
-    hTMLImage?: string;
+    HTMLImage?: string;
     /**
      * PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular.   The PDF417 image will be returned when the shipment is trans-border and the service option is one of the following: Standard Express, Saver Express Plus. The image is Base 64 encoded and only returned for GIF image format.
      * @type {string}
      * @memberof LabelResultsLabelImage
      */
-    pDF417?: string;
+    PDF417?: string;
     /**
      * Base 64 encoded graphic image of the Warsaw text and signature box.
      * @type {string}
      * @memberof LabelResultsLabelImage
      */
-    internationalSignatureGraphicImage?: string;
+    InternationalSignatureGraphicImage?: string;
     /**
      * This is only returned if the label link is requested to be returned and only at the first package result  Applicable for following types of shipments: Print/Electronic Return Label Print/Electronic Import Control Label Forward shipment except for Mail Innovations Forward
      * @type {string}
@@ -3233,31 +3233,31 @@ export interface LabelResultsMailInnovationsLabelImage {
      * @type {MailInnovationsLabelImageLabelImageFormat}
      * @memberof LabelResultsMailInnovationsLabelImage
      */
-    labelImageFormat: MailInnovationsLabelImageLabelImageFormat;
+    LabelImageFormat: MailInnovationsLabelImageLabelImageFormat;
     /**
      * Base 64 encoded graphic image.
      * @type {string}
      * @memberof LabelResultsMailInnovationsLabelImage
      */
-    graphicImage: string;
+    GraphicImage: string;
     /**
      * Base 64 encoded html browser image rendering software. This is only returned for GIF image formats.
      * @type {string}
      * @memberof LabelResultsMailInnovationsLabelImage
      */
-    hTMLImage?: string;
+    HTMLImage?: string;
     /**
      * PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular. The PDF417 image will be returned when the shipment is trans-border and the service option is one of the following: Standard, Express Saver or Express Plus.  The image is Base 64 encoded and only returned for GIF image format
      * @type {string}
      * @memberof LabelResultsMailInnovationsLabelImage
      */
-    pDF417?: string;
+    PDF417?: string;
     /**
      * Base 64 encoded graphic image of the Warsaw text and signature box.  EPL2, ZPL and SPL labels. The image will be returned for non-US based shipments. One image will be given per shipment and it will be in the first PackageResults container.
      * @type {string}
      * @memberof LabelResultsMailInnovationsLabelImage
      */
-    internationalSignatureGraphicImage?: string;
+    InternationalSignatureGraphicImage?: string;
     /**
      * This is only returned if the label link is requested to be returned and only at the first package result  Applicable for following types of shipments: Print/Electronic Return Label
      * @type {string}
@@ -3281,13 +3281,13 @@ export interface LabelResultsReceipt {
      * @type {string}
      * @memberof LabelResultsReceipt
      */
-    hTMLImage?: string;
+    HTMLImage?: string;
     /**
      *
      * @type {ReceiptImage}
      * @memberof LabelResultsReceipt
      */
-    image?: ReceiptImage;
+    Image?: ReceiptImage;
     /**
      * Receipt's url  Applicable for following types of shipments: Print/Electronic Return Label Print/Electronic Import Control Label
      * @type {string}
@@ -3321,13 +3321,13 @@ export interface LabelSpecificationInstruction {
      * @type {string}
      * @memberof LabelSpecificationInstruction
      */
-    code: string;
+    Code: string;
     /**
      * Description of the label Instruction code.
      * @type {string}
      * @memberof LabelSpecificationInstruction
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * LabelImageFormat Container.
@@ -3340,13 +3340,13 @@ export interface LabelSpecificationLabelImageFormat {
      * @type {string}
      * @memberof LabelSpecificationLabelImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the label image format code.
      * @type {string}
      * @memberof LabelSpecificationLabelImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Container for the EPL2, ZPL or SPL label size.  Valid for EPL2, ZPL and SPL Labels.
@@ -3359,13 +3359,13 @@ export interface LabelSpecificationLabelStockSize {
      * @type {string}
      * @memberof LabelSpecificationLabelStockSize
      */
-    height: string;
+    Height: string;
     /**
      * Width of the label image. For IN, use whole inches.  For EPL2, ZPL and SPL Labels. Valid value is 4.� Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.
      * @type {string}
      * @memberof LabelSpecificationLabelStockSize
      */
-    width: string;
+    Width: string;
 }
 /**
  * Height of the label image. For IN, use whole inches.  For EPL2, ZPL and SPL Labels. Only valid values are 6 or 8� Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.
@@ -3439,7 +3439,7 @@ export interface MailInnovationsLabelImageLabelImageFormat {
      * @type {string}
      * @memberof MailInnovationsLabelImageLabelImageFormat
      */
-    code: string;
+    Code: string;
 }
 /**
  * PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular. The PDF417 image will be returned when the shipment is trans-border and the service option is one of the following: Standard, Express Saver or Express Plus.  The image is Base 64 encoded and only returned for GIF image format
@@ -3472,31 +3472,31 @@ export interface NegotiatedChargesItemizedCharges {
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Itemized Charges value amount.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of ItemizedCharges type.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601.  Negotiated itemized charges are only returned for certain contract-only shipments as well as Worldwide Express Freight, Ground Freight Pricing, and Hazmat movements.
@@ -3509,31 +3509,31 @@ export interface NegotiatedRateChargesItemizedCharges {
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Itemized Charges value amount.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of ItemizedCharges type.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * TaxCharges container are returned only when TaxInformationIndicator is present in request. TaxCharges container contains Tax information for a given shipment.
@@ -3546,13 +3546,13 @@ export interface NegotiatedRateChargesTaxCharges {
      * @type {string}
      * @memberof NegotiatedRateChargesTaxCharges
      */
-    type: string;
+    Type: string;
     /**
      * Tax Monetary Value represent the Tax amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof NegotiatedRateChargesTaxCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Total charges container. Account Based Rates info.��� Total charges are only returned for ABR eligible shipper account/UserId combinations when the user includes the NegotiatedRatesIndicator in the request.
@@ -3565,13 +3565,13 @@ export interface NegotiatedRateChargesTotalCharge {
      * @type {string}
      * @memberof NegotiatedRateChargesTotalCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total charges monetary value.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof NegotiatedRateChargesTotalCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TotalChargesWithTaxes container would be returned only if TaxInformationIndicator is present in request. TotalChargesWithTaxes contains total charges including total taxes applied to a shipment.
@@ -3584,13 +3584,13 @@ export interface NegotiatedRateChargesTotalChargesWithTaxes {
      * @type {string}
      * @memberof NegotiatedRateChargesTotalChargesWithTaxes
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * TotalChargesWithTaxes monetary value amount.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof NegotiatedRateChargesTotalChargesWithTaxes
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Net Charge currency code.
@@ -3623,43 +3623,43 @@ export interface NotificationEMail {
      * @type {Array<string>}
      * @memberof NotificationEMail
      */
-    eMailAddress: Array<string>;
+    EMailAddress: Array<string>;
     /**
      * The e-mail address where an undeliverable email message is sent if the Receiver Return Notification email is undeliverable.  Defaults to FromEMailAddress.� Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    undeliverableEMailAddress?: string;
+    UndeliverableEMailAddress?: string;
     /**
      * The email address listed in the Reply To field of the message header, includes name and e-mail address of sender. The \"From\" field of the message header contains pkginfo@ups.com.  Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    fromEMailAddress?: string;
+    FromEMailAddress?: string;
     /**
      * The name the receiver return notification will appear to be from.  Defaults to the Shipper Name.� Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    fromName?: string;
+    FromName?: string;
     /**
      * User defined text that will be included in the email.  Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    memo?: string;
+    Memo?: string;
     /**
      * The eMails subject. Defaults to the UPS Receiver Return Notification plus the shipment ID.  Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    subject?: string;
+    Subject?: string;
     /**
      * Specifies a reference code and reference number to display in the subject of the Receiver Return Notification.�   When the subject code is provided, the subject will contain the following: UPS Receiver Return Notification.�   The reference code (the reference code will be mapped to the corresponding ANSI value) Plus the reference number.  The valid subject codes are: 01 - Shipment Reference Number 1,  02 - Shipment Reference Number 2,   03 - package Reference Number 1,  04 - package Reference Number 2, 05 - package Reference Number 3, 06 - package Reference Number 4, 07 - package Reference Number 5, 08 - Subject Text (Return Notification only).  If the subject code tag is not provided and the subject text is provided, the subject of the notification will be the subject text.�   If the subject text is provided, and subject code tag exists, then the subject code value must be 08.   If the subject code is 08, the subject text must exist. If a subject code is provided that refers to a nonexistent reference number, the subject will default to the tracking number.� Only allowed at the first package.
      * @type {string}
      * @memberof NotificationEMail
      */
-    subjectCode?: string;
+    SubjectCode?: string;
 }
 /**
  * This container is used for providing Language and dialect details for Alternate Delivery Location notifications and UAP Shipper notifications.  Valid only for Alternate Delivery Location notification and UAP Shipper notification.
@@ -3672,13 +3672,13 @@ export interface NotificationLocale {
      * @type {string}
      * @memberof NotificationLocale
      */
-    language: string;
+    Language: string;
     /**
      * Refer to Language/Dialect Combinations in the Appendix for valid pairs.
      * @type {string}
      * @memberof NotificationLocale
      */
-    dialect: string;
+    Dialect: string;
 }
 /**
  * Notification Code.  Valid values: 3 - Receiver Return Notification 6 - QV Email Notification 7 - QV Exception Notification 8 - QV Delivery Notification  For Mail Innovations forward shipments, QV Email Notifications are allowed for First Class, Priority Mail, and Expedited Mail Innovation services.
@@ -3696,7 +3696,7 @@ export interface NotificationTextMessage {
      * @type {string}
      * @memberof NotificationTextMessage
      */
-    phoneNumber: string;
+    PhoneNumber: string;
 }
 /**
  * VoiceMessage container is used for specifying phone number for receiving voice Alternate Delivery Location notification and UAP Shipper notification.  Valid only for Alternate Delivery Location notification and UAP Shipper notification. VoiceMessage phone number or TextMessage phone number or email address is required for ADL notification and UAP Shipper notification.
@@ -3709,7 +3709,7 @@ export interface NotificationVoiceMessage {
      * @type {string}
      * @memberof NotificationVoiceMessage
      */
-    phoneNumber: string;
+    PhoneNumber: string;
 }
 /**
  * Description of what the other charges are for.  Applies to Invoice and Partial Invoice forms only. Required for Complete Invoice and Optional for Partial Invoice forms.
@@ -3762,7 +3762,7 @@ export interface PackageCommodity {
      * @type {string}
      * @memberof PackageCommodity
      */
-    freightClass: string;
+    FreightClass: string;
     /**
      *
      * @type {CommodityNMFC}
@@ -3786,13 +3786,13 @@ export interface PackageDimWeight {
      * @type {DimWeightUnitOfMeasurement}
      * @memberof PackageDimWeight
      */
-    unitOfMeasurement?: DimWeightUnitOfMeasurement;
+    UnitOfMeasurement?: DimWeightUnitOfMeasurement;
     /**
      * Actual package weight.  Weight accepted for letters/envelopes.
      * @type {string}
      * @memberof PackageDimWeight
      */
-    weight?: string;
+    Weight?: string;
 }
 /**
  * Dimensions information container. Note: Currently dimensions are not applicable to Ground Freight Pricing.  Length + 2*(Width + Height) must be less than or equal to 165 IN or 330 CM.�Required for Heavy Goods service. Package Dimension will be ignored for Simple Rate
@@ -3805,25 +3805,25 @@ export interface PackageDimensions {
      * @type {DimensionsUnitOfMeasurement}
      * @memberof PackageDimensions
      */
-    unitOfMeasurement: DimensionsUnitOfMeasurement;
+    UnitOfMeasurement: DimensionsUnitOfMeasurement;
     /**
      * The length of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    length: string;
+    Length: string;
     /**
      * The width of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    width: string;
+    Width: string;
     /**
      * The height of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    height: string;
+    Height: string;
 }
 /**
  * Required when number of hazmat containers in a package is greater than 1. It indicates whether all the hazmat materials are kept in a single box or multiple boxes.  Required when number of hazmat container in a package is greater than 1.
@@ -3836,25 +3836,25 @@ export interface PackageHazMatPackageInformation {
      * @type {string}
      * @memberof PackageHazMatPackageInformation
      */
-    allPackedInOneIndicator?: string;
+    AllPackedInOneIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. Presence indicates that one or more hazmat/chemicals are in separate boxes in a package.  When number of Hazmat containers in a package is more than one, either AllPackedInOneIndicator or OverPackedIndicator is needed
      * @type {string}
      * @memberof PackageHazMatPackageInformation
      */
-    overPackedIndicator?: string;
+    OverPackedIndicator?: string;
     /**
      * When a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA, Ship API must require the shipment to specify a Q-Value with exactly one of the following values: 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0
      * @type {string}
      * @memberof PackageHazMatPackageInformation
      */
-    qValue?: string;
+    QValue?: string;
     /**
      * This field is used for the Outer Hazmat packaging type.  Ex. FIBERBOARD BOX, WOOD(EN) BOX, PLASTIC JERRICAN, METAL BOX, STEEL DRUM, OTHER, PLASTIC BOX, PLASTIC DRUM, STYROFOAM BOX, CYLINDERS, ENVIROTAINER, PLYWOOD BOX, ALUMINUM DRUM, ALUMINUM CYLINDERS, PLASTIC PAIL, PLYWOOD DRUM, FIBER DRUM, STEEL JERRICAN, ALUMINUM JERRICAN, STEEL BOX, CARTON, ALUMINUM BOX
      * @type {string}
      * @memberof PackageHazMatPackageInformation
      */
-    outerPackagingType?: string;
+    OuterPackagingType?: string;
 }
 /**
  * Presence of the indicator mentions that the package is Large Package.  This is an empty tag, any value inside is ignored.
@@ -3872,13 +3872,13 @@ export interface PackageLevelResultStatus {
      * @type {string}
      * @memberof PackageLevelResultStatus
      */
-    code: string;
+    Code: string;
     /**
      * A text description of the status code.
      * @type {string}
      * @memberof PackageLevelResultStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * The package's identification number
@@ -3901,13 +3901,13 @@ export interface PackagePackageServiceOptions {
      * @type {PackageServiceOptionsDeliveryConfirmation}
      * @memberof PackagePackageServiceOptions
      */
-    deliveryConfirmation?: PackageServiceOptionsDeliveryConfirmation;
+    DeliveryConfirmation?: PackageServiceOptionsDeliveryConfirmation;
     /**
      *
      * @type {PackageServiceOptionsDeclaredValue}
      * @memberof PackagePackageServiceOptions
      */
-    declaredValue?: PackageServiceOptionsDeclaredValue;
+    DeclaredValue?: PackageServiceOptionsDeclaredValue;
     /**
      *
      * @type {PackageServiceOptionsCOD}
@@ -3919,61 +3919,61 @@ export interface PackagePackageServiceOptions {
      * @type {PackageServiceOptionsAccessPointCOD}
      * @memberof PackagePackageServiceOptions
      */
-    accessPointCOD?: PackageServiceOptionsAccessPointCOD;
+    AccessPointCOD?: PackageServiceOptionsAccessPointCOD;
     /**
      * The presence indicates that the package may be released by driver without a signature from the consignee.  Empty Tag. Only available for US50/PR to US50/PR packages without return service.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    shipperReleaseIndicator?: string;
+    ShipperReleaseIndicator?: string;
     /**
      *
      * @type {PackageServiceOptionsNotification}
      * @memberof PackagePackageServiceOptions
      */
-    notification?: PackageServiceOptionsNotification;
+    Notification?: PackageServiceOptionsNotification;
     /**
      *
      * @type {PackageServiceOptionsHazMat}
      * @memberof PackagePackageServiceOptions
      */
-    hazMat?: PackageServiceOptionsHazMat;
+    HazMat?: PackageServiceOptionsHazMat;
     /**
      *
      * @type {PackageServiceOptionsDryIce}
      * @memberof PackagePackageServiceOptions
      */
-    dryIce?: PackageServiceOptionsDryIce;
+    DryIce?: PackageServiceOptionsDryIce;
     /**
      * An UPSPremiumCareIndicator indicates special handling is required for shipment having controlled substances.  Empty Tag means indicator is present.   The UPSPremiumCareIndicator cannot be requested for package with Delivery Confirmation - Adult Signature Required and Delivery Confirmation- Signature Required.   UPSPremiumCareIndicator is valid for following Return services:�  Returns Exchange (available with a contract) Print Return Label Print and Mail Electronic Return Label  Return Service Three Attempt  The UPSPremiumCareIndicator can be requested with following UPS services:  UPS Express� Early UPS Express UPS Express Saver  UPS Standard Valid only for Canada to Canada movements.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    uPSPremiumCareIndicator?: string;
+    UPSPremiumCareIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. If present, the package is rated for UPS Proactive Response and proactive package tracking. Contractual accessorial for health care companies to allow package monitoring throughout the UPS system.  Shippers account needs to have valid contract for UPS Proactive Reponse.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    proactiveIndicator?: string;
+    ProactiveIndicator?: string;
     /**
      * Identifies the package containing Dangerous Goods.  Required for Hazmat shipment if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    packageIdentifier?: string;
+    PackageIdentifier?: string;
     /**
      * Unique identifier for clinical trials
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    clinicalTrialsID?: string;
+    ClinicalTrialsID?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. If present, indicates that the package contains an item that needs refrigeration.  Shippers account needs to have a valid contract for Refrigeration.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    refrigerationIndicator?: string;
+    RefrigerationIndicator?: string;
 }
 /**
  * Container to hold package weight information.  Package weight is a required for Ground Freight Pricing shipments and Heavy Goods service. Package Weight will be ignored for Simple Rate.
@@ -3986,13 +3986,13 @@ export interface PackagePackageWeight {
      * @type {PackageWeightUnitOfMeasurement}
      * @memberof PackagePackageWeight
      */
-    unitOfMeasurement: PackageWeightUnitOfMeasurement;
+    UnitOfMeasurement: PackageWeightUnitOfMeasurement;
     /**
      * Packages weight. Weight accepted for letters/envelopes.  Only average package weight is required for Ground Freight Pricing Shipment.
      * @type {string}
      * @memberof PackagePackageWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Packaging container.  Container for Packaging Type.
@@ -4005,13 +4005,13 @@ export interface PackagePackaging {
      * @type {string}
      * @memberof PackagePackaging
      */
-    code: string;
+    Code: string;
     /**
      * Description of packaging type. Examples are letter, customer supplied, express box.
      * @type {string}
      * @memberof PackagePackaging
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Description of articles & special marks. Applicable for Air Freight only
@@ -4029,19 +4029,19 @@ export interface PackageReferenceNumber {
      * @type {string}
      * @memberof PackageReferenceNumber
      */
-    barCodeIndicator?: string;
+    BarCodeIndicator?: string;
     /**
      * Reference number type code, for the entire shipment. The code specifies the Reference name.   Refer to the Reference Number Code table.  Valid if the origin/destination pair is US/US or PR/PR and character should be alpha-numeric.
      * @type {string}
      * @memberof PackageReferenceNumber
      */
-    code?: string;
+    Code?: string;
     /**
      * Customer supplied reference number.  Valid if the origin/destination pair is US/US or PR/PR.
      * @type {string}
      * @memberof PackageReferenceNumber
      */
-    value: string;
+    Value: string;
 }
 /**
  * The container for Accessorial indicators. This information would be returned only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Mid-day service request with Dry Ice or Oversize Pallet and SubVersion greater than or equal to 1707.  This is valid only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Mid-day service.
@@ -4054,13 +4054,13 @@ export interface PackageResultsAccessorial {
      * @type {string}
      * @memberof PackageResultsAccessorial
      */
-    code: string;
+    Code: string;
     /**
      * Description for Accessorial Indicator.
      * @type {string}
      * @memberof PackageResultsAccessorial
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Base Service Charge container. Transportation charge = BaseServiceCharge + Fuel charge  Returned only if Subversion >=1701.
@@ -4073,13 +4073,13 @@ export interface PackageResultsBaseServiceCharge {
      * @type {string}
      * @memberof PackageResultsBaseServiceCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Base Service Charge value amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof PackageResultsBaseServiceCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * USPS defined CN22 ID number format varies based on destination country or territory.  Not applicable as of Jan 2015.  Mail Innovations shipments US to VI, PR, and GU are not considered international.
@@ -4097,31 +4097,31 @@ export interface PackageResultsForm {
      * @type {string}
      * @memberof PackageResultsForm
      */
-    code: string;
+    Code: string;
     /**
      * Description that indicates the type of form. Possible Values. All Requested International Forms.     Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsForm
      */
-    description: string;
+    Description: string;
     /**
      *
      * @type {FormImage}
      * @memberof PackageResultsForm
      */
-    image?: FormImage;
+    Image?: FormImage;
     /**
      * Unique Id for later retrieval of saved version of the completed international forms. Always returned when code = 01. 01 represents international forms.     Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsForm
      */
-    formGroupId?: string;
+    FormGroupId?: string;
     /**
      * Contains description text which identifies the group of International forms. This element is part of both request and response. This element does not appear on the forms.    Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsForm
      */
-    formGroupIdName?: string;
+    FormGroupIdName?: string;
 }
 /**
  * Itemized Charges are returned only when the subversion element is present and greater than or equal to 1607.  Package level itemized charges are only returned for US domestic movements
@@ -4134,31 +4134,31 @@ export interface PackageResultsItemizedCharges {
      * @type {string}
      * @memberof PackageResultsItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof PackageResultsItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof PackageResultsItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Itemized Charges value amount.
      * @type {string}
      * @memberof PackageResultsItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of ItemizedCharges type.
      * @type {string}
      * @memberof PackageResultsItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Negotiated Rates Charge Container.  These charges are returned when: 1) Subversion is greater than or equal to 1607 2) If negotiated rates were requested for GFP shipments and account number is eligible to receive negotiated rates.
@@ -4171,7 +4171,7 @@ export interface PackageResultsNegotiatedCharges {
      * @type {Array<NegotiatedChargesItemizedCharges>}
      * @memberof PackageResultsNegotiatedCharges
      */
-    itemizedCharges?: Array<NegotiatedChargesItemizedCharges>;
+    ItemizedCharges?: Array<NegotiatedChargesItemizedCharges>;
 }
 /**
  * Container for returned Rate Modifier information. Applies only if SubVersion is 2205 or greater.
@@ -4184,25 +4184,25 @@ export interface PackageResultsRateModifier {
      * @type {string}
      * @memberof PackageResultsRateModifier
      */
-    modifierType: string;
+    ModifierType: string;
     /**
      * Rate Modifier Description. Example: \"Origin Modifier\". Applies only if SubVersion is 2205 or greater.
      * @type {string}
      * @memberof PackageResultsRateModifier
      */
-    modifierDesc: string;
+    ModifierDesc: string;
     /**
      * Rate Currency Code. Example: \"USD\"
      * @type {string}
      * @memberof PackageResultsRateModifier
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Amount. Example: \"-1.00\",\"0.25\". It contains positive or negative values. Applies only if SubVersion is 2205 or greater.
      * @type {string}
      * @memberof PackageResultsRateModifier
      */
-    amount: string;
+    Amount: string;
 }
 /**
  * Shipment charges info. Shipment charges are only guaranteed to be returned for shipments whose origin country or territory is US or Puerto Rico.�   Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -4215,13 +4215,13 @@ export interface PackageResultsServiceOptionsCharges {
      * @type {string}
      * @memberof PackageResultsServiceOptionsCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Package accessorial charges value amount.   Applicable only for ShipmentResponse and ShipAcceptResponse. Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof PackageResultsServiceOptionsCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The container for UPS shipping label. Returned for following shipments - Forward shipments, Shipments with PRL returns service,  Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707. Shipping label wont be returned if BarCodeImageIndicator is present. Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -4234,37 +4234,37 @@ export interface PackageResultsShippingLabel {
      * @type {ShippingLabelImageFormat}
      * @memberof PackageResultsShippingLabel
      */
-    imageFormat: ShippingLabelImageFormat;
+    ImageFormat: ShippingLabelImageFormat;
     /**
      * Base 64 encoded graphic image.   Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsShippingLabel
      */
-    graphicImage: string;
+    GraphicImage: string;
     /**
      * Base 64 encoded graphic image.  Applicable only for ShipmentResponse and ShipAcceptResponse for Mail Innovations CN22 Combination Forward Label with more than 3 commodities.
      * @type {Array<string>}
      * @memberof PackageResultsShippingLabel
      */
-    graphicImagePart: Array<string>;
+    GraphicImagePart: Array<string>;
     /**
      * Base 64 encoded graphic image of the Warsaw text and signature box. EPL2, ZPL and SPL labels. The image will be returned for non-US based shipments. One image will be given per shipment and it will be in the first PackageResults container.   Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsShippingLabel
      */
-    internationalSignatureGraphicImage?: string;
+    InternationalSignatureGraphicImage?: string;
     /**
      * Base 64 encoded html browser image rendering software. This is only returned for gif and png image formats.   Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsShippingLabel
      */
-    hTMLImage?: string;
+    HTMLImage?: string;
     /**
      * PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular. The image is Base 64 encoded and returned if the LabelImageFormat code is GIF.� Shipment with PRL return service only.�   Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof PackageResultsShippingLabel
      */
-    pDF417?: string;
+    PDF417?: string;
 }
 /**
  * Supported for following shipments - PRL shipments, Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.  Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -4277,13 +4277,13 @@ export interface PackageResultsShippingReceipt {
      * @type {ShippingReceiptImageFormat}
      * @memberof PackageResultsShippingReceipt
      */
-    imageFormat: ShippingReceiptImageFormat;
+    ImageFormat: ShippingReceiptImageFormat;
     /**
      * Base 64 encoded receipt in HTML format.�    Applicable only for ShipmentResponse and ShipAcceptResponse.  The receipt image is only returned for the first 5 packages.
      * @type {string}
      * @memberof PackageResultsShippingReceipt
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Package 1Z number.   For Mail Innovations shipments, please use the USPSPICNumber when tracking packages (a non-1Z number Mail Manifest Id is returned).  Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -4306,13 +4306,13 @@ export interface PackageServiceOptionsAccessPointCOD {
      * @type {string}
      * @memberof PackageServiceOptionsAccessPointCOD
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Access Point COD Monetary Value.
      * @type {string}
      * @memberof PackageServiceOptionsAccessPointCOD
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Container for COD.  Indicates COD is requested. Package level COD is available for shipment without return service from US/PR to US/PR, CA to CA, and CA to US. CA to US COD is not allowed for package Letter/ Envelope. COD is not valid for return service movements.
@@ -4325,13 +4325,13 @@ export interface PackageServiceOptionsCOD {
      * @type {string}
      * @memberof PackageServiceOptionsCOD
      */
-    cODFundsCode: string;
+    CODFundsCode: string;
     /**
      *
      * @type {CODCODAmount}
      * @memberof PackageServiceOptionsCOD
      */
-    cODAmount: CODCODAmount;
+    CODAmount: CODCODAmount;
 }
 /**
  * Unique identifier for clinical trials
@@ -4349,19 +4349,19 @@ export interface PackageServiceOptionsDeclaredValue {
      * @type {DeclaredValueType}
      * @memberof PackageServiceOptionsDeclaredValue
      */
-    type?: DeclaredValueType;
+    Type?: DeclaredValueType;
     /**
      * Declared value amount currency type. Defaults to the non-Euro currency used in the shippers country or territory.  Code must represent a currency that is a valid for Shipper country or territory.
      * @type {string}
      * @memberof PackageServiceOptionsDeclaredValue
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Declared value amount.
      * @type {string}
      * @memberof PackageServiceOptionsDeclaredValue
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Delivery Confirmation container.  Refer to Delivery Confirmation Origin- Destination Pairs in the Appendix for a list of valid values.  Valid only for forward shipment only.
@@ -4374,13 +4374,13 @@ export interface PackageServiceOptionsDeliveryConfirmation {
      * @type {string}
      * @memberof PackageServiceOptionsDeliveryConfirmation
      */
-    dCISType: string;
+    DCISType: string;
     /**
      * Delivery Confirmation Control number associated with the delivery confirmation for the package.  Valid for forward shipments only.
      * @type {string}
      * @memberof PackageServiceOptionsDeliveryConfirmation
      */
-    dCISNumber?: string;
+    DCISNumber?: string;
 }
 /**
  * Container for Dry Ice.  Maximum 1 Dry Ice is allowed. Lane check will happen based on postal code/ city.
@@ -4393,19 +4393,19 @@ export interface PackageServiceOptionsDryIce {
      * @type {string}
      * @memberof PackageServiceOptionsDryIce
      */
-    regulationSet: string;
+    RegulationSet: string;
     /**
      *
      * @type {DryIceDryIceWeight}
      * @memberof PackageServiceOptionsDryIce
      */
-    dryIceWeight: DryIceDryIceWeight;
+    DryIceWeight: DryIceDryIceWeight;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. Relevant only in CFR regulation set. If present it is used to designate the dry Ice is for any medical use and rates are adjusted for DryIce weight more than 2.5 Kgs or 5.7 Lbs.
      * @type {string}
      * @memberof PackageServiceOptionsDryIce
      */
-    medicalUseIndicator?: string;
+    MedicalUseIndicator?: string;
 }
 /**
  * Container to hold HazMat Chemical Records.
@@ -4418,31 +4418,31 @@ export interface PackageServiceOptionsHazMat {
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    packagingTypeQuantity?: string;
+    PackagingTypeQuantity?: string;
     /**
      * Reserved for future use.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    recordIdentifier1?: string;
+    RecordIdentifier1?: string;
     /**
      * Reserved for future use.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    recordIdentifier2?: string;
+    RecordIdentifier2?: string;
     /**
      * Reserved for future use.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    recordIdentifier3?: string;
+    RecordIdentifier3?: string;
     /**
      * Recommended if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.   Secondary hazardous characteristics of a package. (There can be more than one � separate each with a comma).
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    subRiskClass?: string;
+    SubRiskClass?: string;
     /**
      * The type of regulated good for an ADR package where ADR is for Europe to Europe ground movement.
      * @type {string}
@@ -4460,31 +4460,31 @@ export interface PackageServiceOptionsHazMat {
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    technicalName?: string;
+    TechnicalName?: string;
     /**
      * Defines the type of label that is required on the package for the commodity.   Not applicable if CommodityRegulatedLevelCode = LR or EQ.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    hazardLabelRequired?: string;
+    HazardLabelRequired?: string;
     /**
      * This is the hazard class associated to the specified commodity.   Required if CommodityRegulatedLevelCode is 'EQ', �LQ� or �FR�
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    classDivisionNumber?: string;
+    ClassDivisionNumber?: string;
     /**
      * Optional reference number. It will be displayed only on label.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    referenceNumber?: string;
+    ReferenceNumber?: string;
     /**
      * Required if CommodityRegulatedLevelCode = EQ, LQ or FR. The numerical value of the mass capacity of the regulated good.  Should be more than 0.0. Valid characters are 0-9 and \".\" (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including \".\" (Decimal point) and can hold up to 1 decimal place.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    quantity?: string;
+    Quantity?: string;
     /**
      * Required if CommodityRegulatedLevelCode = LQ, EQ or FR. The unit of measure used for the mass capacity of the regulated good.   For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.
      * @type {string}
@@ -4496,103 +4496,103 @@ export interface PackageServiceOptionsHazMat {
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    packagingType?: string;
+    PackagingType?: string;
     /**
      * This is the ID number (UN/NA/ID) for the specified commodity.  Required if CommodityRegulatedLevelCode = LR, LQ or FR and if the field applies to the material by regulation.  UN/NA/ID Identification Number assigned to the specified regulated good. (Include the UN/NA/ID as part of the entry).
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    iDNumber?: string;
+    IDNumber?: string;
     /**
      * The Proper Shipping Name assigned by ADR, CFR or IATA. Required if CommodityRegulatedLevelCode = LR, LQ or FR.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    properShippingName: string;
+    ProperShippingName: string;
     /**
      * Additional remarks or special provision information. Recommended if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.  Additional information that may be required by regulation about a hazardous material, such as, �Limited Quantity�, DOT-SP numbers, EX numbers.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    additionalDescription?: string;
+    AdditionalDescription?: string;
     /**
      * This is the packing group category associated to the specified commodity. Recommended if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Must be shown in Roman Numerals.   Valid values: I II III blank
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    packagingGroupType?: string;
+    PackagingGroupType?: string;
     /**
      * The packing instructions related to the chemical record. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    packagingInstructionCode?: string;
+    PackagingInstructionCode?: string;
     /**
      * 24 Hour Emergency Phone Number of the shipper. Valid values for this field are (0) through (9) with trailing blanks. For numbers within the U.S., the layout is 1, area code, 7-digit number. For all other countries or territories the layout is country or territory code, area code, number.                        The following are restricted in the phone number   period �.�, dash �-�, plus sign �+� and conventional parentheses �(� and �)�, �EXT\" or \"OPT�
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    emergencyPhone?: string;
+    EmergencyPhone?: string;
     /**
      * The emergency information, contact name and/or contract number, required to be communicated when a call is placed to the EmergencyPhoneNumber. The information is required if there is a value in the EmergencyPhoneNumber field above and the shipment is with a US50 or PR origin and/or destination and the RegulationSet is IATA.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    emergencyContact?: string;
+    EmergencyContact?: string;
     /**
      * Recommended if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. If reportable quantity is met, 'RQ' should be entered.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    reportableQuantity?: string;
+    ReportableQuantity?: string;
     /**
      * The Regulatory set associated with every regulated shipment. It must be same across the shipment.  Valid values:  ADR = Europe to Europe Ground Movement  CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada  IATA= Worldwide Air movement  TDG= Canada to Canada ground movement or Canada to U.S. standard movement.  Valid values are ADR, CFR, IATA and TDG. For multiple Chemical Records per package or multiple packages containing different RegulationSet, RegulationSet of first Chemical Record would be considered for validating and rating the entire shipment.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    regulationSet: string;
+    RegulationSet: string;
     /**
      * Not applicable for ADR regulation set. Required for any other regulation set. Declares that a package was prepared according to ground passenger aircraft or cargo aircraft only.  Valid values:  Highway=Highway  Ground=Ground  PAX=Passenger Aircraft  Passenger Aircraft=Passenger Aircraft  CAO=Cargo Aircraft Only  Cargo Aircraft Only=Cargo Aircraft Only  Valid entries include: Highway, Ground, PAX, Passenger Aircraft, CAO and Cargo Aircraft Only.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    transportationMode: string;
+    TransportationMode: string;
     /**
      * Indicates the type of commodity - Fully Regulated (FR), Limited Quantity (LQ), Excepted Quantity (EQ) or Lightly Regulated (LR).  Valid values are LR, FR, LQ and EQ. Required for subversion 1701 or greater. LR and EQ are validated if subversion is 1701 or greater. FR, LQ will be validated if subversion is 1807 or greater
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    commodityRegulatedLevelCode?: string;
+    CommodityRegulatedLevelCode?: string;
     /**
      * Transport Category.  Valid values are 0 to 4.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    transportCategory?: string;
+    TransportCategory?: string;
     /**
      * Defines what is restricted to pass through a tunnel.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    tunnelRestrictionCode?: string;
+    TunnelRestrictionCode?: string;
     /**
      * Identifies the Chemical Record.  Required if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    chemicalRecordIdentifier?: string;
+    ChemicalRecordIdentifier?: string;
     /**
      * Technical name in local language.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    localTechnicalName?: string;
+    LocalTechnicalName?: string;
     /**
      * Proper shipping name in local langauge.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    localProperShippingName?: string;
+    LocalProperShippingName?: string;
 }
 /**
  * Receiver Return Notification.  Applicable for Shipment with returned service.
@@ -4605,13 +4605,13 @@ export interface PackageServiceOptionsNotification {
      * @type {string}
      * @memberof PackageServiceOptionsNotification
      */
-    notificationCode: string;
+    NotificationCode: string;
     /**
      *
      * @type {NotificationEMail}
      * @memberof PackageServiceOptionsNotification
      */
-    eMail: NotificationEMail;
+    EMail: NotificationEMail;
 }
 /**
  * Identifies the package containing Dangerous Goods.  Required for Hazmat shipment if SubVersion is greater than or equal to 1701.
@@ -4649,19 +4649,19 @@ export interface PackageUPSPremier {
      * @type {string}
      * @memberof PackageUPSPremier
      */
-    category: string;
+    Category: string;
     /**
      * SensorID is RFID for UPS Premier Silver. SensorID is MeshID for UPS Premier Gold or UPS Premier Platinum Package.
      * @type {string}
      * @memberof PackageUPSPremier
      */
-    sensorID: string;
+    SensorID: string;
     /**
      *
      * @type {UPSPremierHandlingInstructions}
      * @memberof PackageUPSPremier
      */
-    handlingInstructions: UPSPremierHandlingInstructions;
+    HandlingInstructions: UPSPremierHandlingInstructions;
 }
 /**
  * Unit price of the commodity. Applicable for Air Freight only  Limit to 2 digit after the decimal. The maximum length of the field is 12 including �.� and can hold up to 2 decimal place. (e.g. 999999999.99)
@@ -4679,13 +4679,13 @@ export interface PackageWeightUnitOfMeasurement {
      * @type {string}
      * @memberof PackageWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof PackageWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Packages weight. Weight accepted for letters/envelopes.  Only average package weight is required for Ground Freight Pricing Shipment.
@@ -4713,19 +4713,19 @@ export interface PackingListInfoPackageAssociated {
      * @type {string}
      * @memberof PackingListInfoPackageAssociated
      */
-    packageNumber: string;
+    PackageNumber: string;
     /**
      * Amount of Product associated with a package.  Required for packaging list and Air Freight Packing list.
      * @type {string}
      * @memberof PackingListInfoPackageAssociated
      */
-    productAmount: string;
+    ProductAmount: string;
     /**
      * Product Note.
      * @type {string}
      * @memberof PackingListInfoPackageAssociated
      */
-    productNote?: string;
+    ProductNote?: string;
 }
 /**
  * Shipment charge container.  If Duty and Tax charges are applicable to a shipment and a payer is not specified, the default payer of Duty and Tax charges is Bill to Receiver.
@@ -4738,31 +4738,31 @@ export interface PaymentInformationShipmentCharge {
      * @type {string}
      * @memberof PaymentInformationShipmentCharge
      */
-    type: string;
+    Type: string;
     /**
      *
      * @type {ShipmentChargeBillShipper}
      * @memberof PaymentInformationShipmentCharge
      */
-    billShipper?: ShipmentChargeBillShipper;
+    BillShipper?: ShipmentChargeBillShipper;
     /**
      *
      * @type {ShipmentChargeBillReceiver}
      * @memberof PaymentInformationShipmentCharge
      */
-    billReceiver?: ShipmentChargeBillReceiver;
+    BillReceiver?: ShipmentChargeBillReceiver;
     /**
      *
      * @type {ShipmentChargeBillThirdParty}
      * @memberof PaymentInformationShipmentCharge
      */
-    billThirdParty?: ShipmentChargeBillThirdParty;
+    BillThirdParty?: ShipmentChargeBillThirdParty;
     /**
      * Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  This is an empty tag, any value inside is ignored. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.  This payment method allows you to bill the charges for a specified shipment to a consignee who has agreed to pay the charges. All shipping charges are billed to the consignees UPS account number including the following accessorials: Additional Handling, Delivery Area Surcharges, Delivery Change Requests, Early AM Premium, Early AM Out of Territory, Fuel Surcharge, Hazardous Material Surcharges, Large Package Surcharge, Over Max Limits, and Saturday Delivery.  Declared Value, Delivery Confirmation, On Call Pickup, Remote Area Surcharge, Saturday Pickup of Delivery fees are not passed to the consignee. These charges are billed to the shippers UPS account number.
      * @type {string}
      * @memberof PaymentInformationShipmentCharge
      */
-    consigneeBilledIndicator?: string;
+    ConsigneeBilledIndicator?: string;
 }
 /**
  * Split Duty VAT Indicator. The presence indicates the payer specified for Transportation Charges will pay transportation charges and any duties that apply to the shipment. The payer specified for Duties and Taxes will pay the VAT (Value-Added Tax) only.  This is an empty tag, any value inside is ignored. The payment method for Transportation charges must be UPS account. The UPS account must be a daily pickup account or an occasional account.
@@ -4800,13 +4800,13 @@ export interface PreAlertNotificationEMailMessage {
      * @type {string}
      * @memberof PreAlertNotificationEMailMessage
      */
-    eMailAddress: string;
+    EMailAddress: string;
     /**
      * This is used for notification when EMailAddress for PreAlertNotification is undeliverable.
      * @type {string}
      * @memberof PreAlertNotificationEMailMessage
      */
-    undeliverableEMailAddress?: string;
+    UndeliverableEMailAddress?: string;
 }
 /**
  * This container is used for providing Language and dialect details for PreAlertNotification.
@@ -4819,13 +4819,13 @@ export interface PreAlertNotificationLocale {
      * @type {string}
      * @memberof PreAlertNotificationLocale
      */
-    language: string;
+    Language: string;
     /**
      * Refer to Language/Dialect Combinations in the Appendix for valid pairs.
      * @type {string}
      * @memberof PreAlertNotificationLocale
      */
-    dialect: string;
+    Dialect: string;
 }
 /**
  * TextMessage container is used for specifying phone number for receiving text preAlertNotification.
@@ -4838,7 +4838,7 @@ export interface PreAlertNotificationTextMessage {
      * @type {string}
      * @memberof PreAlertNotificationTextMessage
      */
-    phoneNumber: string;
+    PhoneNumber: string;
 }
 /**
  * VoiceMessage container is used for specifying phone number for receiving voice PreAlertNotification.
@@ -4851,7 +4851,7 @@ export interface PreAlertNotificationVoiceMessage {
      * @type {string}
      * @memberof PreAlertNotificationVoiceMessage
      */
-    phoneNumber: string;
+    PhoneNumber: string;
 }
 /**
  * Address information of the Producer.  Applies to NAFTA CO. Only applicable if producer option is empty or not present. Conditionally required for: NAFTA CO, when Producer option is not specified.
@@ -4864,37 +4864,37 @@ export interface ProducerAddress {
      * @type {string}
      * @memberof ProducerAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof ProducerAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof ProducerAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s town code.
      * @type {string}
      * @memberof ProducerAddress
      */
-    town?: string;
+    Town?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof ProducerAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof ProducerAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Contact name at the Producer location.  Applies to NAFTA CO.
@@ -4927,13 +4927,13 @@ export interface ProducerPhone {
      * @type {string}
      * @memberof ProducerPhone
      */
-    number: string;
+    Number: string;
     /**
      * Sold To contacts phone extension.
      * @type {string}
      * @memberof ProducerPhone
      */
-    extension?: string;
+    Extension?: string;
 }
 /**
  * Tax ID of the Producer.  Applies to NAFTA CO. Only applicable when producer option is empty or not present
@@ -4961,19 +4961,19 @@ export interface ProductEEIInformation {
      * @type {string}
      * @memberof ProductEEIInformation
      */
-    exportInformation?: string;
+    ExportInformation?: string;
     /**
      *
      * @type {EEIInformationLicense}
      * @memberof ProductEEIInformation
      */
-    license?: EEIInformationLicense;
+    License?: EEIInformationLicense;
     /**
      *
      * @type {EEIInformationDDTCInformation}
      * @memberof ProductEEIInformation
      */
-    dDTCInformation?: EEIInformationDDTCInformation;
+    DDTCInformation?: EEIInformationDDTCInformation;
 }
 /**
  * Container tag for determining whether or not to exclude product information from a particular form.  If this container is not present we assume that the DEFAULT is selected which is \"none\" and all products will appear on all forms.
@@ -4986,7 +4986,7 @@ export interface ProductExcludeFromForm {
      * @type {string}
      * @memberof ProductExcludeFromForm
      */
-    formType: string;
+    FormType: string;
 }
 /**
  * Code indicating Domestic: Exports that have been produced, manufactured, or grown in the United States or Puerto Rico. This includes imported merchandise which has been enhanced in value or changed from the form in which imported by further manufacture or processing in the United States or Puerto Rico. Foreign: Merchandise that has entered the United States and is being exported again in the same condition as when imported.   Applies to EEI forms only. Required for EEI form.  Valid values:  D: Domestic; F: Foreign.
@@ -5019,13 +5019,13 @@ export interface ProductNetCostDateRange {
      * @type {string}
      * @memberof ProductNetCostDateRange
      */
-    beginDate: string;
+    BeginDate: string;
     /**
      * If the RVC is calculated over a period of time, it should be identified by the End date (yyyyMMdd) of that period. (Reference: Articles 402.1, 402.5).  Applies to NAFTA CO only. Format is yyyyMMdd.
      * @type {string}
      * @memberof ProductNetCostDateRange
      */
-    endDate: string;
+    EndDate: string;
 }
 /**
  * The total number of packages, cartons, or containers for the commodity.  Applicable for CO and is required. Should be numeric. Valid characters are 0 -9.
@@ -5048,7 +5048,7 @@ export interface ProductPackingListInfo {
      * @type {PackingListInfoPackageAssociated}
      * @memberof ProductPackingListInfo
      */
-    packageAssociated: PackingListInfoPackageAssociated;
+    PackageAssociated: PackingListInfoPackageAssociated;
 }
 /**
  * The part number or reference number for the product contained in the invoice line, as indicated on the customs invoice.  Applies to Invoice and Partial Invoice. Required for Invoice forms and optional for Partial Invoice.
@@ -5076,13 +5076,13 @@ export interface ProductProductWeight {
      * @type {ProductWeightUnitOfMeasurement}
      * @memberof ProductProductWeight
      */
-    unitOfMeasurement: ProductWeightUnitOfMeasurement;
+    UnitOfMeasurement: ProductWeightUnitOfMeasurement;
     /**
      * Weight of Product.  Applies to CO and EEI forms only. Valid characters are 0-9 and �.�  (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including �.� and can hold up to 1 decimal place.
      * @type {string}
      * @memberof ProductProductWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * This amount will always be USD.  Applies to EEI forms only. Required for EEI form. Valid characters are 0-9 and �.� (Decimal point). Limit to 2 digit after the decimal. The maximum length of the field is 15 including �.� and can hold up to 2 decimal places.  Note: This value is calculated based on the Product/Unit/Value and /Product/Unit/Number (Number of Units * Price per Unit). If the total value is incorrect it will be replaced by the actual calculated total value.
@@ -5100,19 +5100,19 @@ export interface ProductScheduleB {
      * @type {string}
      * @memberof ProductScheduleB
      */
-    number: string;
+    Number: string;
     /**
      * The count of how many Schedule B units of the current good are in the shipment (EEI only). For example, if the Schedule B unit of measure is dozens and eight dozen, is being shipped, indicate 8 in this field.  Applies to EEI forms only. Conditionally required for EEI forms if ScheduleB UnitOfMeasurement is not X. Should be Numeric. Valid characters are 0 -9.
      * @type {string}
      * @memberof ProductScheduleB
      */
-    quantity?: string;
+    Quantity?: string;
     /**
      *
      * @type {ScheduleBUnitOfMeasurement}
      * @memberof ProductScheduleB
      */
-    unitOfMeasurement: ScheduleBUnitOfMeasurement;
+    UnitOfMeasurement: ScheduleBUnitOfMeasurement;
 }
 /**
  * Container tag for the Unit information of each product. (also called as commodity)  Required for Invoice forms and optional for Partial Invoice.
@@ -5125,19 +5125,19 @@ export interface ProductUnit {
      * @type {string}
      * @memberof ProductUnit
      */
-    number: string;
+    Number: string;
     /**
      *
      * @type {UnitUnitOfMeasurement}
      * @memberof ProductUnit
      */
-    unitOfMeasurement: UnitUnitOfMeasurement;
+    UnitOfMeasurement: UnitUnitOfMeasurement;
     /**
      * Monetary amount used to specify the worth or price of the commodity. Amount should be greater than zero.  Applies to Invoice and Partial Invoice form. Required for Invoice forms and optional for Partial Invoice. Amount should be greater than zero.  Valid characters are 0-9 and. (Decimal point). Limit to 6 digits after the decimal. The maximum length of the field is 19 including '.' and can hold up to 6 decimal places.(#####.######, ######.#####, #######.####, ########.###, #########.##,##########.#,############). The value of this product  and the other products should be such that the invoice line total which is the sum of ( number*values) of all products should not exceed 9999999999999999.99
      * @type {string}
      * @memberof ProductUnit
      */
-    value: string;
+    Value: string;
 }
 /**
  * Includes the following information for used self-propelled vehicles as defined in Customs regulations 19 CFR 192.1: The unique Vehicle Identification Number (VIN) in the proper format. Or The Product Identification Number (PIN) for those used self-propelled vehicles for which there are no VINs.  Or the Vehicle Title Number.  Applies to EEI forms only.
@@ -5155,13 +5155,13 @@ export interface ProductWeightUnitOfMeasurement {
      * @type {string}
      * @memberof ProductWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof ProductWeightUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Weight of Product.  Applies to CO and EEI forms only. Valid characters are 0-9 and �.�  (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including �.� and can hold up to 1 decimal place.
@@ -5194,13 +5194,13 @@ export interface ReceiptImage {
      * @type {ImageImageFormat}
      * @memberof ReceiptImage
      */
-    imageFormat: ImageImageFormat;
+    ImageFormat: ImageImageFormat;
     /**
      * Base 64 encoded High Value Report image.
      * @type {string}
      * @memberof ReceiptImage
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * ImageFormat Container.
@@ -5213,13 +5213,13 @@ export interface ReceiptSpecificationImageFormat {
      * @type {string}
      * @memberof ReceiptSpecificationImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the image format.
      * @type {string}
      * @memberof ReceiptSpecificationImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Receipt's url  Applicable for following types of shipments: Print/Electronic Return Label Print/Electronic Import Control Label
@@ -5252,7 +5252,7 @@ export interface ReferenceValuesReferenceNumber {
      * @type {string}
      * @memberof ReferenceValuesReferenceNumber
      */
-    value: string;
+    Value: string;
 }
 /**
  * Required if ReferenceNumber/Value is populated. Shippers six digit account number. Must be six alphanumeric characters. Must be associated with the Internet account used to login.
@@ -5280,7 +5280,7 @@ export interface RequestTransactionReference {
      * @type {string}
      * @memberof RequestTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * Alert Container. There can be zero to many alert containers with code and description.
@@ -5293,13 +5293,13 @@ export interface ResponseAlert {
      * @type {string}
      * @memberof ResponseAlert
      */
-    code: string;
+    Code: string;
     /**
      * Warning messages returned by the system.
      * @type {string}
      * @memberof ResponseAlert
      */
-    description: string;
+    Description: string;
 }
 /**
  * Response status container.
@@ -5312,13 +5312,13 @@ export interface ResponseResponseStatus {
      * @type {string}
      * @memberof ResponseResponseStatus
      */
-    code: string;
+    Code: string;
     /**
      * Describes Response Status Code. Returns text of Success.
      * @type {string}
      * @memberof ResponseResponseStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * Identifies the success or failure of the transaction. 1 = Successful
@@ -5341,7 +5341,7 @@ export interface ResponseTransactionReference {
      * @type {string}
      * @memberof ResponseTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Alcoholic Beverages  Shippers account needs to have a valid contract for Alcohol.
@@ -5399,7 +5399,7 @@ export interface SHIPRequestWrapper {
      * @type {ShipmentRequest}
      * @memberof SHIPRequestWrapper
      */
-    shipmentRequest: ShipmentRequest;
+    ShipmentRequest: ShipmentRequest;
 }
 /**
  * N/A
@@ -5412,7 +5412,7 @@ export interface SHIPResponseWrapper {
      * @type {ShipmentResponse}
      * @memberof SHIPResponseWrapper
      */
-    shipmentResponse: ShipmentResponse;
+    ShipmentResponse: ShipmentResponse;
 }
 /**
  * A unique 10-digit commodity classification code for the item being exported. (To classify a commodity access the following Web page: http://www.census.gov/foreign-trade/schedules/b/#search).  Applies to EEI forms only. Has to be 10 characters.
@@ -5435,13 +5435,13 @@ export interface ScheduleBUnitOfMeasurement {
      * @type {string}
      * @memberof ScheduleBUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof ScheduleBUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Valid values:  01 = Next Day Air 02 = 2nd Day Air 03 = Ground 07 = Express 08 = Expedited 11 = UPS Standard 12 = 3 Day Select 13 = Next Day Air Saver 14 = UPS Next Day Air� Early                           17 = UPS Worldwide Economy DDU 54 = Express Plus 59 = 2nd Day Air A.M.  65 = UPS Saver M2 = First Class Mail M3 = Priority Mail M4 = Expedited MaiI Innovations M5 = Priority Mail Innovations M6 = Economy Mail Innovations                                                                                                                                                                                                                                                                   M7 = MaiI Innovations (MI) Returns 70 = UPS Access Point� Economy 71 = UPS Worldwide Express Freight Midday            72 = UPS Worldwide Economy DDP 74 = UPS Express�12:00                                    75 = UPS Heavy Goods 82 = UPS Today Standard 83 = UPS Today Dedicated Courier 84 = UPS Today Intercity 85 = UPS Today Express 86 = UPS Today Express Saver 96 = UPS Worldwide Express Freight.�   Note: Only service code 03 is used for Ground Freight Pricing� shipments  The following Services are not available to return shipment: 13, 59, 82, 83, 84, 85, 86
@@ -5474,31 +5474,31 @@ export interface ShipFromAddress {
      * @type {string}
      * @memberof ShipFromAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * The ship from Attention name.  35 characters are accepted, but for return Shipment only 30 characters will be printed on the label.  Required if ShipFrom tag is in the XML and Invoice or CO International forms is requested. If not present, will default to the Shipper Attention Name.
@@ -5531,13 +5531,13 @@ export interface ShipFromPhone {
      * @type {string}
      * @memberof ShipFromPhone
      */
-    number: string;
+    Number: string;
     /**
      * Sold To contacts phone extension.
      * @type {string}
      * @memberof ShipFromPhone
      */
-    extension?: string;
+    Extension?: string;
 }
 /**
  * Tax Identification Container.  Applies to EEI form only.
@@ -5550,13 +5550,13 @@ export interface ShipFromTaxIDType {
      * @type {string}
      * @memberof ShipFromTaxIDType
      */
-    code: string;
+    Code: string;
     /**
      * Description of TaxID submitted.  Applies to EEI form only.
      * @type {string}
      * @memberof ShipFromTaxIDType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Company�s Tax Identification Number at the pick up location.  Conditionally required if EEI form (International forms) is requested.  Applies to EEI Form only.
@@ -5574,19 +5574,19 @@ export interface ShipFromVendorInfo {
      * @type {string}
      * @memberof ShipFromVendorInfo
      */
-    vendorCollectIDTypeCode: string;
+    VendorCollectIDTypeCode: string;
     /**
      * Shipper�s VAT Tax collection registration number to be entered by Shipper at time of shipment creation.   Presence of this number as part of the shipment information implies the shipper has collected/paid the required VAT tax (outside of UPS/UPS systems).  Vendor Colect ID Number will be printed on commercial invoice if present.                                   Sample Values:   �IMDEU1234567� (IOSS #),  �VOEC1234567� (VOEC #),  �GB1234567� (HMRC #)     Required if the shipment is subject to Vendor Collect ID collection
      * @type {string}
      * @memberof ShipFromVendorInfo
      */
-    vendorCollectIDNumber: string;
+    VendorCollectIDNumber: string;
     /**
      * Consignee Type.                                             01 = Business                                                 02 = Consumer                                                           NA = Not Applicable
      * @type {string}
      * @memberof ShipFromVendorInfo
      */
-    consigneeType?: string;
+    ConsigneeType?: string;
 }
 /**
  * Address Container.
@@ -5599,37 +5599,37 @@ export interface ShipToAddress {
      * @type {string}
      * @memberof ShipToAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof ShipToAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof ShipToAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof ShipToAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof ShipToAddress
      */
-    countryCode: string;
+    CountryCode: string;
     /**
      * This field is a flag to indicate if the receiver is a residential location.  True if ResidentialAddressIndicator tag exists.  This is an empty tag, any value inside is ignored.
      * @type {string}
      * @memberof ShipToAddress
      */
-    residentialAddressIndicator?: string;
+    ResidentialAddressIndicator?: string;
 }
 /**
  * Contact name at the consignee�s location.  Required for: UPS Next Day Air� Early service, and when ShipTo country or territory is different than ShipFrom country or territory.   Required if Invoice International form is requested.
@@ -5672,13 +5672,13 @@ export interface ShipToPhone {
      * @type {string}
      * @memberof ShipToPhone
      */
-    number: string;
+    Number: string;
     /**
      * Sold To contacts phone extension.
      * @type {string}
      * @memberof ShipToPhone
      */
-    extension?: string;
+    Extension?: string;
 }
 /**
  * Consignee�s tax identification number.
@@ -5696,25 +5696,25 @@ export interface ShipmentAlternateDeliveryAddress {
      * @type {string}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    name: string;
+    Name: string;
     /**
      * Attention Name.
      * @type {string}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    attentionName: string;
+    AttentionName: string;
     /**
      * UPS Access Point ID.
      * @type {string}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    uPSAccessPointID?: string;
+    UPSAccessPointID?: string;
     /**
      *
      * @type {AlternateDeliveryAddressAddress}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    address: AlternateDeliveryAddressAddress;
+    Address: AlternateDeliveryAddressAddress;
 }
 /**
  * Container for the BillReceiver billing option.  This element or its sibling element, BillShipper, BillThirdParty or Consignee Billed, must be present but no more than one can be present. For a return shipment, Bill Receiver is invalid for Transportation charges.
@@ -5727,13 +5727,13 @@ export interface ShipmentChargeBillReceiver {
      * @type {string}
      * @memberof ShipmentChargeBillReceiver
      */
-    accountNumber: string;
+    AccountNumber: string;
     /**
      *
      * @type {BillReceiverAddress}
      * @memberof ShipmentChargeBillReceiver
      */
-    address?: BillReceiverAddress;
+    Address?: BillReceiverAddress;
 }
 /**
  * Container for the BillShipper billing option. The three payment methods that are available for the Bill Shipper billing option are alternate payment method, account number or credit card.  This element or its sibling element, BillReceiver, BillThirdParty or ConsigneeBilledIndicator, must be present but no more than one can be present.
@@ -5746,19 +5746,19 @@ export interface ShipmentChargeBillShipper {
      * @type {string}
      * @memberof ShipmentChargeBillShipper
      */
-    accountNumber?: string;
+    AccountNumber?: string;
     /**
      *
      * @type {BillShipperCreditCard}
      * @memberof ShipmentChargeBillShipper
      */
-    creditCard?: BillShipperCreditCard;
+    CreditCard?: BillShipperCreditCard;
     /**
      * Alternate Payment Method.  Valid value: 01= PayPal  Only valid for forward shipments. It is not valid for Return or Import Control shipments.   This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.   PayPal 01: Is only valid for forward shipments. It is not valid for Return or Import Control shipments.   This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.
      * @type {string}
      * @memberof ShipmentChargeBillShipper
      */
-    alternatePaymentMethod?: string;
+    AlternatePaymentMethod?: string;
 }
 /**
  * Container for the third party billing option.  This element or its sibling element, BillShipper, BillReceiver or Consignee Billed, must be present but no more than one can be present.
@@ -5771,25 +5771,25 @@ export interface ShipmentChargeBillThirdParty {
      * @type {string}
      * @memberof ShipmentChargeBillThirdParty
      */
-    accountNumber?: string;
+    AccountNumber?: string;
     /**
      * Posta Elettronica Certificata (PEC) which is the recipient code for the customers certified electronic mail value.
      * @type {string}
      * @memberof ShipmentChargeBillThirdParty
      */
-    certifiedElectronicMail?: string;
+    CertifiedElectronicMail?: string;
     /**
      * Sistema Di Interscambio(SDI) which is the recipient code for the customer's interchange value or Interchange System Code
      * @type {string}
      * @memberof ShipmentChargeBillThirdParty
      */
-    interchangeSystemCode?: string;
+    InterchangeSystemCode?: string;
     /**
      *
      * @type {BillThirdPartyAddress}
      * @memberof ShipmentChargeBillThirdParty
      */
-    address: BillThirdPartyAddress;
+    Address: BillThirdPartyAddress;
 }
 /**
  * Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  This is an empty tag, any value inside is ignored. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.  This payment method allows you to bill the charges for a specified shipment to a consignee who has agreed to pay the charges. All shipping charges are billed to the consignees UPS account number including the following accessorials: Additional Handling, Delivery Area Surcharges, Delivery Change Requests, Early AM Premium, Early AM Out of Territory, Fuel Surcharge, Hazardous Material Surcharges, Large Package Surcharge, Over Max Limits, and Saturday Delivery.  Declared Value, Delivery Confirmation, On Call Pickup, Remote Area Surcharge, Saturday Pickup of Delivery fees are not passed to the consignee. These charges are billed to the shippers UPS account number.
@@ -5812,13 +5812,13 @@ export interface ShipmentChargesBaseServiceCharge {
      * @type {string}
      * @memberof ShipmentChargesBaseServiceCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Base Service Charge value amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof ShipmentChargesBaseServiceCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601.
@@ -5831,31 +5831,31 @@ export interface ShipmentChargesItemizedCharges {
      * @type {string}
      * @memberof ShipmentChargesItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof ShipmentChargesItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof ShipmentChargesItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Itemized Charges value amount.
      * @type {string}
      * @memberof ShipmentChargesItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of ItemizedCharges type.
      * @type {string}
      * @memberof ShipmentChargesItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Rate Type with which Shipment is rated. Possible RateChart values for different regions will be:  US 48 origin:  1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.  Alaska/Hawaii origin:  1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.   All Other origins:  1 � Rates  5 - Regional Rates  6 - General List Rates.  3 and 4 do not apply.
@@ -5873,13 +5873,13 @@ export interface ShipmentChargesServiceOptionsCharges {
      * @type {string}
      * @memberof ShipmentChargesServiceOptionsCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Package accessorial charges value amount.   Applicable only for ShipmentResponse and ShipAcceptResponse. Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof ShipmentChargesServiceOptionsCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TaxCharges container are returned only when TaxInformationIndicator is present in request and when Negotiated Rates are not applicable. TaxCharges container contains Tax information for a given shipment.
@@ -5892,13 +5892,13 @@ export interface ShipmentChargesTaxCharges {
      * @type {string}
      * @memberof ShipmentChargesTaxCharges
      */
-    type: string;
+    Type: string;
     /**
      * Tax Monetary Value represent the Tax amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof ShipmentChargesTaxCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Total charges container.
@@ -5911,13 +5911,13 @@ export interface ShipmentChargesTotalCharges {
      * @type {string}
      * @memberof ShipmentChargesTotalCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total charges value amount.  Valid values are from 0 to 99999999999999.99.
      * @type {string}
      * @memberof ShipmentChargesTotalCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TotalChargesWithTaxes container would be returned only if TaxInformationIndicator is present in request and when Negotiated Rates are not applicable. TotalChargesWithTaxes contains total charges including total taxes applied to a shipment.
@@ -5930,13 +5930,13 @@ export interface ShipmentChargesTotalChargesWithTaxes {
      * @type {string}
      * @memberof ShipmentChargesTotalChargesWithTaxes
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * TotalChargesWithTaxes monetary value amount.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof ShipmentChargesTotalChargesWithTaxes
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Transportation Charges container.
@@ -5949,13 +5949,13 @@ export interface ShipmentChargesTransportationCharges {
      * @type {string}
      * @memberof ShipmentChargesTransportationCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Transportation and surcharges value amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof ShipmentChargesTransportationCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Customer assigned identifier for report and billing summarization displays to the right of the Cost Center title.  Required for Mail Innovations Return shipments. It is shown on the bottom of the shipping label as reference 2.  Cost Center length is alphanumeric with a max length of 30 for Mail Innovations forward shipments.  Cost Center length is numeric with a max length of 4 for Mail Innovations Return shipments.
@@ -5978,37 +5978,37 @@ export interface ShipmentDGSignatoryInfo {
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    name?: string;
+    Name?: string;
     /**
      * Title of the person signing the declaration. Note: The title of the person or department he/she is employed with, are both acceptable.
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    title?: string;
+    Title?: string;
     /**
      * The city of the Signatory.
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    place?: string;
+    Place?: string;
     /**
      * Date of signing the declaration form.  Valid format is YYYYMMDD.
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    date?: string;
+    Date?: string;
     /**
      * Valid values: 01 = Shipment level 02 = Package level                                              Valid only for the Shipper Declaration paper. If missing or invalid DGPaperImage will be returned at package level.
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    shipperDeclaration?: string;
+    ShipperDeclaration?: string;
     /**
      * Dangerous Goods Paper Upload Only Indicator. DG Paper will not be returned in response if UploadOnlyIndicator present.
      * @type {string}
      * @memberof ShipmentDGSignatoryInfo
      */
-    uploadOnlyIndicator?: string;
+    UploadOnlyIndicator?: string;
 }
 /**
  * The Description of Goods for the shipment. Applies to international and domestic shipments.   Provide a detailed description of items being shipped for documents and non-documents.   Examples: \"annual reports\" and \"9 mm steel screws\".  Required if all of the listed conditions are true:  ShipFrom and ShipTo countries or territories are not the same; The packaging type is not UPS Letter; The ShipFrom and or ShipTo countries or territories are not in the European Union or the ShipFrom and ShipTo countries or territories are both in the European Union and the shipments service type is not UPS Standard.
@@ -6031,19 +6031,19 @@ export interface ShipmentFRSPaymentInformation {
      * @type {string}
      * @memberof ShipmentFRSPaymentInformation
      */
-    type: string;
+    Type: string;
     /**
      * The UPS account number.  If the Ground Freight Pricing indicator and FreightShipmentInformation/DensityEligibleIndicator is present in the request, this account number must be validated to check if it is Ground Freight Pricing Density Based Rating enabled.
      * @type {string}
      * @memberof ShipmentFRSPaymentInformation
      */
-    accountNumber: string;
+    AccountNumber: string;
     /**
      *
      * @type {FRSPaymentInformationAddress}
      * @memberof ShipmentFRSPaymentInformation
      */
-    address?: FRSPaymentInformationAddress;
+    Address?: FRSPaymentInformationAddress;
 }
 /**
  * Container to hold Freight Shipment information.
@@ -6056,13 +6056,13 @@ export interface ShipmentFreightShipmentInformation {
      * @type {FreightShipmentInformationFreightDensityInfo}
      * @memberof ShipmentFreightShipmentInformation
      */
-    freightDensityInfo?: FreightShipmentInformationFreightDensityInfo;
+    FreightDensityInfo?: FreightShipmentInformationFreightDensityInfo;
     /**
      * The presence of the tag indicates that the rate request is density based. For Density Based Rating (DBR), the customer must have DBR Contract Service.
      * @type {string}
      * @memberof ShipmentFreightShipmentInformation
      */
-    densityEligibleIndicator?: string;
+    DensityEligibleIndicator?: string;
 }
 /**
  * Goods Not In Free Circulation indicator.  This is an empty tag, any value inside is ignored. This indicator is invalid for a package type of UPS Letter and DocumentsOnly.
@@ -6090,13 +6090,13 @@ export interface ShipmentInvoiceLineTotal {
      * @type {string}
      * @memberof ShipmentInvoiceLineTotal
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Invoice Line Total amount for the entire shipment.  Valid values are from 1 to 99999999
      * @type {string}
      * @memberof ShipmentInvoiceLineTotal
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Mail classification defined by the USPS.   Valid values:  1 = Balloon 2 = Oversize 3 = Not Applicable
@@ -6154,91 +6154,91 @@ export interface ShipmentPackage {
      * @type {string}
      * @memberof ShipmentPackage
      */
-    description?: string;
+    Description?: string;
     /**
      * Description of articles & special marks. Applicable for Air Freight only
      * @type {string}
      * @memberof ShipmentPackage
      */
-    palletDescription?: string;
+    PalletDescription?: string;
     /**
      * Number of Pieces. Applicable for Air Freight only
      * @type {string}
      * @memberof ShipmentPackage
      */
-    numOfPieces?: string;
+    NumOfPieces?: string;
     /**
      * Unit price of the commodity. Applicable for Air Freight only  Limit to 2 digit after the decimal. The maximum length of the field is 12 including �.� and can hold up to 2 decimal place. (e.g. 999999999.99)
      * @type {string}
      * @memberof ShipmentPackage
      */
-    unitPrice?: string;
+    UnitPrice?: string;
     /**
      *
      * @type {PackagePackaging}
      * @memberof ShipmentPackage
      */
-    packaging: PackagePackaging;
+    Packaging: PackagePackaging;
     /**
      *
      * @type {PackageDimensions}
      * @memberof ShipmentPackage
      */
-    dimensions?: PackageDimensions;
+    Dimensions?: PackageDimensions;
     /**
      *
      * @type {PackageDimWeight}
      * @memberof ShipmentPackage
      */
-    dimWeight?: PackageDimWeight;
+    DimWeight?: PackageDimWeight;
     /**
      *
      * @type {PackagePackageWeight}
      * @memberof ShipmentPackage
      */
-    packageWeight?: PackagePackageWeight;
+    PackageWeight?: PackagePackageWeight;
     /**
      * Presence of the indicator mentions that the package is Large Package.  This is an empty tag, any value inside is ignored.
      * @type {string}
      * @memberof ShipmentPackage
      */
-    largePackageIndicator?: string;
+    LargePackageIndicator?: string;
     /**
      *
      * @type {PackageReferenceNumber}
      * @memberof ShipmentPackage
      */
-    referenceNumber?: PackageReferenceNumber;
+    ReferenceNumber?: PackageReferenceNumber;
     /**
      * Additional Handling Required. The presence indicates additional handling is required, the absence indicates no additional handling is required. Additional Handling indicator indicates it�s a non-corrugated package.
      * @type {string}
      * @memberof ShipmentPackage
      */
-    additionalHandlingIndicator?: string;
+    AdditionalHandlingIndicator?: string;
     /**
      *
      * @type {PackageUPSPremier}
      * @memberof ShipmentPackage
      */
-    uPSPremier?: PackageUPSPremier;
+    UPSPremier?: PackageUPSPremier;
     /**
      *
      * @type {PackagePackageServiceOptions}
      * @memberof ShipmentPackage
      */
-    packageServiceOptions?: PackagePackageServiceOptions;
+    PackageServiceOptions?: PackagePackageServiceOptions;
     /**
      *
      * @type {PackageCommodity}
      * @memberof ShipmentPackage
      */
-    commodity?: PackageCommodity;
+    Commodity?: PackageCommodity;
     /**
      *
      * @type {PackageHazMatPackageInformation}
      * @memberof ShipmentPackage
      */
-    hazMatPackageInformation?: PackageHazMatPackageInformation;
+    HazMatPackageInformation?: PackageHazMatPackageInformation;
 }
 /**
  * Customer-assigned unique piece identifier that returns visibility events.  Required only for Mail Innovations forward shipments. Alpha numeric values only. It is shown on the bottom of the shipping label as reference 1.
@@ -6261,13 +6261,13 @@ export interface ShipmentPaymentInformation {
      * @type {PaymentInformationShipmentCharge}
      * @memberof ShipmentPaymentInformation
      */
-    shipmentCharge: PaymentInformationShipmentCharge;
+    ShipmentCharge: PaymentInformationShipmentCharge;
     /**
      * Split Duty VAT Indicator. The presence indicates the payer specified for Transportation Charges will pay transportation charges and any duties that apply to the shipment. The payer specified for Duties and Taxes will pay the VAT (Value-Added Tax) only.  This is an empty tag, any value inside is ignored. The payment method for Transportation charges must be UPS account. The UPS account must be a daily pickup account or an occasional account.
      * @type {string}
      * @memberof ShipmentPaymentInformation
      */
-    splitDutyVATIndicator?: string;
+    SplitDutyVATIndicator?: string;
 }
 /**
  * PromotionalDiscountInformation container. This container contains discount information that the customer wants to request each time while placing a shipment.
@@ -6280,13 +6280,13 @@ export interface ShipmentPromotionalDiscountInformation {
      * @type {string}
      * @memberof ShipmentPromotionalDiscountInformation
      */
-    promoCode: string;
+    PromoCode: string;
     /**
      * Promotion Alias code  Required if PromotionalDiscountInformation container is present.
      * @type {string}
      * @memberof ShipmentPromotionalDiscountInformation
      */
-    promoAliasCode: string;
+    PromoAliasCode: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. RatingMethodRequestedIndicator is an indicator. If present, Billable Weight Calculation method information and Rating Method information would be returned in response.
@@ -6329,19 +6329,19 @@ export interface ShipmentReferenceNumber {
      * @type {string}
      * @memberof ShipmentReferenceNumber
      */
-    barCodeIndicator?: string;
+    BarCodeIndicator?: string;
     /**
      * Reference number type code, for the entire shipment. The code specifies the Reference name.   Refer to the Reference Number Code table.  Valid if the origin/destination pair is US/US or PR/PR and character should be alpha-numeric.
      * @type {string}
      * @memberof ShipmentReferenceNumber
      */
-    code?: string;
+    Code?: string;
     /**
      * Customer supplied reference number.  Valid if the origin/destination pair is US/US or PR/PR.
      * @type {string}
      * @memberof ShipmentReferenceNumber
      */
-    value: string;
+    Value: string;
 }
 /**
  * Shipment Request.
@@ -6354,25 +6354,25 @@ export interface ShipmentRequest {
      * @type {ShipmentRequestRequest}
      * @memberof ShipmentRequest
      */
-    request: ShipmentRequestRequest;
+    Request: ShipmentRequestRequest;
     /**
      *
      * @type {ShipmentRequestShipment}
      * @memberof ShipmentRequest
      */
-    shipment: ShipmentRequestShipment;
+    Shipment: ShipmentRequestShipment;
     /**
      *
      * @type {ShipmentRequestLabelSpecification}
      * @memberof ShipmentRequest
      */
-    labelSpecification?: ShipmentRequestLabelSpecification;
+    LabelSpecification?: ShipmentRequestLabelSpecification;
     /**
      *
      * @type {ShipmentRequestReceiptSpecification}
      * @memberof ShipmentRequest
      */
-    receiptSpecification?: ShipmentRequestReceiptSpecification;
+    ReceiptSpecification?: ShipmentRequestReceiptSpecification;
 }
 /**
  * Container used to define the properties required by the user to print and/or display the UPS shipping label.  Required for shipment without return service or shipments with PRL return service. Required for Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.
@@ -6385,31 +6385,31 @@ export interface ShipmentRequestLabelSpecification {
      * @type {LabelSpecificationLabelImageFormat}
      * @memberof ShipmentRequestLabelSpecification
      */
-    labelImageFormat: LabelSpecificationLabelImageFormat;
+    LabelImageFormat: LabelSpecificationLabelImageFormat;
     /**
      * Browser HTTPUserAgent String. This is the preferred way of identifying GIF image type to be generated.  Required if /ShipmentRequest/LabelSpecificationLabelSpecification/LabelImageFormat/Code = Gif. Default to Mozilla/4.5 if this field is missing or has invalid value.
      * @type {string}
      * @memberof ShipmentRequestLabelSpecification
      */
-    hTTPUserAgent?: string;
+    HTTPUserAgent?: string;
     /**
      *
      * @type {LabelSpecificationLabelStockSize}
      * @memberof ShipmentRequestLabelSpecification
      */
-    labelStockSize: LabelSpecificationLabelStockSize;
+    LabelStockSize: LabelSpecificationLabelStockSize;
     /**
      *
      * @type {Array<LabelSpecificationInstruction>}
      * @memberof ShipmentRequestLabelSpecification
      */
-    instruction?: Array<LabelSpecificationInstruction>;
+    Instruction?: Array<LabelSpecificationInstruction>;
     /**
      * Language character set expected on label. Valid values: dan = Danish (Latin-1) nld = Dutch (Latin-1) fin = Finnish (Latin-1) fra = French (Latin-1) deu = German (Latin-1) itl = Italian (Latin-1) nor = Norwegian (Latin-1) pol  = Polish (Latin-2) por = Poruguese (Latin-1) spa = Spanish (Latin-1)  swe = Swedish (Latin-1)  ces = Czech (Latin-2) hun = Hungarian (Latin-2) slk = Slovak (Latin-2) rus = Russian (Cyrillic) tur = Turkish (Latin-5) ron = Romanian (Latin-2) bul = Bulgarian (Latin-2) est = Estonian (Latin-2) ell = Greek (Latin-2) lav = Latvian (Latin-2) lit = Lithuanian (Latin-2) eng = English (Latin-1)  Default is English (Latin-1).
      * @type {string}
      * @memberof ShipmentRequestLabelSpecification
      */
-    characterSet?: string;
+    CharacterSet?: string;
 }
 /**
  * Container used to allow the user to choose to print a thermal receipt.
@@ -6422,7 +6422,7 @@ export interface ShipmentRequestReceiptSpecification {
      * @type {ReceiptSpecificationImageFormat}
      * @memberof ShipmentRequestReceiptSpecification
      */
-    imageFormat: ReceiptSpecificationImageFormat;
+    ImageFormat: ReceiptSpecificationImageFormat;
 }
 /**
  * Request Container
@@ -6435,19 +6435,19 @@ export interface ShipmentRequestRequest {
      * @type {string}
      * @memberof ShipmentRequestRequest
      */
-    requestOption: string;
+    RequestOption: string;
     /**
      * When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.  To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.  Example: Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601.   Format: YYMM = Year and month of the release.  Example: 1607 = 2016 July  Supported values: 1601, 1607, 1701, 1707, 1801, 1807, 2108, 2205
      * @type {string}
      * @memberof ShipmentRequestRequest
      */
-    subVersion?: string;
+    SubVersion?: string;
     /**
      *
      * @type {RequestTransactionReference}
      * @memberof ShipmentRequestRequest
      */
-    transactionReference?: RequestTransactionReference;
+    TransactionReference?: RequestTransactionReference;
 }
 /**
  * Shipment Container
@@ -6460,247 +6460,247 @@ export interface ShipmentRequestShipment {
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    description?: string;
+    Description?: string;
     /**
      *
      * @type {ShipmentReturnService}
      * @memberof ShipmentRequestShipment
      */
-    returnService?: ShipmentReturnService;
+    ReturnService?: ShipmentReturnService;
     /**
      * Indicates a shipment contains written, typed, or printed communication of no commercial value.   If DocumentsOnly is not specified then it implies that the shipment contains non documents or documents of commercial value.   Default is a shipment contains non- documents or documents of commercial value.  This is an empty tag, any value inside is ignored.   Valid only for shipments with different origin and destination countries or territories. The origin country or territory is not US, and the destination country or territory is not CA, PR or MX.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    documentsOnlyIndicator?: string;
+    DocumentsOnlyIndicator?: string;
     /**
      *
      * @type {ShipmentShipper}
      * @memberof ShipmentRequestShipment
      */
-    shipper: ShipmentShipper;
+    Shipper: ShipmentShipper;
     /**
      *
      * @type {ShipmentShipTo}
      * @memberof ShipmentRequestShipment
      */
-    shipTo: ShipmentShipTo;
+    ShipTo: ShipmentShipTo;
     /**
      *
      * @type {ShipmentAlternateDeliveryAddress}
      * @memberof ShipmentRequestShipment
      */
-    alternateDeliveryAddress?: ShipmentAlternateDeliveryAddress;
+    AlternateDeliveryAddress?: ShipmentAlternateDeliveryAddress;
     /**
      *
      * @type {ShipmentShipFrom}
      * @memberof ShipmentRequestShipment
      */
-    shipFrom?: ShipmentShipFrom;
+    ShipFrom?: ShipmentShipFrom;
     /**
      *
      * @type {ShipmentPaymentInformation}
      * @memberof ShipmentRequestShipment
      */
-    paymentInformation?: ShipmentPaymentInformation;
+    PaymentInformation?: ShipmentPaymentInformation;
     /**
      *
      * @type {ShipmentFRSPaymentInformation}
      * @memberof ShipmentRequestShipment
      */
-    fRSPaymentInformation?: ShipmentFRSPaymentInformation;
+    FRSPaymentInformation?: ShipmentFRSPaymentInformation;
     /**
      *
      * @type {ShipmentFreightShipmentInformation}
      * @memberof ShipmentRequestShipment
      */
-    freightShipmentInformation?: ShipmentFreightShipmentInformation;
+    FreightShipmentInformation?: ShipmentFreightShipmentInformation;
     /**
      * Goods Not In Free Circulation indicator.  This is an empty tag, any value inside is ignored. This indicator is invalid for a package type of UPS Letter and DocumentsOnly.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    goodsNotInFreeCirculationIndicator?: string;
+    GoodsNotInFreeCirculationIndicator?: string;
     /**
      *
      * @type {ShipmentPromotionalDiscountInformation}
      * @memberof ShipmentRequestShipment
      */
-    promotionalDiscountInformation?: ShipmentPromotionalDiscountInformation;
+    PromotionalDiscountInformation?: ShipmentPromotionalDiscountInformation;
     /**
      *
      * @type {ShipmentDGSignatoryInfo}
      * @memberof ShipmentRequestShipment
      */
-    dGSignatoryInfo?: ShipmentDGSignatoryInfo;
+    DGSignatoryInfo?: ShipmentDGSignatoryInfo;
     /**
      *
      * @type {ShipmentShipmentRatingOptions}
      * @memberof ShipmentRequestShipment
      */
-    shipmentRatingOptions?: ShipmentShipmentRatingOptions;
+    ShipmentRatingOptions?: ShipmentShipmentRatingOptions;
     /**
      * Movement Reference Number (MRN) information.  Must contain alphanumeric characters only. Must be a length of 18 characters. The 3rd and 4th Characters must be the Shipper country or territory ISO Code.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    movementReferenceNumber?: string;
+    MovementReferenceNumber?: string;
     /**
      *
      * @type {ShipmentReferenceNumber}
      * @memberof ShipmentRequestShipment
      */
-    referenceNumber?: ShipmentReferenceNumber;
+    ReferenceNumber?: ShipmentReferenceNumber;
     /**
      *
      * @type {ShipmentService}
      * @memberof ShipmentRequestShipment
      */
-    service: ShipmentService;
+    Service: ShipmentService;
     /**
      *
      * @type {ShipmentInvoiceLineTotal}
      * @memberof ShipmentRequestShipment
      */
-    invoiceLineTotal?: ShipmentInvoiceLineTotal;
+    InvoiceLineTotal?: ShipmentInvoiceLineTotal;
     /**
      * Total number of pieces in all pallets in a UPS Worldwide Express Freight Shipment.  It is required for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment. Valid values are 1 to 99999.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    numOfPiecesInShipment?: string;
+    NumOfPiecesInShipment?: string;
     /**
      * USPS Endorsement. Valid values:  1 = Return Service Requested  2 = Forwarding Service Requested  3 = Address Service Requested  4 = Change Service Requested and  5 = No Service Selected.  Note: For International Mail Innovations shipments use No Service Selected. International Mail Innovations shipments are applicable for Priority Mail Innovations and Mail Innovations Economy Mail Innovations services only.  Required for Mail Innovations forward shipments.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    uSPSEndorsement?: string;
+    USPSEndorsement?: string;
     /**
      * Indicates single label with both MI label and CN22 form.  International CN22 form is required.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    mILabelCN22Indicator?: string;
+    MILabelCN22Indicator?: string;
     /**
      * A component encoded on the barcode of the Mail Innovations label.   Valid values:  IR = Irregular MA = Machineable SubClass is only required if the customer�s contract have them subclass the package not UPS.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    subClassification?: string;
+    SubClassification?: string;
     /**
      * Customer assigned identifier for report and billing summarization displays to the right of the Cost Center title.  Required for Mail Innovations Return shipments. It is shown on the bottom of the shipping label as reference 2.  Cost Center length is alphanumeric with a max length of 30 for Mail Innovations forward shipments.  Cost Center length is numeric with a max length of 4 for Mail Innovations Return shipments.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    costCenter?: string;
+    CostCenter?: string;
     /**
      * Presence/Absence indicator. Presence of this indicator means that the customer is requesting for the CostCenter field to be barcoded at the bottom of the label.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    costCenterBarcodeIndicator?: string;
+    CostCenterBarcodeIndicator?: string;
     /**
      * Customer-assigned unique piece identifier that returns visibility events.  Required only for Mail Innovations forward shipments. Alpha numeric values only. It is shown on the bottom of the shipping label as reference 1.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    packageID?: string;
+    PackageID?: string;
     /**
      * Presence/Absence indicator. Presence of this indicator means that the customer is requesting for the PackageID field to be barcoded at the bottom of the label.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    packageIDBarcodeIndicator?: string;
+    PackageIDBarcodeIndicator?: string;
     /**
      * Mail classification defined by the USPS.   Valid values:  1 = Balloon 2 = Oversize 3 = Not Applicable
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    irregularIndicator?: string;
+    IrregularIndicator?: string;
     /**
      *
      * @type {Array<ShipmentShipmentIndicationType>}
      * @memberof ShipmentRequestShipment
      */
-    shipmentIndicationType?: Array<ShipmentShipmentIndicationType>;
+    ShipmentIndicationType?: Array<ShipmentShipmentIndicationType>;
     /**
      * MIDualReturnShipmentKey is unique key required to process Mail Innovations Dual Return Shipment.   The unique identifier (key) would be returned in response of first phase of Mail Innovations Dual Return Shipments.   This unique identifier (key) would be part of request for second phase of Mail Innovations Dual Return Shipments.  Format:  For Package return shipments, the package tracking number is concatenated with the system time (YYYY-MM-DDHH.MM.SS.NNN), followed by service code.   For MI Return shipments, the Mail Manifest ID (MMI) is concatenated with the system time.  The unique identifier (key) is required to link the package and the Mail Innovations portion of Dual Return shipment.   If unique identifier (key) is empty in the request for UPS Mail Innovations Return Service, the request will be treated as the first phase of the Mail Innovations Dual Returns Request.   If the MIDualReturnShipmentIndicator is present with empty or null MIDualReturnShipmentKey in UPS Package Return Shipment, the request will be treated as the first phase of Dual MI Return Label Shipment.   This field would be ignored if MIDualReturnShipmentIndicator is not present in UPS Package Return Shipment request.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    mIDualReturnShipmentKey?: string;
+    MIDualReturnShipmentKey?: string;
     /**
      * MIDualReturnShipmentIndicator is an indicator to identify a Package Shipment is part of UPS Mail Innovations Dual Label Shipment.   Its presence means Package Shipment is part of UPS Mail Innovations Dual Label shipment.  If the indicator is present in Package Shipment request, shipment would be considered as part of a Dual Mail Innovations Returns.   This indicator is not valid with UPS Mail Innovations Returns Service code.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    mIDualReturnShipmentIndicator?: string;
+    MIDualReturnShipmentIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. RatingMethodRequestedIndicator is an indicator. If present, Billable Weight Calculation method information and Rating Method information would be returned in response.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    ratingMethodRequestedIndicator?: string;
+    RatingMethodRequestedIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. TaxInformationIndicator is an indicator. If present, any taxes that may be applicable to a shipment would be returned in response. If this indicator is requested with NegotiatedRatesIndicator, Tax related information, if applicable, would be returned only for Negotiated Rates and not for Published Rates. The Tax related information includes any type of Taxes, corresponding Monetary Values, Total Charges with Taxes and disclaimers (if applicable) would be returned in response.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    taxInformationIndicator?: string;
+    TaxInformationIndicator?: string;
     /**
      *
      * @type {ShipmentShipmentServiceOptions}
      * @memberof ShipmentRequestShipment
      */
-    shipmentServiceOptions?: ShipmentShipmentServiceOptions;
+    ShipmentServiceOptions?: ShipmentShipmentServiceOptions;
     /**
      * Represents 5 character ISO Locale that allows the user to request Reference Number Code on Label, Label instructions and Receipt instructions (if applicable) in desired language.  Locale is specified by the combination of language code and country or territory code - 2 character language code and 2 character country or territory code seperated by an underscore ('_') character.  If Locale element is requested along with LabelLinksIndicator, the URL to retrieve Label and Receipts (if applicable) will be returned in the requested Locale. Please note only LabelURL and ReceiptURL (if applicable) will be returned. LocalLanguageLabelURL and LocalLanguageReceiptURL will not be returned if Locale element is present in request. Queen�s English (en_GB) is the default
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    locale?: string;
+    Locale?: string;
     /**
      * Shipment Value Threshold Code.                                                      01 = Shipment value is below or equals to threshold value 02 = Shipment value is above threshold value.     NA = Not Applicable
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    shipmentValueThresholdCode?: string;
+    ShipmentValueThresholdCode?: string;
     /**
      * Master Carton ID.                                              If Economy Service (17 or 72) : Economy Shipment will be associated with given Master Carton ID.                                                                          If Non-Economy Service: Master Carton Shipment will be created for given Master Carton ID.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    masterCartonID?: string;
+    MasterCartonID?: string;
     /**
      * Master Carton Indicator. Presence of the indicator means Master Carton ID will be created and returned to client.  This is an empty tag, any value inside is ignored.                                                                  MasterCartonIndicator is only valid with Econmoy Shipment (Service Code 17 or 72). Will be ignored if master carton id present.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    masterCartonIndicator?: string;
+    MasterCartonIndicator?: string;
     /**
      * Bar Code Image Indicator. Presence of this indicator means only bar code image will be created and returned to client. Shipping Label wont be returned when bar code image is returned.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    barCodeImageIndicator?: string;
+    BarCodeImageIndicator?: string;
     /**
      * Bar Code And Label Indicator. Presence of this indicator means both bar code image and shipping label will be returned.
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    barCodeAndLabelIndicator?: string;
+    BarCodeAndLabelIndicator?: string;
     /**
      * User can send up to 7 days in the future with current date as day zero. Format: YYYYMMDD
      * @type {string}
      * @memberof ShipmentRequestShipment
      */
-    shipmentDate?: string;
+    ShipmentDate?: string;
     /**
      *
      * @type {Array<ShipmentPackage>}
      * @memberof ShipmentRequestShipment
      */
-    _package: Array<ShipmentPackage>;
+    _Package: Array<ShipmentPackage>;
 }
 /**
  * Shipment Response.
@@ -6713,13 +6713,13 @@ export interface ShipmentResponse {
      * @type {ShipmentResponseResponse}
      * @memberof ShipmentResponse
      */
-    response: ShipmentResponseResponse;
+    Response: ShipmentResponseResponse;
     /**
      *
      * @type {ShipmentResponseShipmentResults}
      * @memberof ShipmentResponse
      */
-    shipmentResults: ShipmentResponseShipmentResults;
+    ShipmentResults: ShipmentResponseShipmentResults;
 }
 /**
  * Response container for Shipment response.
@@ -6732,19 +6732,19 @@ export interface ShipmentResponseResponse {
      * @type {ResponseResponseStatus}
      * @memberof ShipmentResponseResponse
      */
-    responseStatus: ResponseResponseStatus;
+    ResponseStatus: ResponseResponseStatus;
     /**
      *
      * @type {ResponseAlert}
      * @memberof ShipmentResponseResponse
      */
-    alert?: ResponseAlert;
+    Alert?: ResponseAlert;
     /**
      *
      * @type {ResponseTransactionReference}
      * @memberof ShipmentResponseResponse
      */
-    transactionReference?: ResponseTransactionReference;
+    TransactionReference?: ResponseTransactionReference;
 }
 /**
  * Shipment Results container.
@@ -6757,133 +6757,133 @@ export interface ShipmentResponseShipmentResults {
      * @type {Array<ShipmentResultsDisclaimer>}
      * @memberof ShipmentResponseShipmentResults
      */
-    disclaimer?: Array<ShipmentResultsDisclaimer>;
+    Disclaimer?: Array<ShipmentResultsDisclaimer>;
     /**
      *
      * @type {ShipmentResultsShipmentCharges}
      * @memberof ShipmentResponseShipmentResults
      */
-    shipmentCharges?: ShipmentResultsShipmentCharges;
+    ShipmentCharges?: ShipmentResultsShipmentCharges;
     /**
      *
      * @type {ShipmentResultsNegotiatedRateCharges}
      * @memberof ShipmentResponseShipmentResults
      */
-    negotiatedRateCharges?: ShipmentResultsNegotiatedRateCharges;
+    NegotiatedRateCharges?: ShipmentResultsNegotiatedRateCharges;
     /**
      *
      * @type {ShipmentResultsFRSShipmentData}
      * @memberof ShipmentResponseShipmentResults
      */
-    fRSShipmentData?: ShipmentResultsFRSShipmentData;
+    FRSShipmentData?: ShipmentResultsFRSShipmentData;
     /**
      * RatingMethod is to indicate whether the Shipment was rated as shipment level or package level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values: 01 = Shipment level 02 = Package level
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    ratingMethod?: string;
+    RatingMethod?: string;
     /**
      * BillableWeightCalculationMethod is to indicate whether the billable weight calculation method utilized was - the package level or shipment level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values: 01 = Shipment Billable Weight 02 = Package Billable Weight
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    billableWeightCalculationMethod?: string;
+    BillableWeightCalculationMethod?: string;
     /**
      *
      * @type {ShipmentResultsBillingWeight}
      * @memberof ShipmentResponseShipmentResults
      */
-    billingWeight: ShipmentResultsBillingWeight;
+    BillingWeight: ShipmentResultsBillingWeight;
     /**
      * Returned UPS shipment ID number.1Z Number of the first package in the shipment.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    shipmentIdentificationNumber?: string;
+    ShipmentIdentificationNumber?: string;
     /**
      * MIDualReturnShipmentKey is unique key required to process Mail Innovations Dual Return Shipment.   The unique identifier (key) would be returned in response of first phase of Mail Innovations Dual Return Shipments.   This unique identifier (key) would be part of request for second phase of Mail Innovations Dual Return Shipments and would be played back in response for second phase of Mail Innovations Dual Return Shipment.  If the shipment is a Package return shipment, the package tracking number will be concatenated with the system time (in the format YYYY-MM-DDHH.MM.SS.NNN) and followed by service code.   If the shipment is an MI Returns shipment, the Mail Manifest ID (MMI) will be concatenated with the system time.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    mIDualReturnShipmentKey?: string;
+    MIDualReturnShipmentKey?: string;
     /**
      * Bar Code Image will be returned as Base 64 encoded graphic image. Bar Code Image will be returned if BarCodeImageIndicator or BarCodeAndLabelIndicator is present.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    barCodeImage?: string;
+    BarCodeImage?: string;
     /**
      *
      * @type {Array<ShipmentResultsPackageResults>}
      * @memberof ShipmentResponseShipmentResults
      */
-    packageResults?: Array<ShipmentResultsPackageResults>;
+    PackageResults?: Array<ShipmentResultsPackageResults>;
     /**
      *
      * @type {Array<ShipmentResultsControlLogReceipt>}
      * @memberof ShipmentResponseShipmentResults
      */
-    controlLogReceipt?: Array<ShipmentResultsControlLogReceipt>;
+    ControlLogReceipt?: Array<ShipmentResultsControlLogReceipt>;
     /**
      *
      * @type {ShipmentResultsForm}
      * @memberof ShipmentResponseShipmentResults
      */
-    form?: ShipmentResultsForm;
+    Form?: ShipmentResultsForm;
     /**
      *
      * @type {ShipmentResultsCODTurnInPage}
      * @memberof ShipmentResponseShipmentResults
      */
-    cODTurnInPage?: ShipmentResultsCODTurnInPage;
+    CODTurnInPage?: ShipmentResultsCODTurnInPage;
     /**
      *
      * @type {ShipmentResultsHighValueReport}
      * @memberof ShipmentResponseShipmentResults
      */
-    highValueReport?: ShipmentResultsHighValueReport;
+    HighValueReport?: ShipmentResultsHighValueReport;
     /**
      * URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LabelURL is returned only if the LabelLinksIndicator is requested for following shipments: Print/Electronic ImportControl shipment Print/Electronic Return shipment.  Forward shipment except for Mail Innovations Forward.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    labelURL?: string;
+    LabelURL?: string;
     /**
      * URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LocalLanguageLabelURL is returned only if the LabelLinksIndicator is requested for following shipments: Print/Electronic ImportControl shipment Print/Electronic Return shipment.  Forward shipment except for Mail Innovations Forward.  Not returned if LabelLinksIndicator is requested with Locale element.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    localLanguageLabelURL?: string;
+    LocalLanguageLabelURL?: string;
     /**
      * URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. ReceiptURL is returned only if the LabelLinksIndicator is requested for following shipments: Print/Electronic ImportControl shipment Print/Electronic Return shipment.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    receiptURL?: string;
+    ReceiptURL?: string;
     /**
      * URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LocalLanguageReceiptURL is returned only if the LabelLinksIndicator is requested for following shipments: Print/Electronic ImportControl shipment Print/Electronic Return shipment.   Not returned if LabelLinksIndicator is requested with Locale element.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    localLanguageReceiptURL?: string;
+    LocalLanguageReceiptURL?: string;
     /**
      * Dangrous Good Paper Image in pdf format. One multipage PDF document will be returned that will contain all required Dangrous Goods shipping paper copies for all Dangerous Goods packages.  Only returned when DGSignatoryInfo is present.
      * @type {Array<string>}
      * @memberof ShipmentResponseShipmentResults
      */
-    dGPaperImage?: Array<string>;
+    DGPaperImage?: Array<string>;
     /**
      * Master Carton ID. MasterCartonID will be return if MasterCartonIndicator is present in request.
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    masterCartonID?: string;
+    MasterCartonID?: string;
     /**
      * Informational only
      * @type {string}
      * @memberof ShipmentResponseShipmentResults
      */
-    roarRatedIndicator?: string;
+    RoarRatedIndicator?: string;
 }
 /**
  * BillableWeightCalculationMethod is to indicate whether the billable weight calculation method utilized was - the package level or shipment level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values: 01 = Shipment Billable Weight 02 = Package Billable Weight
@@ -6901,13 +6901,13 @@ export interface ShipmentResultsBillingWeight {
      * @type {BillingWeightUnitOfMeasurement}
      * @memberof ShipmentResultsBillingWeight
      */
-    unitOfMeasurement: BillingWeightUnitOfMeasurement;
+    UnitOfMeasurement: BillingWeightUnitOfMeasurement;
     /**
      * Billing weight. Higher of the actual shipment weight versus the shipment dimensional weight.  When using a negotiated divisor different from the published UPS divisor (139 for inches and 5,000 for cm), the weight returned is based on the published divisor. Rates, however, are based on the negotiated divisor.
      * @type {string}
      * @memberof ShipmentResultsBillingWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * The container of the COD Turn In Page.    Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -6920,7 +6920,7 @@ export interface ShipmentResultsCODTurnInPage {
      * @type {CODTurnInPageImage}
      * @memberof ShipmentResultsCODTurnInPage
      */
-    image: CODTurnInPageImage;
+    Image: CODTurnInPageImage;
 }
 /**
  * Container for the High Value reports when forward shipments have declared value between $999 and $50,000 USD.�  Two copies of high value report needs to be pointed out.    Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -6933,13 +6933,13 @@ export interface ShipmentResultsControlLogReceipt {
      * @type {ControlLogReceiptImageFormat}
      * @memberof ShipmentResultsControlLogReceipt
      */
-    imageFormat: ControlLogReceiptImageFormat;
+    ImageFormat: ControlLogReceiptImageFormat;
     /**
      * Base 64 encoded html, EPL2, ZPL or SPL image.�     Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof ShipmentResultsControlLogReceipt
      */
-    graphicImage: string;
+    GraphicImage: string;
 }
 /**
  * Dangrous Good Paper Image in pdf format. One multipage PDF document will be returned that will contain all required Dangrous Goods shipping paper copies for all Dangerous Goods packages.  Only returned when DGSignatoryInfo is present.
@@ -6957,13 +6957,13 @@ export interface ShipmentResultsDisclaimer {
      * @type {string}
      * @memberof ShipmentResultsDisclaimer
      */
-    code: string;
+    Code: string;
     /**
      * Disclaimer description.   This field would be returned only if TaxInformationIndicator is present in a request.  Refer to Disclaimer Codes and Messages in the Appendix for various disclaimers that would be possible for a given shipment.
      * @type {string}
      * @memberof ShipmentResultsDisclaimer
      */
-    description: string;
+    Description: string;
 }
 /**
  * Ground Freight Pricing Shipment data container. Ground Freight Pricing shipment data is only guaranteed to be returned for Ground Freight Pricing shipments only.
@@ -6976,19 +6976,19 @@ export interface ShipmentResultsFRSShipmentData {
      * @type {FRSShipmentDataTransportationCharges}
      * @memberof ShipmentResultsFRSShipmentData
      */
-    transportationCharges: FRSShipmentDataTransportationCharges;
+    TransportationCharges: FRSShipmentDataTransportationCharges;
     /**
      *
      * @type {FRSShipmentDataFreightDensityRate}
      * @memberof ShipmentResultsFRSShipmentData
      */
-    freightDensityRate?: FRSShipmentDataFreightDensityRate;
+    FreightDensityRate?: FRSShipmentDataFreightDensityRate;
     /**
      *
      * @type {Array<FRSShipmentDataHandlingUnits>}
      * @memberof ShipmentResultsFRSShipmentData
      */
-    handlingUnits?: Array<FRSShipmentDataHandlingUnits>;
+    HandlingUnits?: Array<FRSShipmentDataHandlingUnits>;
 }
 /**
  * Container tag for the International forms image.   Form is returned for following shipments - Forward shipments, Shipments with PRL ReturnService, Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.
@@ -7001,31 +7001,31 @@ export interface ShipmentResultsForm {
      * @type {string}
      * @memberof ShipmentResultsForm
      */
-    code: string;
+    Code: string;
     /**
      * Description that indicates the type of form. Possible Values. All Requested International Forms.     Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof ShipmentResultsForm
      */
-    description: string;
+    Description: string;
     /**
      *
      * @type {FormImage}
      * @memberof ShipmentResultsForm
      */
-    image?: FormImage;
+    Image?: FormImage;
     /**
      * Unique Id for later retrieval of saved version of the completed international forms. Always returned when code = 01. 01 represents international forms.     Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof ShipmentResultsForm
      */
-    formGroupId?: string;
+    FormGroupId?: string;
     /**
      * Contains description text which identifies the group of International forms. This element is part of both request and response. This element does not appear on the forms.    Applicable only for ShipmentResponse and ShipAcceptResponse.
      * @type {string}
      * @memberof ShipmentResultsForm
      */
-    formGroupIdName?: string;
+    FormGroupIdName?: string;
 }
 /**
  * Container for the High Value Report generated for ImportControl or Return shipments with high package declared value.  Applicable for one pass ShipmentResponse and two-pass ShipAcceptResponse
@@ -7038,7 +7038,7 @@ export interface ShipmentResultsHighValueReport {
      * @type {HighValueReportImage}
      * @memberof ShipmentResultsHighValueReport
      */
-    image: HighValueReportImage;
+    Image: HighValueReportImage;
 }
 /**
  * URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LabelURL is returned only if the LabelLinksIndicator is requested for following shipments: Print/Electronic ImportControl shipment Print/Electronic Return shipment.  Forward shipment except for Mail Innovations Forward.
@@ -7076,25 +7076,25 @@ export interface ShipmentResultsNegotiatedRateCharges {
      * @type {Array<NegotiatedRateChargesItemizedCharges>}
      * @memberof ShipmentResultsNegotiatedRateCharges
      */
-    itemizedCharges?: Array<NegotiatedRateChargesItemizedCharges>;
+    ItemizedCharges?: Array<NegotiatedRateChargesItemizedCharges>;
     /**
      *
      * @type {Array<NegotiatedRateChargesTaxCharges>}
      * @memberof ShipmentResultsNegotiatedRateCharges
      */
-    taxCharges?: Array<NegotiatedRateChargesTaxCharges>;
+    TaxCharges?: Array<NegotiatedRateChargesTaxCharges>;
     /**
      *
      * @type {NegotiatedRateChargesTotalCharge}
      * @memberof ShipmentResultsNegotiatedRateCharges
      */
-    totalCharge?: NegotiatedRateChargesTotalCharge;
+    TotalCharge?: NegotiatedRateChargesTotalCharge;
     /**
      *
      * @type {NegotiatedRateChargesTotalChargesWithTaxes}
      * @memberof ShipmentResultsNegotiatedRateCharges
      */
-    totalChargesWithTaxes?: NegotiatedRateChargesTotalChargesWithTaxes;
+    TotalChargesWithTaxes?: NegotiatedRateChargesTotalChargesWithTaxes;
 }
 /**
  * Returned Package Information.   Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -7107,73 +7107,73 @@ export interface ShipmentResultsPackageResults {
      * @type {string}
      * @memberof ShipmentResultsPackageResults
      */
-    trackingNumber: string;
+    TrackingNumber: string;
     /**
      *
      * @type {PackageResultsRateModifier}
      * @memberof ShipmentResultsPackageResults
      */
-    rateModifier?: PackageResultsRateModifier;
+    RateModifier?: PackageResultsRateModifier;
     /**
      *
      * @type {PackageResultsBaseServiceCharge}
      * @memberof ShipmentResultsPackageResults
      */
-    baseServiceCharge?: PackageResultsBaseServiceCharge;
+    BaseServiceCharge?: PackageResultsBaseServiceCharge;
     /**
      *
      * @type {PackageResultsServiceOptionsCharges}
      * @memberof ShipmentResultsPackageResults
      */
-    serviceOptionsCharges?: PackageResultsServiceOptionsCharges;
+    ServiceOptionsCharges?: PackageResultsServiceOptionsCharges;
     /**
      *
      * @type {PackageResultsShippingLabel}
      * @memberof ShipmentResultsPackageResults
      */
-    shippingLabel?: PackageResultsShippingLabel;
+    ShippingLabel?: PackageResultsShippingLabel;
     /**
      *
      * @type {PackageResultsShippingReceipt}
      * @memberof ShipmentResultsPackageResults
      */
-    shippingReceipt?: PackageResultsShippingReceipt;
+    ShippingReceipt?: PackageResultsShippingReceipt;
     /**
      * USPSPICNumber is USPS Package Identification; it should be used for tracking Mail Innovations shipments.
      * @type {string}
      * @memberof ShipmentResultsPackageResults
      */
-    uSPSPICNumber?: string;
+    USPSPICNumber?: string;
     /**
      * USPS defined CN22 ID number format varies based on destination country or territory.  Not applicable as of Jan 2015.  Mail Innovations shipments US to VI, PR, and GU are not considered international.
      * @type {string}
      * @memberof ShipmentResultsPackageResults
      */
-    cN22Number?: string;
+    CN22Number?: string;
     /**
      *
      * @type {Array<PackageResultsAccessorial>}
      * @memberof ShipmentResultsPackageResults
      */
-    accessorial?: Array<PackageResultsAccessorial>;
+    Accessorial?: Array<PackageResultsAccessorial>;
     /**
      *
      * @type {PackageResultsForm}
      * @memberof ShipmentResultsPackageResults
      */
-    form?: PackageResultsForm;
+    Form?: PackageResultsForm;
     /**
      *
      * @type {Array<PackageResultsItemizedCharges>}
      * @memberof ShipmentResultsPackageResults
      */
-    itemizedCharges?: Array<PackageResultsItemizedCharges>;
+    ItemizedCharges?: Array<PackageResultsItemizedCharges>;
     /**
      *
      * @type {PackageResultsNegotiatedCharges}
      * @memberof ShipmentResultsPackageResults
      */
-    negotiatedCharges?: PackageResultsNegotiatedCharges;
+    NegotiatedCharges?: PackageResultsNegotiatedCharges;
 }
 /**
  * RatingMethod is to indicate whether the Shipment was rated as shipment level or package level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values: 01 = Shipment level 02 = Package level
@@ -7196,49 +7196,49 @@ export interface ShipmentResultsShipmentCharges {
      * @type {string}
      * @memberof ShipmentResultsShipmentCharges
      */
-    rateChart?: string;
+    RateChart?: string;
     /**
      *
      * @type {ShipmentChargesBaseServiceCharge}
      * @memberof ShipmentResultsShipmentCharges
      */
-    baseServiceCharge?: ShipmentChargesBaseServiceCharge;
+    BaseServiceCharge?: ShipmentChargesBaseServiceCharge;
     /**
      *
      * @type {ShipmentChargesTransportationCharges}
      * @memberof ShipmentResultsShipmentCharges
      */
-    transportationCharges: ShipmentChargesTransportationCharges;
+    TransportationCharges: ShipmentChargesTransportationCharges;
     /**
      *
      * @type {Array<ShipmentChargesItemizedCharges>}
      * @memberof ShipmentResultsShipmentCharges
      */
-    itemizedCharges?: Array<ShipmentChargesItemizedCharges>;
+    ItemizedCharges?: Array<ShipmentChargesItemizedCharges>;
     /**
      *
      * @type {ShipmentChargesServiceOptionsCharges}
      * @memberof ShipmentResultsShipmentCharges
      */
-    serviceOptionsCharges: ShipmentChargesServiceOptionsCharges;
+    ServiceOptionsCharges: ShipmentChargesServiceOptionsCharges;
     /**
      *
      * @type {Array<ShipmentChargesTaxCharges>}
      * @memberof ShipmentResultsShipmentCharges
      */
-    taxCharges?: Array<ShipmentChargesTaxCharges>;
+    TaxCharges?: Array<ShipmentChargesTaxCharges>;
     /**
      *
      * @type {ShipmentChargesTotalCharges}
      * @memberof ShipmentResultsShipmentCharges
      */
-    totalCharges: ShipmentChargesTotalCharges;
+    TotalCharges: ShipmentChargesTotalCharges;
     /**
      *
      * @type {ShipmentChargesTotalChargesWithTaxes}
      * @memberof ShipmentResultsShipmentCharges
      */
-    totalChargesWithTaxes?: ShipmentChargesTotalChargesWithTaxes;
+    TotalChargesWithTaxes?: ShipmentChargesTotalChargesWithTaxes;
 }
 /**
  * Returned UPS shipment ID number.1Z Number of the first package in the shipment.
@@ -7256,13 +7256,13 @@ export interface ShipmentReturnService {
      * @type {string}
      * @memberof ShipmentReturnService
      */
-    code: string;
+    Code: string;
     /**
      * Return Service description.
      * @type {string}
      * @memberof ShipmentReturnService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * UPS service type.
@@ -7275,13 +7275,13 @@ export interface ShipmentService {
      * @type {string}
      * @memberof ShipmentService
      */
-    code: string;
+    Code: string;
     /**
      * Description of the service code. Examples are Next Day Air, Worldwide Express, and Ground.
      * @type {string}
      * @memberof ShipmentService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Access Point COD indicates COD is requested for a shipment.  Valid only for \"01 - Hold For Pickup At UPS Access Point\" Shipment Indication type. Shipment Access Point COD is valid only for countries or territories within E.U.  Not valid with (Shipment) COD.  Not available to shipment with return service.
@@ -7294,13 +7294,13 @@ export interface ShipmentServiceOptionsAccessPointCOD {
      * @type {string}
      * @memberof ShipmentServiceOptionsAccessPointCOD
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Access Point COD Monetary Value.
      * @type {string}
      * @memberof ShipmentServiceOptionsAccessPointCOD
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * COD container  Indicates COD is requested. Shipment COD is only available for EU origin countries or territories and for shippers account type Daily Pickup and Drop Shipping. Not available to shipment with return service.
@@ -7313,13 +7313,13 @@ export interface ShipmentServiceOptionsCOD {
      * @type {string}
      * @memberof ShipmentServiceOptionsCOD
      */
-    cODFundsCode: string;
+    CODFundsCode: string;
     /**
      *
      * @type {CODCODAmount}
      * @memberof ShipmentServiceOptionsCOD
      */
-    cODAmount: CODCODAmount;
+    CODAmount: CODCODAmount;
 }
 /**
  * CommercialInvoiceRemovalIndicator allows a shipper to dictate UPS to remove the Commercial Invoice from the user's shipment before the shipment is delivered to the ultimate consignee.
@@ -7342,13 +7342,13 @@ export interface ShipmentServiceOptionsDeliveryConfirmation {
      * @type {string}
      * @memberof ShipmentServiceOptionsDeliveryConfirmation
      */
-    dCISType: string;
+    DCISType: string;
     /**
      * Delivery Confirmation Control number associated with the delivery confirmation for the package.  Valid for forward shipments only.
      * @type {string}
      * @memberof ShipmentServiceOptionsDeliveryConfirmation
      */
-    dCISNumber?: string;
+    DCISNumber?: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. Direct Delivery Only (DDO) accessorial in a request would ensure that delivery is made only to the ship to address on the shipping label.  This accessorial is not valid with Shipment Indication Type \"01 - Hold For Pickup At UPS Access Point\" and \"02 - UPS Access Point� Delivery\".
@@ -7396,235 +7396,235 @@ export interface ShipmentServiceOptionsInternationalForms {
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    formType: string;
+    FormType: string;
     /**
      *
      * @type {InternationalFormsUserCreatedForm}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    userCreatedForm?: InternationalFormsUserCreatedForm;
+    UserCreatedForm?: InternationalFormsUserCreatedForm;
     /**
      *
      * @type {InternationalFormsUPSPremiumCareForm}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    uPSPremiumCareForm?: InternationalFormsUPSPremiumCareForm;
+    UPSPremiumCareForm?: InternationalFormsUPSPremiumCareForm;
     /**
      *
      * @type {InternationalFormsCN22Form}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    cN22Form?: InternationalFormsCN22Form;
+    CN22Form?: InternationalFormsCN22Form;
     /**
      * Presence of the indicator means user will supply additional document, such as EEI, NAFTA_CO or CO.  This indicator should be set when the shipper intends to utilize UPS paperless invoice functionality AND the shipper has SELF-PREPARED other International Forms (EEI, CO, NAFTACO) to accompany the shipment.  It is evaluated only when:  1. Account is paperless enabled.  2. Movement requires an invoice. 3. Destination country or territory accepts paperless invoice.  4. Invoice data is supplied by the client and the data passes validation.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    additionalDocumentIndicator?: string;
+    AdditionalDocumentIndicator?: string;
     /**
      * Contains description text which identifies the group of International forms. This element does not appear on the forms.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    formGroupIdName?: string;
+    FormGroupIdName?: string;
     /**
      *
      * @type {InternationalFormsEEIFilingOption}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    eEIFilingOption?: InternationalFormsEEIFilingOption;
+    EEIFilingOption?: InternationalFormsEEIFilingOption;
     /**
      *
      * @type {InternationalFormsContacts}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    contacts?: InternationalFormsContacts;
+    Contacts?: InternationalFormsContacts;
     /**
      *
      * @type {InternationalFormsProduct}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    product: InternationalFormsProduct;
+    Product: InternationalFormsProduct;
     /**
      * Commercial Invoice number assigned by the exporter.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and optional for Partial Invoice.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    invoiceNumber?: string;
+    InvoiceNumber?: string;
     /**
      * Date when the Invoice is created. Ideally this is the same as the ship date.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and optional for Partial Invoice. Required for Invoice form for forward shipments. For shipment with return service, the user input will be ignored, and the field will be blank on the invoice. Format is yyyyMMdd.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    invoiceDate?: string;
+    InvoiceDate?: string;
     /**
      * The customer's order reference number.  Applies to Invoice and Partial Invoice forms only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    purchaseOrderNumber?: string;
+    PurchaseOrderNumber?: string;
     /**
      * Indicates the rights to the seller from the buyer. Also, it refers to Terms of Sale.  Applies to Invoice and Partial Invoice forms only.   Valid values:  CFR: Cost and Freight  CIF: Cost Insurance and Freight  CIP: Carriage and Insurance Paid  CPT: Carriage Paid To  DAF: Delivered at Frontier  DDP: Delivery Duty Paid  DDU: Delivery Duty Unpaid  DEQ: Delivered Ex Quay  DES: Delivered Ex Ship  EXW: Ex Works  FAS: Free Alongside Ship  FCA: Free Carrier  FOB: Free On Board
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    termsOfShipment?: string;
+    TermsOfShipment?: string;
     /**
      * A reason to export the current international shipment. Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    reasonForExport?: string;
+    ReasonForExport?: string;
     /**
      * Any extra information about the current shipment.  Applies to Invoice and Partial Invoice forms only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    comments?: string;
+    Comments?: string;
     /**
      * This is the legal explanation, used by Customs, for the delivering of this shipment. It must be identical to the set of declarations actually used by Customs. Examples of declarations that might be entered in this field are: I hereby certify that the goods covered by this shipment qualify as originating goods for purposes of preferential tariff treatment under the NAFTA. I hereby certify that the information on this invoice is true and correct and the contents and value of this shipment is as stated above.  EEA statement:  The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin.  Applies to Invoice and Partial Invoice forms only. On the invoice for return shipment, the verbiage is as follows (user input is ignored): The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    declarationStatement?: string;
+    DeclarationStatement?: string;
     /**
      *
      * @type {InternationalFormsDiscount}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    discount?: InternationalFormsDiscount;
+    Discount?: InternationalFormsDiscount;
     /**
      *
      * @type {InternationalFormsFreightCharges}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    freightCharges?: InternationalFormsFreightCharges;
+    FreightCharges?: InternationalFormsFreightCharges;
     /**
      *
      * @type {InternationalFormsInsuranceCharges}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    insuranceCharges?: InternationalFormsInsuranceCharges;
+    InsuranceCharges?: InternationalFormsInsuranceCharges;
     /**
      *
      * @type {InternationalFormsOtherCharges}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    otherCharges?: InternationalFormsOtherCharges;
+    OtherCharges?: InternationalFormsOtherCharges;
     /**
      * Currency code for all the monetary values of the Invoice form.  Applies to Invoice and Partial Invoice forms only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    currencyCode?: string;
+    CurrencyCode?: string;
     /**
      *
      * @type {InternationalFormsBlanketPeriod}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    blanketPeriod?: InternationalFormsBlanketPeriod;
+    BlanketPeriod?: InternationalFormsBlanketPeriod;
     /**
      * The date the goods will be exiting the country or territory.  Applies to CO and EEI forms only. Required for CO and EEI forms. Format is yyyyMMdd.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    exportDate?: string;
+    ExportDate?: string;
     /**
      * The name of the carrier that is exporting the shipment. The vessels flag number should also be entered, if the carrier is a vessel.  Applies to CO and EEI forms only. Required for CO and EEI forms.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    exportingCarrier?: string;
+    ExportingCarrier?: string;
     /**
      * The four-character Standard Carrier Alpha Code (SCAC) for vessel, rail, and truck shipments. For air shipment, enter the two or three character International Air Transport Association (IATA) code.  Applies to EEI forms only. No Validations.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    carrierID?: string;
+    CarrierID?: string;
     /**
      * The two-character In Bond Code.  Applies to EEI forms only. Required for EEI forms. Valid values for EEI are: 70: Not in bond; 67: IE from a FTZ; 68: T&E from a FTZ.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    inBondCode?: string;
+    InBondCode?: string;
     /**
      * The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    entryNumber?: string;
+    EntryNumber?: string;
     /**
      * Contains one of the following:  The two-digit U.S. Postal Service abbreviation for the state from which the goods were shipped to the port of export. The state that is the source for the good with the highest value. The state of consolidation. The Foreign Trade Zone number of the zone from where the exports are leaving.  If the goods were shipped from Puerto Rico, enter PR.  Applies to EEI forms only. Required for EEI.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    pointOfOrigin?: string;
+    PointOfOrigin?: string;
     /**
      * Valid values are : S (for state postal code abbreviation) , F : FTZ Identifier  Applies EEI forms only. Required for EEI form.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    pointOfOriginType?: string;
+    PointOfOriginType?: string;
     /**
      * Mode of transport by which the goods are exported. Valid values: Air, AirContainerized, Auto, FixedTransportInstallations, Mail, PassengerHandcarried, Pedestrian, Rail, Rail, Containerized, RoadOther, SeaBarge, SeaContainerized, SeaNoncontainerized, Truck, TruckContainerized.  Applies to EEI forms only.  Required for EEI.  Only allowed values can be entered. Only 10 Characters can appear on the form. Anything greater than 10 characters will be truncated on the form.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    modeOfTransport?: string;
+    ModeOfTransport?: string;
     /**
      * Should be one of the following-Overland: The U.S. Customs port where the carrier crosses the U.S. border, Vessel and Air: The U.S. Customs port where the goods are loaded on the carrier to be exported from the U.S., Postal: The U.S. Postal Office from where the goods are mailed.  Applies to EEI forms only. No validation is performed.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    portOfExport?: string;
+    PortOfExport?: string;
     /**
      * The country or territory and the port where the goods will be unloaded from the exporting carrier. For vessel and air shipments only.  Applies to EEI forms only. No validation is performed.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    portOfUnloading?: string;
+    PortOfUnloading?: string;
     /**
      * Pier where goods are loaded. For vessel shipments only.  Applies to EEI forms only. No validation is performed.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    loadingPier?: string;
+    LoadingPier?: string;
     /**
      * Information about parties to transaction. Use Related, if the parties to the transaction are related. A related party is an export from a U.S. businessperson or business to a foreign business or from a U.S. business to a foreign person or business where the person has at least 10 percent of the voting shares of the business during the fiscal year. If unincorporated, then an equivalent interest in the business.  Applies to EEI forms only.   Valid values: R - Related, N - Non-related.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    partiesToTransaction?: string;
+    PartiesToTransaction?: string;
     /**
      * If Present, indicates that it is a routed export transaction. A routed export transaction is one, where the foreign principal party in interest authorizes a U.S. forwarding (or other) agent to export the merchandise outside the U.S.  Applies to EEI forms only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    routedExportTransactionIndicator?: string;
+    RoutedExportTransactionIndicator?: string;
     /**
      * If present indicates that the goods are containerized. This applies to vessel shipments only.  Applies to EEI forms only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    containerizedIndicator?: string;
+    ContainerizedIndicator?: string;
     /**
      * The application will automatically provide a copy of the invoice or NAFTA/CO with each response regardless of whether the user has enabled Paperless account. The user now has the option to print or ignore the copy provided.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    overridePaperlessIndicator?: string;
+    OverridePaperlessIndicator?: string;
     /**
      * Text for the shipper to add additional information.  Forward shipment only.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    shipperMemo?: string;
+    ShipperMemo?: string;
     /**
      * This is an empty tag. Presence of the indicator for EEI form means shipment contains hazardous material.
      * @type {string}
      * @memberof ShipmentServiceOptionsInternationalForms
      */
-    hazardousMaterialsIndicator?: string;
+    HazardousMaterialsIndicator?: string;
 }
 /**
  * Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service.
@@ -7642,13 +7642,13 @@ export interface ShipmentServiceOptionsLabelDelivery {
      * @type {LabelDeliveryEMail}
      * @memberof ShipmentServiceOptionsLabelDelivery
      */
-    eMail?: LabelDeliveryEMail;
+    EMail?: LabelDeliveryEMail;
     /**
      * Indicates the Label and Receipt URLs are to be returned in the XML response.
      * @type {string}
      * @memberof ShipmentServiceOptionsLabelDelivery
      */
-    labelLinksIndicator?: string;
+    LabelLinksIndicator?: string;
 }
 /**
  * Type of ImportControl Label. This container is applicable only for ImportControl shipments.  This container is applicable only for ImportControl shipments.
@@ -7661,13 +7661,13 @@ export interface ShipmentServiceOptionsLabelMethod {
      * @type {string}
      * @memberof ShipmentServiceOptionsLabelMethod
      */
-    code: string;
+    Code: string;
     /**
      * LabelMethod description.
      * @type {string}
      * @memberof ShipmentServiceOptionsLabelMethod
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Lift Gate For Delivery indicator. The empty tag means indicator is present.  Lift Gate for Delivery is not allowed with Hold For Pickup for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   When both Hold for Pickup and Drop Off At UPS Facility are selected, neither of the Lift Gate accessorial (Pick Up or Delivery) are allowed for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   This accessorial is only valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment.
@@ -7690,31 +7690,31 @@ export interface ShipmentServiceOptionsNotification {
      * @type {string}
      * @memberof ShipmentServiceOptionsNotification
      */
-    notificationCode: string;
+    NotificationCode: string;
     /**
      *
      * @type {NotificationEMail}
      * @memberof ShipmentServiceOptionsNotification
      */
-    eMail: NotificationEMail;
+    EMail: NotificationEMail;
     /**
      *
      * @type {NotificationVoiceMessage}
      * @memberof ShipmentServiceOptionsNotification
      */
-    voiceMessage?: NotificationVoiceMessage;
+    VoiceMessage?: NotificationVoiceMessage;
     /**
      *
      * @type {NotificationTextMessage}
      * @memberof ShipmentServiceOptionsNotification
      */
-    textMessage?: NotificationTextMessage;
+    TextMessage?: NotificationTextMessage;
     /**
      *
      * @type {NotificationLocale}
      * @memberof ShipmentServiceOptionsNotification
      */
-    locale?: NotificationLocale;
+    Locale?: NotificationLocale;
 }
 /**
  * This container is used for providing Pre-Alert Notifications to the consignee for UPS Exchange movements and Pack & Collect shipments.
@@ -7727,25 +7727,25 @@ export interface ShipmentServiceOptionsPreAlertNotification {
      * @type {PreAlertNotificationEMailMessage}
      * @memberof ShipmentServiceOptionsPreAlertNotification
      */
-    eMailMessage?: PreAlertNotificationEMailMessage;
+    EMailMessage?: PreAlertNotificationEMailMessage;
     /**
      *
      * @type {PreAlertNotificationVoiceMessage}
      * @memberof ShipmentServiceOptionsPreAlertNotification
      */
-    voiceMessage?: PreAlertNotificationVoiceMessage;
+    VoiceMessage?: PreAlertNotificationVoiceMessage;
     /**
      *
      * @type {PreAlertNotificationTextMessage}
      * @memberof ShipmentServiceOptionsPreAlertNotification
      */
-    textMessage?: PreAlertNotificationTextMessage;
+    TextMessage?: PreAlertNotificationTextMessage;
     /**
      *
      * @type {PreAlertNotificationLocale}
      * @memberof ShipmentServiceOptionsPreAlertNotification
      */
-    locale: PreAlertNotificationLocale;
+    Locale: PreAlertNotificationLocale;
 }
 /**
  * Restricted Articles container.
@@ -7758,43 +7758,43 @@ export interface ShipmentServiceOptionsRestrictedArticles {
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    diagnosticSpecimensIndicator?: string;
+    DiagnosticSpecimensIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Alcoholic Beverages  Shippers account needs to have a valid contract for Alcohol.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    alcoholicBeveragesIndicator?: string;
+    AlcoholicBeveragesIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Perishable items.  Shippers account needs to have a valid contract for Perishables.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    perishablesIndicator?: string;
+    PerishablesIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Plants  Shippers account needs to have a valid contract for Plants.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    plantsIndicator?: string;
+    PlantsIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Seeds.  Shippers account needs to have a valid contract for Seeds.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    seedsIndicator?: string;
+    SeedsIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Special Exception items.  Shippers account needs to have a valid contract for Special Exceptions.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    specialExceptionsIndicator?: string;
+    SpecialExceptionsIndicator?: string;
     /**
      * Presence/Absence Indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the package contains Tobacco  Shippers account needs to have a valid contract for Tobacco.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    tobaccoIndicator?: string;
+    TobaccoIndicator?: string;
 }
 /**
  * The flag indicates the ReturnOfDocument accessorial has been requested.  Valid for Poland to Poland forward shipment only.
@@ -7832,55 +7832,55 @@ export interface ShipmentShipFrom {
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    name: string;
+    Name: string;
     /**
      * The ship from Attention name.  35 characters are accepted, but for return Shipment only 30 characters will be printed on the label.  Required if ShipFrom tag is in the XML and Invoice or CO International forms is requested. If not present, will default to the Shipper Attention Name.
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      * Not applicable for ShipFrom.
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    companyDisplayableName?: string;
+    CompanyDisplayableName?: string;
     /**
      * Company�s Tax Identification Number at the pick up location.  Conditionally required if EEI form (International forms) is requested.  Applies to EEI Form only.
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    taxIdentificationNumber?: string;
+    TaxIdentificationNumber?: string;
     /**
      *
      * @type {ShipFromTaxIDType}
      * @memberof ShipmentShipFrom
      */
-    taxIDType?: ShipFromTaxIDType;
+    TaxIDType?: ShipFromTaxIDType;
     /**
      *
      * @type {ShipFromPhone}
      * @memberof ShipmentShipFrom
      */
-    phone?: ShipFromPhone;
+    Phone?: ShipFromPhone;
     /**
      * The Ship from fax number.  If Ship from country or territory is US 10 digits allowed, otherwise 1-15 digits allowed.
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    faxNumber?: string;
+    FaxNumber?: string;
     /**
      *
      * @type {ShipFromAddress}
      * @memberof ShipmentShipFrom
      */
-    address: ShipFromAddress;
+    Address: ShipFromAddress;
     /**
      *
      * @type {ShipFromVendorInfo}
      * @memberof ShipmentShipFrom
      */
-    vendorInfo?: ShipFromVendorInfo;
+    VendorInfo?: ShipFromVendorInfo;
 }
 /**
  * Ship To Container.
@@ -7893,55 +7893,55 @@ export interface ShipmentShipTo {
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    name: string;
+    Name: string;
     /**
      * Contact name at the consignee�s location.  Required for: UPS Next Day Air� Early service, and when ShipTo country or territory is different than ShipFrom country or territory.   Required if Invoice International form is requested.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      * Not applicable for ShipTo
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    companyDisplayableName?: string;
+    CompanyDisplayableName?: string;
     /**
      * Consignee�s tax identification number.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    taxIdentificationNumber?: string;
+    TaxIdentificationNumber?: string;
     /**
      *
      * @type {ShipToPhone}
      * @memberof ShipmentShipTo
      */
-    phone?: ShipToPhone;
+    Phone?: ShipToPhone;
     /**
      * Consignee�s fax number.  If ShipTo country or territory is US 10 digits allowed, otherwise 1-15 digits allowed.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    faxNumber?: string;
+    FaxNumber?: string;
     /**
      * Consignee�s email address.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    eMailAddress?: string;
+    EMailAddress?: string;
     /**
      *
      * @type {ShipToAddress}
      * @memberof ShipmentShipTo
      */
-    address: ShipToAddress;
+    Address: ShipToAddress;
     /**
      * Location ID is a unique identifier referring to a specific shipping/receiving location.  Location ID must be alphanumeric characters. All letters must be capitalized.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    locationID?: string;
+    LocationID?: string;
 }
 /**
  * Container for Shipment Indication Type.  Required to indicate whether shipment is \"Hold For Pickup At UPS Access Point\" for use by approved shippers to identify a UPS Access Point location as an alternate delivery option during shipment preparation or \"UPS Access Point� Delivery�, ship parcels directly to a UPS Access Point location for collection by the receiver.
@@ -7954,13 +7954,13 @@ export interface ShipmentShipmentIndicationType {
      * @type {string}
      * @memberof ShipmentShipmentIndicationType
      */
-    code: string;
+    Code: string;
     /**
      * Description for the code.
      * @type {string}
      * @memberof ShipmentShipmentIndicationType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * ShipmentRatingOptions container.
@@ -7973,31 +7973,31 @@ export interface ShipmentShipmentRatingOptions {
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    negotiatedRatesIndicator?: string;
+    NegotiatedRatesIndicator?: string;
     /**
      * Ground Freight Pricing Rates option indicator. If the Ground Freight Pricing Shipment indicator is enabled and Shipper number is authorized then Ground Freight Pricing�rates should be returned in the response.  The Shipper account number must be qualified to receive Ground Freight Pricing Density Based Shipment rates. Only the Shipper account number taken from /ShipmentRequest/Shipment/FRSPaymentInformation/AccountNumber is used when checking qualification for Ground Freight Pricing Density Based rates.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    fRSShipmentIndicator?: string;
+    FRSShipmentIndicator?: string;
     /**
      * RateChartIndicator, if present in request, response will contain RateChart element.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    rateChartIndicator?: string;
+    RateChartIndicator?: string;
     /**
      * This indicator applies for a third party (3P) / Freight collect (FC) shipment only.   For 3P/FC shipment if the shipper wishes to request for the negotiated rates of the third party then this indicator should be included in the request.   If authorized the 3P/FC negotiated rates will be applied to the shipment and rates will be returned in response.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    tPFCNegotiatedRatesIndicator?: string;
+    TPFCNegotiatedRatesIndicator?: string;
     /**
      * If this indicator is present user level discount will be applied to rates if applicable  Conditions checked: This indicator should be present Shipper number should not be present User should be eligible for user level discount
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    userLevelDiscountIndicator?: string;
+    UserLevelDiscountIndicator?: string;
 }
 /**
  * Container for Shipment Service Options.
@@ -8010,13 +8010,13 @@ export interface ShipmentShipmentServiceOptions {
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    saturdayDeliveryIndicator?: string;
+    SaturdayDeliveryIndicator?: string;
     /**
      * Saturday pickup indicator. The presence indicates Saturday pickup is requested and the absence indicates Saturday pickup is not requested.  This is an empty tag, any value inside is ignored.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    saturdayPickupIndicator?: string;
+    SaturdayPickupIndicator?: string;
     /**
      *
      * @type {ShipmentServiceOptionsCOD}
@@ -8028,139 +8028,139 @@ export interface ShipmentShipmentServiceOptions {
      * @type {ShipmentServiceOptionsAccessPointCOD}
      * @memberof ShipmentShipmentServiceOptions
      */
-    accessPointCOD?: ShipmentServiceOptionsAccessPointCOD;
+    AccessPointCOD?: ShipmentServiceOptionsAccessPointCOD;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. DeliverToAddresseeOnlyIndicator is shipper specified restriction that requires the addressee to be the one who takes final delivery of the \"Hold For PickUp at UPS Access Point\" package.� Presence of indicator means shipper restriction will apply to the shipment.  Only valid for Shipment Indication type \"01 - Hold For PickUp at UPS Access Point\".
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    deliverToAddresseeOnlyIndicator?: string;
+    DeliverToAddresseeOnlyIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. Direct Delivery Only (DDO) accessorial in a request would ensure that delivery is made only to the ship to address on the shipping label.  This accessorial is not valid with Shipment Indication Type \"01 - Hold For Pickup At UPS Access Point\" and \"02 - UPS Access Point� Delivery\".
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    directDeliveryOnlyIndicator?: string;
+    DirectDeliveryOnlyIndicator?: string;
     /**
      *
      * @type {Array<ShipmentServiceOptionsNotification>}
      * @memberof ShipmentShipmentServiceOptions
      */
-    notification?: Array<ShipmentServiceOptionsNotification>;
+    Notification?: Array<ShipmentServiceOptionsNotification>;
     /**
      *
      * @type {ShipmentServiceOptionsLabelDelivery}
      * @memberof ShipmentShipmentServiceOptions
      */
-    labelDelivery?: ShipmentServiceOptionsLabelDelivery;
+    LabelDelivery?: ShipmentServiceOptionsLabelDelivery;
     /**
      *
      * @type {ShipmentServiceOptionsInternationalForms}
      * @memberof ShipmentShipmentServiceOptions
      */
-    internationalForms?: ShipmentServiceOptionsInternationalForms;
+    InternationalForms?: ShipmentServiceOptionsInternationalForms;
     /**
      *
      * @type {ShipmentServiceOptionsDeliveryConfirmation}
      * @memberof ShipmentShipmentServiceOptions
      */
-    deliveryConfirmation?: ShipmentServiceOptionsDeliveryConfirmation;
+    DeliveryConfirmation?: ShipmentServiceOptionsDeliveryConfirmation;
     /**
      * The flag indicates the ReturnOfDocument accessorial has been requested.  Valid for Poland to Poland forward shipment only.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    returnOfDocumentIndicator?: string;
+    ReturnOfDocumentIndicator?: string;
     /**
      * Indicates that the Shipment is an ImportControl shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    importControlIndicator?: string;
+    ImportControlIndicator?: string;
     /**
      *
      * @type {ShipmentServiceOptionsLabelMethod}
      * @memberof ShipmentShipmentServiceOptions
      */
-    labelMethod?: ShipmentServiceOptionsLabelMethod;
+    LabelMethod?: ShipmentServiceOptionsLabelMethod;
     /**
      * CommercialInvoiceRemovalIndicator allows a shipper to dictate UPS to remove the Commercial Invoice from the user's shipment before the shipment is delivered to the ultimate consignee.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    commercialInvoiceRemovalIndicator?: string;
+    CommercialInvoiceRemovalIndicator?: string;
     /**
      * UPS carbon neutral indicator presence at shipment level is required to create carbon neutral Shipments.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    uPScarbonneutralIndicator?: string;
+    UPScarbonneutralIndicator?: string;
     /**
      *
      * @type {Array<ShipmentServiceOptionsPreAlertNotification>}
      * @memberof ShipmentShipmentServiceOptions
      */
-    preAlertNotification?: Array<ShipmentServiceOptionsPreAlertNotification>;
+    PreAlertNotification?: Array<ShipmentServiceOptionsPreAlertNotification>;
     /**
      * Exchange forward indicator presence at shipment level is required to create exchange forward Shipments.  In the label routing Instruction text will be defaulted to \"EXCHANGE-LIKE ITEM ONLY\".
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    exchangeForwardIndicator?: string;
+    ExchangeForwardIndicator?: string;
     /**
      * Hold For Pickup indicator. The empty tag means indicator is present.  This accessorial is only valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    holdForPickupIndicator?: string;
+    HoldForPickupIndicator?: string;
     /**
      * Drop off At UPS Facility indicator. The empty tag means indicator is present.  This accessorial is only valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    dropoffAtUPSFacilityIndicator?: string;
+    DropoffAtUPSFacilityIndicator?: string;
     /**
      * Lift Gate For Pick Up indicator. The empty tag means indicator is present.  Lift Gate for Pickup is not allowed with Drop Off At UPS Facility for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   When both Hold for Pickup and Drop Off At Facility are selected, neither of the Lift Gate accessorial (Pick Up or Delivery) are allowed for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   This accessorial is only valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    liftGateForPickUpIndicator?: string;
+    LiftGateForPickUpIndicator?: string;
     /**
      * Lift Gate For Delivery indicator. The empty tag means indicator is present.  Lift Gate for Delivery is not allowed with Hold For Pickup for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   When both Hold for Pickup and Drop Off At UPS Facility are selected, neither of the Lift Gate accessorial (Pick Up or Delivery) are allowed for a UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipment.   This accessorial is only valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday Shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    liftGateForDeliveryIndicator?: string;
+    LiftGateForDeliveryIndicator?: string;
     /**
      * The presence of the tag SDLShipmentIndicator indicates Shipment is SDL. SDLShipmentIndicator presence means EEI form/ EEI Filing option required.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    sDLShipmentIndicator?: string;
+    SDLShipmentIndicator?: string;
     /**
      * Package Release code allows the consignee or claimant to pick-up a package at a UPS Access Point�.� The shipper must provide the Package Release Code to the consignee so that they can provide the code to the UPS Access Point personnel as another item for authentication before the package is released to them. Package Release Code is only valid with ShipmentIndicationType�01 - Hold for Pickup at UPS Access Point�.  The release code must be between length 4 and 6 and only contain numbers.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    ePRAReleaseCode?: string;
+    EPRAReleaseCode?: string;
     /**
      *
      * @type {ShipmentServiceOptionsRestrictedArticles}
      * @memberof ShipmentShipmentServiceOptions
      */
-    restrictedArticles?: ShipmentServiceOptionsRestrictedArticles;
+    RestrictedArticles?: ShipmentServiceOptionsRestrictedArticles;
     /**
      * Inside delivery accessory. Valid values: 01 - White Glove 02 - Room of Choice 03 - Installation Default is Room of Choice.  Shippers account needs to have a valid contract for Heavy Goods Service.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    insideDelivery?: string;
+    InsideDelivery?: string;
     /**
      * Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    itemDisposal?: string;
+    ItemDisposal?: string;
 }
 /**
  * Shipment Value Threshold Code.                                                      01 = Shipment value is below or equals to threshold value 02 = Shipment value is above threshold value.     NA = Not Applicable
@@ -8178,55 +8178,55 @@ export interface ShipmentShipper {
      * @type {string}
      * @memberof ShipmentShipper
      */
-    name: string;
+    Name: string;
     /**
      * Shippers Attention Name.   For forward Shipment 35 characters are accepted, but only 30 characters will be printed on the label.  Required if destination is international. Required if Invoice and CO International forms are requested and the ShipFrom address is not present.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      * Shipper's CompanyDisplayableName.  The CompanyDisplayableName will be displayed in tracking results and notification messages in place of the name associated with the shipper account.  The original shipper account name will be displayed for all Return Services and Import Control Shipments.  This is available for Shipper accounts enabled by UPS and applies to Forward Shipments.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    companyDisplayableName?: string;
+    CompanyDisplayableName?: string;
     /**
      * Shipper�s Tax Identification Number.  Conditionally required if EEI form (International forms) is requested and ship From is not mentioned.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    taxIdentificationNumber?: string;
+    TaxIdentificationNumber?: string;
     /**
      *
      * @type {ShipperPhone}
      * @memberof ShipmentShipper
      */
-    phone?: ShipperPhone;
+    Phone?: ShipperPhone;
     /**
      * Shipper�s six digit alphanumeric account number.  Must be associated with the UserId specified in the AccessRequest XML.   The account must be a valid UPS account number that is active.   For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.   Drop Shipper accounts are valid for return service shipments only if the account is Trade Direct (TD) enabled.   All other accounts must be either a daily pickup account or an occasional account.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    shipperNumber: string;
+    ShipperNumber: string;
     /**
      * Shipper�s Fax Number.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    faxNumber?: string;
+    FaxNumber?: string;
     /**
      * Shipper�s email address.  Must be associated with the UserId specified in the AccessRequest XML.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    eMailAddress?: string;
+    EMailAddress?: string;
     /**
      *
      * @type {ShipperAddress}
      * @memberof ShipmentShipper
      */
-    address: ShipperAddress;
+    Address: ShipperAddress;
 }
 /**
  * A component encoded on the barcode of the Mail Innovations label.   Valid values:  IR = Irregular MA = Machineable SubClass is only required if the customer�s contract have them subclass the package not UPS.
@@ -8254,31 +8254,31 @@ export interface ShipperAddress {
      * @type {string}
      * @memberof ShipperAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof ShipperAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof ShipperAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof ShipperAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof ShipperAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Shippers Attention Name.   For forward Shipment 35 characters are accepted, but only 30 characters will be printed on the label.  Required if destination is international. Required if Invoice and CO International forms are requested and the ShipFrom address is not present.
@@ -8341,13 +8341,13 @@ export interface ShipperPhone {
      * @type {string}
      * @memberof ShipperPhone
      */
-    number: string;
+    Number: string;
     /**
      * Sold To contacts phone extension.
      * @type {string}
      * @memberof ShipperPhone
      */
-    extension?: string;
+    Extension?: string;
 }
 /**
  * Shipper�s six digit alphanumeric account number.  Must be associated with the UserId specified in the AccessRequest XML.   The account must be a valid UPS account number that is active.   For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.   Drop Shipper accounts are valid for return service shipments only if the account is Trade Direct (TD) enabled.   All other accounts must be either a daily pickup account or an occasional account.
@@ -8385,13 +8385,13 @@ export interface ShippingLabelImageFormat {
      * @type {string}
      * @memberof ShippingLabelImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the image format.
      * @type {string}
      * @memberof ShippingLabelImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Base 64 encoded graphic image of the Warsaw text and signature box. EPL2, ZPL and SPL labels. The image will be returned for non-US based shipments. One image will be given per shipment and it will be in the first PackageResults container.   Applicable only for ShipmentResponse and ShipAcceptResponse.
@@ -8419,13 +8419,13 @@ export interface ShippingReceiptImageFormat {
      * @type {string}
      * @memberof ShippingReceiptImageFormat
      */
-    code: string;
+    Code: string;
     /**
      * Description of the image format.
      * @type {string}
      * @memberof ShippingReceiptImageFormat
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Sold To Address Container.  Applies to NAFTA CO.
@@ -8438,37 +8438,37 @@ export interface SoldToAddress {
      * @type {string}
      * @memberof SoldToAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof SoldToAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof SoldToAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s town code.
      * @type {string}
      * @memberof SoldToAddress
      */
-    town?: string;
+    Town?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof SoldToAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof SoldToAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Sold to contact name.
@@ -8501,13 +8501,13 @@ export interface SoldToPhone {
      * @type {string}
      * @memberof SoldToPhone
      */
-    number: string;
+    Number: string;
     /**
      * Sold To contacts phone extension.
      * @type {string}
      * @memberof SoldToPhone
      */
-    extension?: string;
+    Extension?: string;
 }
 /**
  * SoldTo Tax Identification Number.
@@ -8535,13 +8535,13 @@ export interface SummaryResultStatus {
      * @type {string}
      * @memberof SummaryResultStatus
      */
-    code: string;
+    Code: string;
     /**
      * A text description of the status code.
      * @type {string}
      * @memberof SummaryResultStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * Tax Monetary Value represent the Tax amount.  Valid values are from 0 to 99999999999999.99
@@ -8619,13 +8619,13 @@ export interface TrackingCandidatePickupDateRange {
      * @type {string}
      * @memberof TrackingCandidatePickupDateRange
      */
-    beginDate: string;
+    BeginDate: string;
     /**
      * The end of the date range for the candidate. Format: YYYYMMDD
      * @type {string}
      * @memberof TrackingCandidatePickupDateRange
      */
-    endDate: string;
+    EndDate: string;
 }
 /**
  * Packaging Tracking Number  Only supported for the web small package shipment so only supported 18 digit
@@ -8673,13 +8673,13 @@ export interface TransportationChargesDiscountAmount {
      * @type {string}
      * @memberof TransportationChargesDiscountAmount
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Discount amount monetary value.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesDiscountAmount
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * It indicates the shipment level discount percentage for transportation charges.
@@ -8697,13 +8697,13 @@ export interface TransportationChargesGrossCharge {
      * @type {string}
      * @memberof TransportationChargesGrossCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Gross charges monetary value.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesGrossCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Transportation and surcharges value amount.  Valid values are from 0 to 99999999999999.99
@@ -8721,13 +8721,13 @@ export interface TransportationChargesNetCharge {
      * @type {string}
      * @memberof TransportationChargesNetCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Net charges monetary value.  Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesNetCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The code associated with Handling Unit Type.  Valid values: SKD = Skid CBY = Carboy  PLT = Pallet TOT = Totes  LOO = Loose OTH = Other
@@ -8750,13 +8750,13 @@ export interface UPSFiledPOA {
      * @type {string}
      * @memberof UPSFiledPOA
      */
-    code: string;
+    Code: string;
     /**
      * Description for POA Code.  Applicable for EEI form.
      * @type {string}
      * @memberof UPSFiledPOA
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * UPS Premier Category.  Valid values are 01,02,03                             UPS Premier Silver -01 UPS Premier Gold - 02 UPS Premier Platinum - 03
@@ -8774,7 +8774,7 @@ export interface UPSPremierHandlingInstructions {
      * @type {string}
      * @memberof UPSPremierHandlingInstructions
      */
-    instruction: string;
+    Instruction: string;
 }
 /**
  * SensorID is RFID for UPS Premier Silver. SensorID is MeshID for UPS Premier Gold or UPS Premier Platinum Package.
@@ -8792,7 +8792,7 @@ export interface UPSPremiumCareFormLanguageForUPSPremiumCare {
      * @type {string}
      * @memberof UPSPremiumCareFormLanguageForUPSPremiumCare
      */
-    language: string;
+    Language: string;
 }
 /**
  * Number of Copies of UPS Premium Care Form.  Valid value is 02.
@@ -8825,37 +8825,37 @@ export interface UltimateConsigneeAddress {
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * SoldTo location�s city.
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    city: string;
+    City: string;
     /**
      * SoldTo location�s state or province code.  Required for certain countries or territories.
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * SoldTo location�s town code.
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    town?: string;
+    Town?: string;
     /**
      * SoldTo location�s postal code.
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * SoldTo location�s country or territory code.
      * @type {string}
      * @memberof UltimateConsigneeAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Company Name or the Individual name of the Ultimate consignee.  Applicable for EEI form only.
@@ -8883,13 +8883,13 @@ export interface UltimateConsigneeUltimateConsigneeType {
      * @type {string}
      * @memberof UltimateConsigneeUltimateConsigneeType
      */
-    code: string;
+    Code: string;
     /**
      * Ultimate Consignee Type Description.  Applicable for EEI form only.
      * @type {string}
      * @memberof UltimateConsigneeUltimateConsigneeType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Total quantity of each commodity to be shipped, measured in the units specified in the Unit of Measure field.  Required for Invoice forms and optional for Partial Invoice. Must be numeric. Valid characters are 0-9.
@@ -8917,13 +8917,13 @@ export interface UnitUnitOfMeasurement {
      * @type {string}
      * @memberof UnitUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * Description of the billing weight measurement units.
      * @type {string}
      * @memberof UnitUnitOfMeasurement
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Monetary amount used to specify the worth or price of the commodity. Amount should be greater than zero.  Applies to Invoice and Partial Invoice form. Required for Invoice forms and optional for Partial Invoice. Amount should be greater than zero.  Valid characters are 0-9 and. (Decimal point). Limit to 6 digits after the decimal. The maximum length of the field is 19 including '.' and can hold up to 6 decimal places.(#####.######, ######.#####, #######.####, ########.###, #########.##,##########.#,############). The value of this product  and the other products should be such that the invoice line total which is the sum of ( number*values) of all products should not exceed 9999999999999999.99
@@ -8946,7 +8946,7 @@ export interface VOIDSHIPMENTRequestWrapper {
      * @type {VoidShipmentRequest}
      * @memberof VOIDSHIPMENTRequestWrapper
      */
-    voidShipmentRequest: VoidShipmentRequest;
+    VoidShipmentRequest: VoidShipmentRequest;
 }
 /**
  * N/A
@@ -8959,7 +8959,7 @@ export interface VOIDSHIPMENTResponseWrapper {
      * @type {VoidShipmentResponse}
      * @memberof VOIDSHIPMENTResponseWrapper
      */
-    voidShipmentResponse: VoidShipmentResponse;
+    VoidShipmentResponse: VoidShipmentResponse;
 }
 /**
  * Consignee Type.                                             01 = Business                                                 02 = Consumer                                                           NA = Not Applicable
@@ -8992,13 +8992,13 @@ export interface VoidRequestTransactionReference {
      * @type {string}
      * @memberof VoidRequestTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
     /**
      * The Unique TransactionIdentifier Information for that transaction. This will be present only if requested in the request.
      * @type {string}
      * @memberof VoidRequestTransactionReference
      */
-    transactionIdentifier?: string;
+    TransactionIdentifier?: string;
 }
 /**
  * Response Status Container.
@@ -9011,13 +9011,13 @@ export interface VoidResponseResponseStatus {
      * @type {string}
      * @memberof VoidResponseResponseStatus
      */
-    code: string;
+    Code: string;
     /**
      * Describes Response Status Code. Returns text of Success
      * @type {string}
      * @memberof VoidResponseResponseStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * Transaction Reference Container.
@@ -9030,13 +9030,13 @@ export interface VoidResponseTransactionReference {
      * @type {string}
      * @memberof VoidResponseTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
     /**
      * The Unique TransactionIdentifier Information for that transaction. This will be present only if requested in the request.
      * @type {string}
      * @memberof VoidResponseTransactionReference
      */
-    transactionIdentifier?: string;
+    TransactionIdentifier?: string;
 }
 /**
  * Void Shipment Request Container
@@ -9049,13 +9049,13 @@ export interface VoidShipmentRequest {
      * @type {VoidShipmentRequestRequest}
      * @memberof VoidShipmentRequest
      */
-    request: VoidShipmentRequestRequest;
+    Request: VoidShipmentRequestRequest;
     /**
      *
      * @type {VoidShipmentRequestVoidShipment}
      * @memberof VoidShipmentRequest
      */
-    voidShipment: VoidShipmentRequestVoidShipment;
+    VoidShipment: VoidShipmentRequestVoidShipment;
 }
 /**
  * Request Container  N/A
@@ -9068,13 +9068,13 @@ export interface VoidShipmentRequestRequest {
      * @type {string}
      * @memberof VoidShipmentRequestRequest
      */
-    requestOption?: string;
+    RequestOption?: string;
     /**
      *
      * @type {VoidRequestTransactionReference}
      * @memberof VoidShipmentRequestRequest
      */
-    transactionReference?: VoidRequestTransactionReference;
+    TransactionReference?: VoidRequestTransactionReference;
 }
 /**
  * The container for the Ship Void Request.  N/A
@@ -9087,19 +9087,19 @@ export interface VoidShipmentRequestVoidShipment {
      * @type {string}
      * @memberof VoidShipmentRequestVoidShipment
      */
-    shippingHistoryUserKey?: string;
+    ShippingHistoryUserKey?: string;
     /**
      * The shipment's identification number  Alpha-numeric. Must pass 1Z rules. Must be upper case.
      * @type {string}
      * @memberof VoidShipmentRequestVoidShipment
      */
-    shipmentIdentificationNumber: string;
+    ShipmentIdentificationNumber: string;
     /**
      * The package's identification number  Alpha-numeric. Must pass 1Z rules. Must be upper case
      * @type {Array<string>}
      * @memberof VoidShipmentRequestVoidShipment
      */
-    trackingNumber?: Array<string>;
+    TrackingNumber?: Array<string>;
 }
 /**
  * Void Response Container.
@@ -9112,19 +9112,19 @@ export interface VoidShipmentResponse {
      * @type {VoidShipmentResponseResponse}
      * @memberof VoidShipmentResponse
      */
-    response: VoidShipmentResponseResponse;
+    Response: VoidShipmentResponseResponse;
     /**
      *
      * @type {VoidShipmentResponseSummaryResult}
      * @memberof VoidShipmentResponse
      */
-    summaryResult: VoidShipmentResponseSummaryResult;
+    SummaryResult: VoidShipmentResponseSummaryResult;
     /**
      *
      * @type {Array<VoidShipmentResponsePackageLevelResult>}
      * @memberof VoidShipmentResponse
      */
-    packageLevelResult?: Array<VoidShipmentResponsePackageLevelResult>;
+    PackageLevelResult?: Array<VoidShipmentResponsePackageLevelResult>;
 }
 /**
  * Contains the Package Level Results
@@ -9137,13 +9137,13 @@ export interface VoidShipmentResponsePackageLevelResult {
      * @type {string}
      * @memberof VoidShipmentResponsePackageLevelResult
      */
-    trackingNumber: string;
+    TrackingNumber: string;
     /**
      *
      * @type {PackageLevelResultStatus}
      * @memberof VoidShipmentResponsePackageLevelResult
      */
-    status: PackageLevelResultStatus;
+    Status: PackageLevelResultStatus;
 }
 /**
  * Response Container.
@@ -9156,19 +9156,19 @@ export interface VoidShipmentResponseResponse {
      * @type {VoidResponseResponseStatus}
      * @memberof VoidShipmentResponseResponse
      */
-    responseStatus: VoidResponseResponseStatus;
+    ResponseStatus: VoidResponseResponseStatus;
     /**
      *
      * @type {ResponseAlert}
      * @memberof VoidShipmentResponseResponse
      */
-    alert?: ResponseAlert;
+    Alert?: ResponseAlert;
     /**
      *
      * @type {VoidResponseTransactionReference}
      * @memberof VoidShipmentResponseResponse
      */
-    transactionReference?: VoidResponseTransactionReference;
+    TransactionReference?: VoidResponseTransactionReference;
 }
 /**
  * Container for the Summary Result
@@ -9181,7 +9181,7 @@ export interface VoidShipmentResponseSummaryResult {
      * @type {SummaryResultStatus}
      * @memberof VoidShipmentResponseSummaryResult
      */
-    status: SummaryResultStatus;
+    Status: SummaryResultStatus;
 }
 /**
  * The shipment's identification number  Alpha-numeric. Must pass 1Z rules. Must be upper case.

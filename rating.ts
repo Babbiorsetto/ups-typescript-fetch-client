@@ -147,13 +147,13 @@ export interface AdjustedHeightUnitOfMeasurement {
      * @type {string}
      * @memberof AdjustedHeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof AdjustedHeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * Adjusted Height value for the handling unit.  Adjusted Height is done only when Handling unit type is SKD = Skid or PLT = Pallet.
@@ -191,13 +191,13 @@ export interface AlertDetailElementLevelInformation {
      * @type {string}
      * @memberof AlertDetailElementLevelInformation
      */
-    level: string;
+    Level: string;
     /**
      *
      * @type {Array<ElementLevelInformationElementIdentifier>}
      * @memberof AlertDetailElementLevelInformation
      */
-    elementIdentifier?: Array<ElementLevelInformationElementIdentifier>;
+    ElementIdentifier?: Array<ElementLevelInformationElementIdentifier>;
 }
 /**
  * Address container for Alternate Delivery Address.
@@ -210,43 +210,43 @@ export interface AlternateDeliveryAddressAddress {
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * UPS Access Point city.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    city?: string;
+    City?: string;
     /**
      * UPS Access Point State or Province code.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * Postal Code for UPS accounts billing address.  Postal Code  may be present when the FRS Payment Information type = 02 and type = 03.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    countryCode: string;
+    CountryCode: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored.This field is a flag to indicate if the Alternate Delivery location is a residential location.  True if ResidentialAddressIndicator tag exists.  For future use.
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    residentialAddressIndicator?: string;
+    ResidentialAddressIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. This field is a flag to indicate if the Alternate Delivery location is a PO box location.  True if POBoxIndicator tag exists; false otherwise.  Not valid with Shipment Indication Types: 01 Hold for Pickup at UPS Access Point 02 UPS Access Point� Delivery
      * @type {string}
      * @memberof AlternateDeliveryAddressAddress
      */
-    pOBoxIndicator?: string;
+    POBoxIndicator?: string;
 }
 /**
  * UPS Access Point� location name.
@@ -299,7 +299,7 @@ export interface BillReceiverAddress {
      * @type {string}
      * @memberof BillReceiverAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
 }
 /**
  * UPS account number  Must be the same UPS account number as the one provided in Shipper/ShipperNumber.
@@ -322,13 +322,13 @@ export interface BillThirdPartyAddress {
      * @type {string}
      * @memberof BillThirdPartyAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof BillThirdPartyAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Unit Of Measurement Container.
@@ -341,13 +341,13 @@ export interface BillingWeightUnitOfMeasurement {
      * @type {string}
      * @memberof BillingWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof BillingWeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * The value for the billable weight associated with the package.  When using a negotiated divisor different from the published UPS divisor (139 for inches and 5,000 for cm), the weight returned is based on the published divisor. Rates, however, are based on the negotiated divisor.
@@ -375,13 +375,13 @@ export interface CODCODAmount {
      * @type {string}
      * @memberof CODCODAmount
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * COD Amount.
      * @type {string}
      * @memberof CODCODAmount
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * For valid values, refer to�Rating and Shipping COD Supported Countries or Territories in the Appendix.
@@ -404,13 +404,13 @@ export interface CommodityNMFC {
      * @type {string}
      * @memberof CommodityNMFC
      */
-    primeCode: string;
+    PrimeCode: string;
     /**
      * Value of NMFC Sub. Contact your service representative if you need information concerning NMFC Codes.  Needs to be provided when the SubCode associated with the PrimeCode is other than 00.  API defaults the sub value to 00 if not provided.  If provided the Sub Code should be associated with the PrimeCode of the NMFC.
      * @type {string}
      * @memberof CommodityNMFC
      */
-    subCode?: string;
+    SubCode?: string;
 }
 /**
  * Customer classification code.  Valid values: 00 -  Rates Associated with Shipper Number 01 -  Daily Rates 04 -  Retail Rates 05 - Regional Rates 06 - General List Rates 53 -  Standard List Rates Length is not validated. If customer classification code is not a valid value please refer to Rate Types Table on page 11.
@@ -463,13 +463,13 @@ export interface DeliveryTimeInformationPickup {
      * @type {string}
      * @memberof DeliveryTimeInformationPickup
      */
-    date: string;
+    Date: string;
     /**
      * The time UPS will pick up the shipment. Military Time Format HHMMSS or HHMM
      * @type {string}
      * @memberof DeliveryTimeInformationPickup
      */
-    time?: string;
+    Time?: string;
 }
 /**
  * Return contract services container
@@ -482,13 +482,13 @@ export interface DeliveryTimeInformationReturnContractServices {
      * @type {string}
      * @memberof DeliveryTimeInformationReturnContractServices
      */
-    code: string;
+    Code: string;
     /**
      * Return contract service Description
      * @type {string}
      * @memberof DeliveryTimeInformationReturnContractServices
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * UnitOfMeasurement Container.  N/A
@@ -501,13 +501,13 @@ export interface DimWeightUnitOfMeasurement {
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * Dimensional weight of the package. Decimal values are not accepted, however there is one implied decimal place for values in this field (i.e. 115 = 11.5).
@@ -535,13 +535,13 @@ export interface DimensionsUnitOfMeasurement {
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * The width of the line item used to determine dimensional weight.
@@ -584,13 +584,13 @@ export interface DryIceDryIceWeight {
      * @type {DryIceWeightUnitOfMeasurement}
      * @memberof DryIceDryIceWeight
      */
-    unitOfMeasurement: DryIceWeightUnitOfMeasurement;
+    UnitOfMeasurement: DryIceWeightUnitOfMeasurement;
     /**
      * Weight for Dry Ice.  Cannot be more than package weight.  Should be more than 0.0.  Valid characters are 0-9 and \".\" (Decimal point).  Limit to 1 digit after the decimal.  The maximum length of the field is 5 including \".\" and can hold up to 1 decimal place.
      * @type {string}
      * @memberof DryIceDryIceWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. Relevant only in CFR regulation set. If present it is used to designate the Dry Ice is for any medical use and rates are adjusted for DryIce weight more than 2.5 KGS or 5.5 LBS.
@@ -613,13 +613,13 @@ export interface DryIceWeightUnitOfMeasurement {
      * @type {string}
      * @memberof DryIceWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof DryIceWeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * Weight for Dry Ice.  Cannot be more than package weight.  Should be more than 0.0.  Valid characters are 0-9 and \".\" (Decimal point).  Limit to 1 digit after the decimal.  The maximum length of the field is 5 including \".\" and can hold up to 1 decimal place.
@@ -647,13 +647,13 @@ export interface ElementLevelInformationElementIdentifier {
      * @type {string}
      * @memberof ElementLevelInformationElementIdentifier
      */
-    code: string;
+    Code: string;
     /**
      * Represents the value of element.
      * @type {string}
      * @memberof ElementLevelInformationElementIdentifier
      */
-    value: string;
+    Value: string;
 }
 /**
  * Define type of element in request. Possible values are -  'H� for the header details level,   �S� for the shipment level,  �P� for the package level,  �C� for the commodity level.
@@ -671,13 +671,13 @@ export interface EstimatedArrivalArrival {
      * @type {string}
      * @memberof EstimatedArrivalArrival
      */
-    date: string;
+    Date: string;
     /**
      * The time UPS will pick up the shipment. This is commit Time. Military Time Format HHMMSS or HHMM
      * @type {string}
      * @memberof EstimatedArrivalArrival
      */
-    time?: string;
+    Time?: string;
 }
 /**
  * Number of business days from Origin to Destination Locations.
@@ -715,13 +715,13 @@ export interface EstimatedArrivalPickup {
      * @type {string}
      * @memberof EstimatedArrivalPickup
      */
-    date: string;
+    Date: string;
     /**
      * The time UPS will pick up the shipment. Military Time Format HHMMSS or HHMM
      * @type {string}
      * @memberof EstimatedArrivalPickup
      */
-    time?: string;
+    Time?: string;
 }
 /**
  * Number of rest days, i.e. non movement. Returned for International requests.
@@ -759,13 +759,13 @@ export interface FRSPaymentInformationAddress {
      * @type {string}
      * @memberof FRSPaymentInformationAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof FRSPaymentInformationAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * GFP Payment Information Type container.  GFP only.
@@ -778,13 +778,13 @@ export interface FRSPaymentInformationType {
      * @type {string}
      * @memberof FRSPaymentInformationType
      */
-    code: string;
+    Code: string;
     /**
      * A description of the code for the Handling Unit type.
      * @type {string}
      * @memberof FRSPaymentInformationType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * FreightDensityRate container for Density based rating.
@@ -797,13 +797,13 @@ export interface FRSShipmentDataFreightDensityRate {
      * @type {string}
      * @memberof FRSShipmentDataFreightDensityRate
      */
-    density: string;
+    Density: string;
     /**
      * TotalCubic feet is returned if the Shipper is eligible for Density based rate.  Valid values:0 to 99999.999
      * @type {string}
      * @memberof FRSShipmentDataFreightDensityRate
      */
-    totalCubicFeet: string;
+    TotalCubicFeet: string;
 }
 /**
  * Handling Unit for Density based rating container.
@@ -816,25 +816,25 @@ export interface FRSShipmentDataHandlingUnits {
      * @type {string}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    quantity: string;
+    Quantity: string;
     /**
      *
      * @type {HandlingUnitsType}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    type: HandlingUnitsType;
+    Type: HandlingUnitsType;
     /**
      *
      * @type {HandlingUnitsDimensions}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    dimensions: HandlingUnitsDimensions;
+    Dimensions: HandlingUnitsDimensions;
     /**
      *
      * @type {HandlingUnitsAdjustedHeight}
      * @memberof FRSShipmentDataHandlingUnits
      */
-    adjustedHeight?: HandlingUnitsAdjustedHeight;
+    AdjustedHeight?: HandlingUnitsAdjustedHeight;
 }
 /**
  * Transportation Charges Container
@@ -847,25 +847,25 @@ export interface FRSShipmentDataTransportationCharges {
      * @type {TransportationChargesGrossCharge}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    grossCharge: TransportationChargesGrossCharge;
+    GrossCharge: TransportationChargesGrossCharge;
     /**
      *
      * @type {TransportationChargesDiscountAmount}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    discountAmount: TransportationChargesDiscountAmount;
+    DiscountAmount: TransportationChargesDiscountAmount;
     /**
      * Discount Percentage
      * @type {string}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    discountPercentage: string;
+    DiscountPercentage: string;
     /**
      *
      * @type {TransportationChargesNetCharge}
      * @memberof FRSShipmentDataTransportationCharges
      */
-    netCharge: TransportationChargesNetCharge;
+    NetCharge: TransportationChargesNetCharge;
 }
 /**
  * Container to hold Adjusted Height information.  Required if AdjustedHeightIndicator is present.
@@ -878,13 +878,13 @@ export interface FreightDensityInfoAdjustedHeight {
      * @type {string}
      * @memberof FreightDensityInfoAdjustedHeight
      */
-    value: string;
+    Value: string;
     /**
      *
      * @type {AdjustedHeightUnitOfMeasurement}
      * @memberof FreightDensityInfoAdjustedHeight
      */
-    unitOfMeasurement: AdjustedHeightUnitOfMeasurement;
+    UnitOfMeasurement: AdjustedHeightUnitOfMeasurement;
 }
 /**
  * The presence of the AdjustedHeightIndicator allows UPS to do height reduction adjustment for density based rate request.
@@ -902,19 +902,19 @@ export interface FreightDensityInfoHandlingUnits {
      * @type {string}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    quantity: string;
+    Quantity: string;
     /**
      *
      * @type {HandlingUnitsType}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    type: HandlingUnitsType;
+    Type: HandlingUnitsType;
     /**
      *
      * @type {HandlingUnitsDimensions}
      * @memberof FreightDensityInfoHandlingUnits
      */
-    dimensions: HandlingUnitsDimensions;
+    Dimensions: HandlingUnitsDimensions;
 }
 /**
  * Density is returned if the Shipper is eligible for Density based rate.  Valid values:0 to 999.9
@@ -942,19 +942,19 @@ export interface FreightShipmentInformationFreightDensityInfo {
      * @type {string}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    adjustedHeightIndicator?: string;
+    AdjustedHeightIndicator?: string;
     /**
      *
      * @type {FreightDensityInfoAdjustedHeight}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    adjustedHeight?: FreightDensityInfoAdjustedHeight;
+    AdjustedHeight?: FreightDensityInfoAdjustedHeight;
     /**
      *
      * @type {FreightDensityInfoHandlingUnits}
      * @memberof FreightShipmentInformationFreightDensityInfo
      */
-    handlingUnits: FreightDensityInfoHandlingUnits;
+    HandlingUnits: FreightDensityInfoHandlingUnits;
 }
 /**
  * The IATA currency code associated with the transportation costs for the shipment.
@@ -977,13 +977,13 @@ export interface HandlingUnitsAdjustedHeight {
      * @type {string}
      * @memberof HandlingUnitsAdjustedHeight
      */
-    value: string;
+    Value: string;
     /**
      *
      * @type {AdjustedHeightUnitOfMeasurement}
      * @memberof HandlingUnitsAdjustedHeight
      */
-    unitOfMeasurement: AdjustedHeightUnitOfMeasurement;
+    UnitOfMeasurement: AdjustedHeightUnitOfMeasurement;
 }
 /**
  * Dimension of the HandlingUnit container for density based pricing.
@@ -996,25 +996,25 @@ export interface HandlingUnitsDimensions {
      * @type {DimensionsUnitOfMeasurement}
      * @memberof HandlingUnitsDimensions
      */
-    unitOfMeasurement: DimensionsUnitOfMeasurement;
+    UnitOfMeasurement: DimensionsUnitOfMeasurement;
     /**
      * The length of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    length: string;
+    Length: string;
     /**
      * The width of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    width: string;
+    Width: string;
     /**
      * The height of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof HandlingUnitsDimensions
      */
-    height: string;
+    Height: string;
 }
 /**
  * Handling Unit Quantity for Density based rating.
@@ -1032,13 +1032,13 @@ export interface HandlingUnitsType {
      * @type {string}
      * @memberof HandlingUnitsType
      */
-    code: string;
+    Code: string;
     /**
      * A description of the code for the Handling Unit type.
      * @type {string}
      * @memberof HandlingUnitsType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Presence/Absence Indicator. Any value is ignored. Indicates the hazmat shipment/package is all packed in one.  Applies only if SubVersion is greater than or equal to 1701.
@@ -1166,67 +1166,67 @@ export interface HazMatHazMatChemicalRecord {
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    chemicalRecordIdentifier?: string;
+    ChemicalRecordIdentifier?: string;
     /**
      * This is the hazard class associated to the specified commodity. Required if CommodityRegulatedLevelCode is �LQ� or �FR�  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    classDivisionNumber?: string;
+    ClassDivisionNumber?: string;
     /**
      * This is the ID number (UN/NA/ID) for the specified commodity. Required if CommodityRegulatedLevelCode = LR, LQ or FR and if the field applies to the material by regulation. UN/NA/ID Identification Number assigned to the specified regulated good. (Include the UN/NA/ID as part of the entry).  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    iDNumber?: string;
+    IDNumber?: string;
     /**
      * The method of transport by which a shipment is approved to move and the regulations associated with that method.  Only required when the CommodityRegulatedLevelCode is FR or LQ. Valid values:  01 - Highway 02 - Ground 03 - Passenger Aircraft 04 - Cargo Aircraft Only  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package having different TransportationMode, TransportationMode of first ChemicalRecord would be considered for validating and rating the package. All TransportationMode except for '04' are general service offering. If any chemical record contains '04' as TransportationMode, ShipperNumber needs to be authorized to use '04' as TransportationMode.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    transportationMode: string;
+    TransportationMode: string;
     /**
      * The Regulatory set associated with every regulated shipment. It must be the same across the shipment.  Valid values:    ADR -  For Europe to Europe Ground Movement  CFR -  For HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada,  IATA -  For Worldwide Air movement  TDG -  For Canada to Canada ground movement or Canada to U.S. standard movement  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package or multiple packages containing different RegulationSet, RegulationSet of first ChemicalRecord would be considered for validating and rating the entire shipment.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    regulationSet: string;
+    RegulationSet: string;
     /**
      * 24 Hour Emergency Phone Number of the shipper.  Valid values for this field are (0) through (9) with trailing blanks. For numbers within the U.S., the layout is '1', area code, 7-digit number. For all other countries or territories the layout is country or territory code, area code, number.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    emergencyPhone?: string;
+    EmergencyPhone?: string;
     /**
      * The emergency information, contact name and/or contact number, required to be communicated when a call is placed to the EmergencyPhoneNumber. The information is required if there is a value in the EmergencyPhoneNumber field above and the shipment is with a US50 or PR origin and/or destination and the RegulationSet is IATA.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    emergencyContact?: string;
+    EmergencyContact?: string;
     /**
      * Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. If reportable quantity is met, 'RQ' should be entered.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    reportableQuantity?: string;
+    ReportableQuantity?: string;
     /**
      * Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Secondary hazardous characteristics of a package. (There can be more than one � separate each with a comma).  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    subRiskClass?: string;
+    SubRiskClass?: string;
     /**
      * This is the packing group category associated to the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Must be shown in Roman Numerals. Valid values are: I,  II, III, blank.   Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    packagingGroupType?: string;
+    PackagingGroupType?: string;
     /**
      * Required if CommodityRegulatedLevelCode = LQ or FR. The numerical value of the mass capacity of the regulated good.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    quantity?: string;
+    Quantity?: string;
     /**
      * Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good. For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
@@ -1238,61 +1238,61 @@ export interface HazMatHazMatChemicalRecord {
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    packagingInstructionCode?: string;
+    PackagingInstructionCode?: string;
     /**
      * The Proper Shipping Name assigned by ADR, CFR or IATA. Required if CommodityRegulatedLevelCode = LR, LQ or FR.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    properShippingName?: string;
+    ProperShippingName?: string;
     /**
      * The technical name (when required) for the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    technicalName?: string;
+    TechnicalName?: string;
     /**
      * Additional remarks or special provision information. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.  Additional information that may be required by regulation about a hazardous material, such as, �Limited Quantity�, DOT-SP numbers, EX numbers.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    additionalDescription?: string;
+    AdditionalDescription?: string;
     /**
      * The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.   Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    packagingType?: string;
+    PackagingType?: string;
     /**
      * Defines the type of label that is required on the package for the commodity. Not applicable if CommodityRegulatedLevelCode = LR or EQ.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    hazardLabelRequired?: string;
+    HazardLabelRequired?: string;
     /**
      * The number of pieces of the specific commodity. Required if CommodityRegulatedLevelCode = LQ or FR. Valid values are 1 to 999.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    packagingTypeQuantity?: string;
+    PackagingTypeQuantity?: string;
     /**
      * Indicates the type of commodity - Fully Regulated (FR), Limited Quantity (LQ), Excepted Quantity (EQ), Lightly Regulated (LR). Default value is FR. Valid values are  LR,  FR,  LQ,  EQ.   Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    commodityRegulatedLevelCode?: string;
+    CommodityRegulatedLevelCode?: string;
     /**
      * Transport Category. Valid values are 0 to 4.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    transportCategory?: string;
+    TransportCategory?: string;
     /**
      * Defines what is restricted to pass through a tunnel.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof HazMatHazMatChemicalRecord
      */
-    tunnelRestrictionCode?: string;
+    TunnelRestrictionCode?: string;
 }
 /**
  * Presence/Absence Indicator. Any value is ignored. Presence indicates that shipment is overpack.  Applies only if SubVersion is greater than or equal to 1701.
@@ -1330,13 +1330,13 @@ export interface InsuranceBasicFlexibleParcelIndicator {
      * @type {string}
      * @memberof InsuranceBasicFlexibleParcelIndicator
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The monetary value associated with the package.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof InsuranceBasicFlexibleParcelIndicator
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Container for Extended Flexible Parcel Indicator  Valid for UPS World Wide Express Freight shipments.
@@ -1349,13 +1349,13 @@ export interface InsuranceExtendedFlexibleParcelIndicator {
      * @type {string}
      * @memberof InsuranceExtendedFlexibleParcelIndicator
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The monetary value associated with the package.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof InsuranceExtendedFlexibleParcelIndicator
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Container to hold Time In Transit Flexible Parcel Indicator information.  Valid for UPS World Wide Express Freight shipments.
@@ -1368,13 +1368,13 @@ export interface InsuranceTimeInTransitFlexibleParcelIndicator {
      * @type {string}
      * @memberof InsuranceTimeInTransitFlexibleParcelIndicator
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The monetary value associated with the package.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof InsuranceTimeInTransitFlexibleParcelIndicator
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Invoice Line Total Currency type. The Currency code should match the origin country's or territory's currency code, otherwise the currency code entered will be ignored.  Note: UPS doesn't support all international currency codes. Please check the developer guides for Supported Currency codes.
@@ -1432,31 +1432,31 @@ export interface NegotiatedChargesItemizedCharges {
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for Itemized Charge costs associated with the shipment.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of Itemized Charge type.
      * @type {string}
      * @memberof NegotiatedChargesItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Itemized Charges are returned only when the subversion element is present and greater than or equal to '1601'.  These charges would be returned only when subversion is greater than or equal to 1601
@@ -1469,31 +1469,31 @@ export interface NegotiatedRateChargesItemizedCharges {
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for Itemized Charge costs associated with the shipment.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of Itemized Charge type.
      * @type {string}
      * @memberof NegotiatedRateChargesItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * TaxCharges container are returned only when TaxInformationIndicator is present in request. TaxCharges container contains Tax information for a given shipment.
@@ -1506,13 +1506,13 @@ export interface NegotiatedRateChargesTaxCharges {
      * @type {string}
      * @memberof NegotiatedRateChargesTaxCharges
      */
-    type: string;
+    Type: string;
     /**
      * Tax Monetary Value represent the Tax amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof NegotiatedRateChargesTaxCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Total Charges Container.
@@ -1525,13 +1525,13 @@ export interface NegotiatedRateChargesTotalCharge {
      * @type {string}
      * @memberof NegotiatedRateChargesTotalCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the Negotiated Rate total charges associated with the shipment.
      * @type {string}
      * @memberof NegotiatedRateChargesTotalCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TotalChargesWithTaxes container would be returned only if TaxInformationIndicator is present in request. TotalChargesWithTaxes contains total charges including total taxes applied to a shipment.
@@ -1544,13 +1544,13 @@ export interface NegotiatedRateChargesTotalChargesWithTaxes {
      * @type {string}
      * @memberof NegotiatedRateChargesTotalChargesWithTaxes
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * TotalChargesWithTaxes monetary value amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof NegotiatedRateChargesTotalChargesWithTaxes
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The IATA currency code associated with the transportation costs for the shipment.
@@ -1578,7 +1578,7 @@ export interface PackageCommodity {
      * @type {string}
      * @memberof PackageCommodity
      */
-    freightClass: string;
+    FreightClass: string;
     /**
      *
      * @type {CommodityNMFC}
@@ -1597,13 +1597,13 @@ export interface PackageDimWeight {
      * @type {DimWeightUnitOfMeasurement}
      * @memberof PackageDimWeight
      */
-    unitOfMeasurement?: DimWeightUnitOfMeasurement;
+    UnitOfMeasurement?: DimWeightUnitOfMeasurement;
     /**
      * Dimensional weight of the package. Decimal values are not accepted, however there is one implied decimal place for values in this field (i.e. 115 = 11.5).
      * @type {string}
      * @memberof PackageDimWeight
      */
-    weight?: string;
+    Weight?: string;
 }
 /**
  * Dimensions Container. This container is not applicable for GFP Rating request.  Required for Heavy Goods service. Package Dimension will be ignored for Simple Rate
@@ -1616,25 +1616,25 @@ export interface PackageDimensions {
      * @type {DimensionsUnitOfMeasurement}
      * @memberof PackageDimensions
      */
-    unitOfMeasurement: DimensionsUnitOfMeasurement;
+    UnitOfMeasurement: DimensionsUnitOfMeasurement;
     /**
      * The length of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    length: string;
+    Length: string;
     /**
      * The width of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    width: string;
+    Width: string;
     /**
      * The height of the line item used to determine dimensional weight.
      * @type {string}
      * @memberof PackageDimensions
      */
-    height: string;
+    Height: string;
 }
 /**
  * This element does not require a value and if one is entered it will be ignored.  If present, it indicates the shipment will be categorized as a Large Package.
@@ -1662,13 +1662,13 @@ export interface PackagePackageServiceOptions {
      * @type {PackageServiceOptionsDeliveryConfirmation}
      * @memberof PackagePackageServiceOptions
      */
-    deliveryConfirmation?: PackageServiceOptionsDeliveryConfirmation;
+    DeliveryConfirmation?: PackageServiceOptionsDeliveryConfirmation;
     /**
      *
      * @type {PackageServiceOptionsAccessPointCOD}
      * @memberof PackagePackageServiceOptions
      */
-    accessPointCOD?: PackageServiceOptionsAccessPointCOD;
+    AccessPointCOD?: PackageServiceOptionsAccessPointCOD;
     /**
      *
      * @type {PackageServiceOptionsCOD}
@@ -1680,49 +1680,49 @@ export interface PackagePackageServiceOptions {
      * @type {PackageServiceOptionsDeclaredValue}
      * @memberof PackagePackageServiceOptions
      */
-    declaredValue?: PackageServiceOptionsDeclaredValue;
+    DeclaredValue?: PackageServiceOptionsDeclaredValue;
     /**
      *
      * @type {PackageServiceOptionsShipperDeclaredValue}
      * @memberof PackagePackageServiceOptions
      */
-    shipperDeclaredValue?: PackageServiceOptionsShipperDeclaredValue;
+    ShipperDeclaredValue?: PackageServiceOptionsShipperDeclaredValue;
     /**
      * The presence indicates that the package may be released by driver without a signature from the consignee.  Empty Tag. Only available for US50/PR to US50/PR packages without return service.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    shipperReleaseIndicator?: string;
+    ShipperReleaseIndicator?: string;
     /**
      * Any value associated with this element will be ignored.   If present, the package is rated for UPS Proactive Response and proactive package tracking.  Contractual accessorial for health care companies to allow package monitoring throughout the UPS system.  Shippers account needs to have valid contract for UPS Proactive Response.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    proactiveIndicator?: string;
+    ProactiveIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. If present, indicates that the package contains an item that needs refrigeration.  Shippers account needs to have a valid contract for Refrigeration.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    refrigerationIndicator?: string;
+    RefrigerationIndicator?: string;
     /**
      * An UPSPremiumCareIndicator indicates special handling is required for shipment having controlled substances.  Empty Tag means indicator is present.   Valid only for Canada to Canada movements.  Available for the following Return Services: Returns Exchange (available with a contract) Print Return Label Print and Mail Electronic Return Label Return Service Three Attempt  May be requested with following UPS services:  UPS Express� Early UPS Express UPS Express Saver UPS Standard.   Not available for packages with the following: Delivery Confirmation - Signature Required Delivery Confirmation - Adult Signature Required.
      * @type {string}
      * @memberof PackagePackageServiceOptions
      */
-    uPSPremiumCareIndicator?: string;
+    UPSPremiumCareIndicator?: string;
     /**
      *
      * @type {PackageServiceOptionsHazMat}
      * @memberof PackagePackageServiceOptions
      */
-    hazMat?: PackageServiceOptionsHazMat;
+    HazMat?: PackageServiceOptionsHazMat;
     /**
      *
      * @type {PackageServiceOptionsDryIce}
      * @memberof PackagePackageServiceOptions
      */
-    dryIce?: PackageServiceOptionsDryIce;
+    DryIce?: PackageServiceOptionsDryIce;
 }
 /**
  * Package Weight Container.  Required for an GFP Rating request. Otherwise optional. Required for Heavy Goods service.  Package Weight will be ignored for Simple Rate
@@ -1735,13 +1735,13 @@ export interface PackagePackageWeight {
      * @type {PackageWeightUnitOfMeasurement}
      * @memberof PackagePackageWeight
      */
-    unitOfMeasurement: PackageWeightUnitOfMeasurement;
+    UnitOfMeasurement: PackageWeightUnitOfMeasurement;
     /**
      * Actual package weight.  Weight accepted for letters/envelopes.
      * @type {string}
      * @memberof PackagePackageWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Packaging Type Container.  N/A
@@ -1754,13 +1754,13 @@ export interface PackagePackagingType {
      * @type {string}
      * @memberof PackagePackagingType
      */
-    code: string;
+    Code: string;
     /**
      * A text description of the code for the UPS packaging type associated with the shipment.  Length is not validated.
      * @type {string}
      * @memberof PackagePackagingType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Access Point COD indicates Package COD is requested for a shipment.  Valid only for : 01 - Hold For Pickup At UPS Access Point, Shipment Indication type.  Package Access Point COD is valid only for shipment without return service from US/PR to US/PR and CA to CA.  Not valid with (Package) COD.
@@ -1773,13 +1773,13 @@ export interface PackageServiceOptionsAccessPointCOD {
      * @type {string}
      * @memberof PackageServiceOptionsAccessPointCOD
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Access Point COD Monetary Value.  Required if Access Point COD container is present.
      * @type {string}
      * @memberof PackageServiceOptionsAccessPointCOD
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * COD Container. Indicates COD is requested.   Valid for the following country or territory combinations:  US/PR to US/PR CA to CA CA to US Not allowed for CA to US for packages that are designated as Letters or Envelopes.
@@ -1792,13 +1792,13 @@ export interface PackageServiceOptionsCOD {
      * @type {string}
      * @memberof PackageServiceOptionsCOD
      */
-    cODFundsCode: string;
+    CODFundsCode: string;
     /**
      *
      * @type {CODCODAmount}
      * @memberof PackageServiceOptionsCOD
      */
-    cODAmount: CODCODAmount;
+    CODAmount: CODCODAmount;
 }
 /**
  * Declared Value Container.  N/A
@@ -1811,13 +1811,13 @@ export interface PackageServiceOptionsDeclaredValue {
      * @type {string}
      * @memberof PackageServiceOptionsDeclaredValue
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The monetary value for the declared value amount associated with the package.  Max value of 5,000 USD for Local and 50,000 USD for Remote. Absolute maximum value is 21474836.47
      * @type {string}
      * @memberof PackageServiceOptionsDeclaredValue
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Delivery Confirmation Container. For a list of valid origin/destination countries or territories please refer to appendix.  DeliveryConfirmation and COD are mutually exclusive.
@@ -1830,7 +1830,7 @@ export interface PackageServiceOptionsDeliveryConfirmation {
      * @type {string}
      * @memberof PackageServiceOptionsDeliveryConfirmation
      */
-    dCISType: string;
+    DCISType: string;
 }
 /**
  * Container to hold Dry Ice information.  Lane check will happen based on postal code/ city.
@@ -1843,25 +1843,25 @@ export interface PackageServiceOptionsDryIce {
      * @type {string}
      * @memberof PackageServiceOptionsDryIce
      */
-    regulationSet: string;
+    RegulationSet: string;
     /**
      *
      * @type {DryIceDryIceWeight}
      * @memberof PackageServiceOptionsDryIce
      */
-    dryIceWeight: DryIceDryIceWeight;
+    DryIceWeight: DryIceDryIceWeight;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. Relevant only in CFR regulation set. If present it is used to designate the Dry Ice is for any medical use and rates are adjusted for DryIce weight more than 2.5 KGS or 5.5 LBS.
      * @type {string}
      * @memberof PackageServiceOptionsDryIce
      */
-    medicalUseIndicator?: string;
+    MedicalUseIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. Indicates a Dry Ice audit will be performed per the Regulation Set requirements. Empty tag means indicator is present.
      * @type {string}
      * @memberof PackageServiceOptionsDryIce
      */
-    auditRequired?: string;
+    AuditRequired?: string;
 }
 /**
  * Container to hold HazMat information.  Applies only if SubVersion is greater than or equal to 1701.
@@ -1874,31 +1874,31 @@ export interface PackageServiceOptionsHazMat {
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    packageIdentifier?: string;
+    PackageIdentifier?: string;
     /**
      * QValue is required when a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA.   Applies only if SubVersion is greater than or equal to 1701. Valid values are : 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    qValue?: string;
+    QValue?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. Presence indicates that shipment is overpack.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    overPackedIndicator?: string;
+    OverPackedIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value is ignored. Indicates the hazmat shipment/package is all packed in one.  Applies only if SubVersion is greater than or equal to 1701.
      * @type {string}
      * @memberof PackageServiceOptionsHazMat
      */
-    allPackedInOneIndicator?: string;
+    AllPackedInOneIndicator?: string;
     /**
      *
      * @type {HazMatHazMatChemicalRecord}
      * @memberof PackageServiceOptionsHazMat
      */
-    hazMatChemicalRecord: HazMatHazMatChemicalRecord;
+    HazMatChemicalRecord: HazMatHazMatChemicalRecord;
 }
 /**
  * Any value associated with this element will be ignored.   If present, the package is rated for UPS Proactive Response and proactive package tracking.  Contractual accessorial for health care companies to allow package monitoring throughout the UPS system.  Shippers account needs to have valid contract for UPS Proactive Response.
@@ -1921,13 +1921,13 @@ export interface PackageServiceOptionsShipperDeclaredValue {
      * @type {string}
      * @memberof PackageServiceOptionsShipperDeclaredValue
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The monetary value for the amount associated with the package.
      * @type {string}
      * @memberof PackageServiceOptionsShipperDeclaredValue
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The presence indicates that the package may be released by driver without a signature from the consignee.  Empty Tag. Only available for US50/PR to US50/PR packages without return service.
@@ -1950,7 +1950,7 @@ export interface PackageUPSPremier {
      * @type {string}
      * @memberof PackageUPSPremier
      */
-    category: string;
+    Category: string;
 }
 /**
  * UnitOfMeasurement Container.  N/A
@@ -1963,13 +1963,13 @@ export interface PackageWeightUnitOfMeasurement {
      * @type {string}
      * @memberof PackageWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof PackageWeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * Actual package weight.  Weight accepted for letters/envelopes.
@@ -1997,31 +1997,31 @@ export interface PaymentDetailsShipmentCharge {
      * @type {string}
      * @memberof PaymentDetailsShipmentCharge
      */
-    type: string;
+    Type: string;
     /**
      *
      * @type {ShipmentChargeBillShipper}
      * @memberof PaymentDetailsShipmentCharge
      */
-    billShipper?: ShipmentChargeBillShipper;
+    BillShipper?: ShipmentChargeBillShipper;
     /**
      *
      * @type {ShipmentChargeBillReceiver}
      * @memberof PaymentDetailsShipmentCharge
      */
-    billReceiver?: ShipmentChargeBillReceiver;
+    BillReceiver?: ShipmentChargeBillReceiver;
     /**
      *
      * @type {ShipmentChargeBillThirdParty}
      * @memberof PaymentDetailsShipmentCharge
      */
-    billThirdParty?: ShipmentChargeBillThirdParty;
+    BillThirdParty?: ShipmentChargeBillThirdParty;
     /**
      * Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  Empty Tag. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.
      * @type {string}
      * @memberof PaymentDetailsShipmentCharge
      */
-    consigneeBilledIndicator?: string;
+    ConsigneeBilledIndicator?: string;
 }
 /**
  * Split Duty VAT Indicator. The presence indicates the payer specified for Transportation Charges will pay transportation charges and any duties that apply to the shipment. The payer specified for Duties and Taxes will pay the VAT (Value-Added Tax) only.  Empty Tag. The payment method for Transportation charges must be UPS account. The UPS account must be a daily pickup account or an occasional account.
@@ -2079,7 +2079,7 @@ export interface RATERequestWrapper {
      * @type {RateRequest}
      * @memberof RATERequestWrapper
      */
-    rateRequest: RateRequest;
+    RateRequest: RateRequest;
 }
 /**
  * N/A
@@ -2092,7 +2092,7 @@ export interface RATEResponseWrapper {
      * @type {RateResponse}
      * @memberof RATEResponseWrapper
      */
-    rateResponse: RateResponse;
+    RateResponse: RateResponse;
 }
 /**
  * Rate Request container.  N/A
@@ -2105,25 +2105,25 @@ export interface RateRequest {
      * @type {RateRequestRequest}
      * @memberof RateRequest
      */
-    request: RateRequestRequest;
+    Request: RateRequestRequest;
     /**
      *
      * @type {RateRequestPickupType}
      * @memberof RateRequest
      */
-    pickupType?: RateRequestPickupType;
+    PickupType?: RateRequestPickupType;
     /**
      *
      * @type {RateRequestCustomerClassification}
      * @memberof RateRequest
      */
-    customerClassification?: RateRequestCustomerClassification;
+    CustomerClassification?: RateRequestCustomerClassification;
     /**
      *
      * @type {RateRequestShipment}
      * @memberof RateRequest
      */
-    shipment: RateRequestShipment;
+    Shipment: RateRequestShipment;
 }
 /**
  * Customer classification container. Valid if ShipFrom country or territory  is �US�  N/A
@@ -2136,13 +2136,13 @@ export interface RateRequestCustomerClassification {
      * @type {string}
      * @memberof RateRequestCustomerClassification
      */
-    code: string;
+    Code: string;
     /**
      * Customer classification description of the code above.  Ignored if provided in the Request. Length is not validated.
      * @type {string}
      * @memberof RateRequestCustomerClassification
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Pickup Type container tag.  N/A
@@ -2155,13 +2155,13 @@ export interface RateRequestPickupType {
      * @type {string}
      * @memberof RateRequestPickupType
      */
-    code: string;
+    Code: string;
     /**
      * Pickup Type Description.  Ignored if provided in the Request.
      * @type {string}
      * @memberof RateRequestPickupType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Request container.  N/A
@@ -2174,19 +2174,19 @@ export interface RateRequestRequest {
      * @type {string}
      * @memberof RateRequestRequest
      */
-    requestOption: string;
+    RequestOption: string;
     /**
      * Indicates Rate API to display the new release features in Rate API response based on Rate release. See the What's New section for the latest Rate release. Supported values: 1601, 1607, 1701, 1707, 2108, 2205
      * @type {string}
      * @memberof RateRequestRequest
      */
-    subVersion?: string;
+    SubVersion?: string;
     /**
      *
      * @type {RequestTransactionReference}
      * @memberof RateRequestRequest
      */
-    transactionReference?: RequestTransactionReference;
+    TransactionReference?: RequestTransactionReference;
 }
 /**
  * Container for Shipment Information.  N/A
@@ -2199,145 +2199,145 @@ export interface RateRequestShipment {
      * @type {string}
      * @memberof RateRequestShipment
      */
-    originRecordTransactionTimestamp?: string;
+    OriginRecordTransactionTimestamp?: string;
     /**
      *
      * @type {ShipmentShipper}
      * @memberof RateRequestShipment
      */
-    shipper: ShipmentShipper;
+    Shipper: ShipmentShipper;
     /**
      *
      * @type {ShipmentShipTo}
      * @memberof RateRequestShipment
      */
-    shipTo: ShipmentShipTo;
+    ShipTo: ShipmentShipTo;
     /**
      *
      * @type {ShipmentShipFrom}
      * @memberof RateRequestShipment
      */
-    shipFrom?: ShipmentShipFrom;
+    ShipFrom?: ShipmentShipFrom;
     /**
      *
      * @type {ShipmentAlternateDeliveryAddress}
      * @memberof RateRequestShipment
      */
-    alternateDeliveryAddress?: ShipmentAlternateDeliveryAddress;
+    AlternateDeliveryAddress?: ShipmentAlternateDeliveryAddress;
     /**
      *
      * @type {Array<ShipmentShipmentIndicationType>}
      * @memberof RateRequestShipment
      */
-    shipmentIndicationType?: Array<ShipmentShipmentIndicationType>;
+    ShipmentIndicationType?: Array<ShipmentShipmentIndicationType>;
     /**
      *
      * @type {ShipmentPaymentDetails}
      * @memberof RateRequestShipment
      */
-    paymentDetails?: ShipmentPaymentDetails;
+    PaymentDetails?: ShipmentPaymentDetails;
     /**
      *
      * @type {ShipmentFRSPaymentInformation}
      * @memberof RateRequestShipment
      */
-    fRSPaymentInformation?: ShipmentFRSPaymentInformation;
+    FRSPaymentInformation?: ShipmentFRSPaymentInformation;
     /**
      *
      * @type {ShipmentFreightShipmentInformation}
      * @memberof RateRequestShipment
      */
-    freightShipmentInformation?: ShipmentFreightShipmentInformation;
+    FreightShipmentInformation?: ShipmentFreightShipmentInformation;
     /**
      * Goods Not In Free Circulation indicator.  This is an empty tag, any value inside is ignored. This indicator is invalid for a package type of UPS Letter and DocumentsOnly.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    goodsNotInFreeCirculationIndicator?: string;
+    GoodsNotInFreeCirculationIndicator?: string;
     /**
      *
      * @type {ShipmentService}
      * @memberof RateRequestShipment
      */
-    service?: ShipmentService;
+    Service?: ShipmentService;
     /**
      * Total number of pieces in all pallets. Required for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipments.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    numOfPieces?: string;
+    NumOfPieces?: string;
     /**
      *
      * @type {ShipmentShipmentTotalWeight}
      * @memberof RateRequestShipment
      */
-    shipmentTotalWeight?: ShipmentShipmentTotalWeight;
+    ShipmentTotalWeight?: ShipmentShipmentTotalWeight;
     /**
      * Valid values are Document and Non-document. If the indicator is present then the value is Document else Non-Document. Note: Not applicable for FRS rating  requests.  Empty Tag.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    documentsOnlyIndicator?: string;
+    DocumentsOnlyIndicator?: string;
     /**
      *
      * @type {Array<ShipmentPackage>}
      * @memberof RateRequestShipment
      */
-    _package: Array<ShipmentPackage>;
+    _Package: Array<ShipmentPackage>;
     /**
      *
      * @type {ShipmentShipmentServiceOptions}
      * @memberof RateRequestShipment
      */
-    shipmentServiceOptions?: ShipmentShipmentServiceOptions;
+    ShipmentServiceOptions?: ShipmentShipmentServiceOptions;
     /**
      *
      * @type {ShipmentShipmentRatingOptions}
      * @memberof RateRequestShipment
      */
-    shipmentRatingOptions?: ShipmentShipmentRatingOptions;
+    ShipmentRatingOptions?: ShipmentShipmentRatingOptions;
     /**
      *
      * @type {ShipmentInvoiceLineTotal}
      * @memberof RateRequestShipment
      */
-    invoiceLineTotal?: ShipmentInvoiceLineTotal;
+    InvoiceLineTotal?: ShipmentInvoiceLineTotal;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. RatingMethodRequestedIndicator is an indicator. If present, Billable Weight Calculation method and Rating Method information would be returned in response.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    ratingMethodRequestedIndicator?: string;
+    RatingMethodRequestedIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. TaxInformationIndicator is an indicator.   The Tax related information includes any type of Taxes, corresponding Monetary Values, Total Charges with Taxes and disclaimers (if applicable) would be returned in response.  If present, any taxes that may be applicable to a shipment would be returned in response.   If this indicator is requested with NegotiatedRatesIndicator, Tax related information, if applicable, would be returned only for Negotiated Rates and not for Published Rates.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    taxInformationIndicator?: string;
+    TaxInformationIndicator?: string;
     /**
      *
      * @type {ShipmentPromotionalDiscountInformation}
      * @memberof RateRequestShipment
      */
-    promotionalDiscountInformation?: ShipmentPromotionalDiscountInformation;
+    PromotionalDiscountInformation?: ShipmentPromotionalDiscountInformation;
     /**
      *
      * @type {ShipmentDeliveryTimeInformation}
      * @memberof RateRequestShipment
      */
-    deliveryTimeInformation?: ShipmentDeliveryTimeInformation;
+    DeliveryTimeInformation?: ShipmentDeliveryTimeInformation;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. MasterCartonIndicator is an indicator and presence implies that shipment is Master Carton type.  If present, the shipment will be rated as a Master Carton Type. If this indicator is requested with NegotiatedRatesIndicator, rates would be returned only for Negotiated Rates and not for Published Rates.
      * @type {string}
      * @memberof RateRequestShipment
      */
-    masterCartonIndicator?: string;
+    MasterCartonIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. WWEShipmentIndicator is an indicator and presence implies that WWE service details requested for RequestOption=Shop or  RequestOption=Shoptimeintransit  RequestOption=Shop or  RequestOption=Shoptimeintransit
      * @type {string}
      * @memberof RateRequestShipment
      */
-    wWEShipmentIndicator?: string;
+    WWEShipmentIndicator?: string;
 }
 /**
  * Rate Response Container.
@@ -2350,13 +2350,13 @@ export interface RateResponse {
      * @type {RateResponseResponse}
      * @memberof RateResponse
      */
-    response: RateResponseResponse;
+    Response: RateResponseResponse;
     /**
      *
      * @type {Array<RateResponseRatedShipment>}
      * @memberof RateResponse
      */
-    ratedShipment: Array<RateResponseRatedShipment>;
+    RatedShipment: Array<RateResponseRatedShipment>;
 }
 /**
  * RatedShipment Container.
@@ -2369,121 +2369,121 @@ export interface RateResponseRatedShipment {
      * @type {Array<RatedShipmentDisclaimer>}
      * @memberof RateResponseRatedShipment
      */
-    disclaimer?: Array<RatedShipmentDisclaimer>;
+    Disclaimer?: Array<RatedShipmentDisclaimer>;
     /**
      *
      * @type {RatedShipmentService}
      * @memberof RateResponseRatedShipment
      */
-    service: RatedShipmentService;
+    Service: RatedShipmentService;
     /**
      * Rate Type with which Shipment is rated. Possible RateChart values for different regions will be:  US 48 origin:  1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.  Alaska/Hawaii origin: 1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.   All Other origins: 1 � Rates  5 - Regional Rates  6 - General List Rates.  3 and 4 do not apply
      * @type {string}
      * @memberof RateResponseRatedShipment
      */
-    rateChart?: string;
+    RateChart?: string;
     /**
      *
      * @type {Array<RatedShipmentRatedShipmentAlert>}
      * @memberof RateResponseRatedShipment
      */
-    ratedShipmentAlert?: Array<RatedShipmentRatedShipmentAlert>;
+    RatedShipmentAlert?: Array<RatedShipmentRatedShipmentAlert>;
     /**
      * Indicates whether the billable weight calculation method is utilized at the package or shipment level.  This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Possible values: 01 = Shipment Billable Weight 02 = Package Billable Weight
      * @type {string}
      * @memberof RateResponseRatedShipment
      */
-    billableWeightCalculationMethod?: string;
+    BillableWeightCalculationMethod?: string;
     /**
      * Indicates whether the Shipment was rated at the shipment-level or the package-level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Possible values: 01 = Shipment level 02 = Package level
      * @type {string}
      * @memberof RateResponseRatedShipment
      */
-    ratingMethod?: string;
+    RatingMethod?: string;
     /**
      *
      * @type {RatedShipmentBillingWeight}
      * @memberof RateResponseRatedShipment
      */
-    billingWeight: RatedShipmentBillingWeight;
+    BillingWeight: RatedShipmentBillingWeight;
     /**
      *
      * @type {RatedShipmentTransportationCharges}
      * @memberof RateResponseRatedShipment
      */
-    transportationCharges: RatedShipmentTransportationCharges;
+    TransportationCharges: RatedShipmentTransportationCharges;
     /**
      *
      * @type {RatedShipmentBaseServiceCharge}
      * @memberof RateResponseRatedShipment
      */
-    baseServiceCharge?: RatedShipmentBaseServiceCharge;
+    BaseServiceCharge?: RatedShipmentBaseServiceCharge;
     /**
      *
      * @type {Array<RatedShipmentItemizedCharges>}
      * @memberof RateResponseRatedShipment
      */
-    itemizedCharges?: Array<RatedShipmentItemizedCharges>;
+    ItemizedCharges?: Array<RatedShipmentItemizedCharges>;
     /**
      *
      * @type {RatedShipmentFRSShipmentData}
      * @memberof RateResponseRatedShipment
      */
-    fRSShipmentData?: RatedShipmentFRSShipmentData;
+    FRSShipmentData?: RatedShipmentFRSShipmentData;
     /**
      *
      * @type {RatedShipmentServiceOptionsCharges}
      * @memberof RateResponseRatedShipment
      */
-    serviceOptionsCharges: RatedShipmentServiceOptionsCharges;
+    ServiceOptionsCharges: RatedShipmentServiceOptionsCharges;
     /**
      *
      * @type {Array<RatedShipmentTaxCharges>}
      * @memberof RateResponseRatedShipment
      */
-    taxCharges?: Array<RatedShipmentTaxCharges>;
+    TaxCharges?: Array<RatedShipmentTaxCharges>;
     /**
      *
      * @type {RatedShipmentTotalCharges}
      * @memberof RateResponseRatedShipment
      */
-    totalCharges: RatedShipmentTotalCharges;
+    TotalCharges: RatedShipmentTotalCharges;
     /**
      *
      * @type {RatedShipmentTotalChargesWithTaxes}
      * @memberof RateResponseRatedShipment
      */
-    totalChargesWithTaxes?: RatedShipmentTotalChargesWithTaxes;
+    TotalChargesWithTaxes?: RatedShipmentTotalChargesWithTaxes;
     /**
      *
      * @type {RatedShipmentNegotiatedRateCharges}
      * @memberof RateResponseRatedShipment
      */
-    negotiatedRateCharges?: RatedShipmentNegotiatedRateCharges;
+    NegotiatedRateCharges?: RatedShipmentNegotiatedRateCharges;
     /**
      *
      * @type {Array<RatedShipmentRatedPackage>}
      * @memberof RateResponseRatedShipment
      */
-    ratedPackage: Array<RatedShipmentRatedPackage>;
+    RatedPackage: Array<RatedShipmentRatedPackage>;
     /**
      *
      * @type {RatedShipmentTimeInTransit}
      * @memberof RateResponseRatedShipment
      */
-    timeInTransit?: RatedShipmentTimeInTransit;
+    TimeInTransit?: RatedShipmentTimeInTransit;
     /**
      * The rated shipments scheduled delivery date, ScheduledDeliveryDate returned only when Subversion of 2205 was sent in the request and the customer has the specific contract.
      * @type {string}
      * @memberof RateResponseRatedShipment
      */
-    scheduledDeliveryDate?: string;
+    ScheduledDeliveryDate?: string;
     /**
      * Informational only
      * @type {string}
      * @memberof RateResponseRatedShipment
      */
-    roarRatedIndicator?: string;
+    RoarRatedIndicator?: string;
 }
 /**
  * Response Container.
@@ -2496,25 +2496,25 @@ export interface RateResponseResponse {
      * @type {ResponseResponseStatus}
      * @memberof RateResponseResponse
      */
-    responseStatus: ResponseResponseStatus;
+    ResponseStatus: ResponseResponseStatus;
     /**
      *
      * @type {ResponseAlert}
      * @memberof RateResponseResponse
      */
-    alert?: ResponseAlert;
+    Alert?: ResponseAlert;
     /**
      *
      * @type {ResponseAlertDetail}
      * @memberof RateResponseResponse
      */
-    alertDetail?: ResponseAlertDetail;
+    AlertDetail?: ResponseAlertDetail;
     /**
      *
      * @type {ResponseTransactionReference}
      * @memberof RateResponseResponse
      */
-    transactionReference?: ResponseTransactionReference;
+    TransactionReference?: ResponseTransactionReference;
 }
 /**
  * The container for Accessorial indicators. This information would be returned only if ItemizedChargesRequested was present during Rate request. This is valid only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Mid-day service request with Dry Ice or Oversize Pallet and SubVersion greater than or equal to 1707.  This is valid only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Middday Service.
@@ -2527,13 +2527,13 @@ export interface RatedPackageAccessorial {
      * @type {string}
      * @memberof RatedPackageAccessorial
      */
-    code: string;
+    Code: string;
     /**
      * Description for Accessorial Indicator.
      * @type {string}
      * @memberof RatedPackageAccessorial
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Base Service Charge Container.  These charges would be returned only when subversion is greater than or equal to 1701
@@ -2546,13 +2546,13 @@ export interface RatedPackageBaseServiceCharge {
      * @type {string}
      * @memberof RatedPackageBaseServiceCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The base value of the specific service for the shipment. This is equal to transportation charges - fuel surcharges.
      * @type {string}
      * @memberof RatedPackageBaseServiceCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Billing Weight Container.
@@ -2565,13 +2565,13 @@ export interface RatedPackageBillingWeight {
      * @type {BillingWeightUnitOfMeasurement}
      * @memberof RatedPackageBillingWeight
      */
-    unitOfMeasurement: BillingWeightUnitOfMeasurement;
+    UnitOfMeasurement: BillingWeightUnitOfMeasurement;
     /**
      * The value for the billable weight associated with the package.  When using a negotiated divisor different from the published UPS divisor (139 for inches and 5,000 for cm), the weight returned is based on the published divisor. Rates, however, are based on the negotiated divisor.
      * @type {string}
      * @memberof RatedPackageBillingWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Itemized Charges are returned only when the subversion element is present and greater than or equal to '1607'.  These charges would be returned only when subversion is greater than or equal to 1607.
@@ -2584,31 +2584,31 @@ export interface RatedPackageItemizedCharges {
      * @type {string}
      * @memberof RatedPackageItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof RatedPackageItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof RatedPackageItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for Itemized Charge costs associated with the shipment.
      * @type {string}
      * @memberof RatedPackageItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of Itemized Charge type.
      * @type {string}
      * @memberof RatedPackageItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Negotiated Rates container.  These charges would be returned only when - 1) subversion is greater than or equal to 1607 2) if negotiated rates were requested for GFP shipments and account number is eligible to receive negotiated rates.
@@ -2621,7 +2621,7 @@ export interface RatedPackageNegotiatedCharges {
      * @type {Array<NegotiatedChargesItemizedCharges>}
      * @memberof RatedPackageNegotiatedCharges
      */
-    itemizedCharges?: Array<NegotiatedChargesItemizedCharges>;
+    ItemizedCharges?: Array<NegotiatedChargesItemizedCharges>;
 }
 /**
  * Container for returned Rate Modifier information. Applies only if SubVersion is 2205 or greater.
@@ -2634,25 +2634,25 @@ export interface RatedPackageRateModifier {
      * @type {string}
      * @memberof RatedPackageRateModifier
      */
-    modifierType: string;
+    ModifierType: string;
     /**
      * Rate Modifier Description. Example: \"Origin Modifier\". Applies only if SubVersion is 2205 or greater.
      * @type {string}
      * @memberof RatedPackageRateModifier
      */
-    modifierDesc: string;
+    ModifierDesc: string;
     /**
      * Rate Currency Code. Example: \"USD\"
      * @type {string}
      * @memberof RatedPackageRateModifier
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Amount. Example: \"-1.00\",\"0.25\". It contains positive or negative values. Applies only if SubVersion is 2205 or greater.
      * @type {string}
      * @memberof RatedPackageRateModifier
      */
-    amount: string;
+    Amount: string;
 }
 /**
  * Service Options Charges Container.
@@ -2665,13 +2665,13 @@ export interface RatedPackageServiceOptionsCharges {
      * @type {string}
      * @memberof RatedPackageServiceOptionsCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the accessorial charges associated with the package.
      * @type {string}
      * @memberof RatedPackageServiceOptionsCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Total Charges Container.
@@ -2684,13 +2684,13 @@ export interface RatedPackageTotalCharges {
      * @type {string}
      * @memberof RatedPackageTotalCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the total charges associated with the package.
      * @type {string}
      * @memberof RatedPackageTotalCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Transportation Charges Container.
@@ -2703,13 +2703,13 @@ export interface RatedPackageTransportationCharges {
      * @type {string}
      * @memberof RatedPackageTransportationCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the transportation costs associated with the package.
      * @type {string}
      * @memberof RatedPackageTransportationCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The weight of the package in the rated Package.
@@ -2737,13 +2737,13 @@ export interface RatedShipmentBaseServiceCharge {
      * @type {string}
      * @memberof RatedShipmentBaseServiceCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The base value of the specific service for the shipment. This is equal to transportation charges - fuel surcharges.
      * @type {string}
      * @memberof RatedShipmentBaseServiceCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Indicates whether the billable weight calculation method is utilized at the package or shipment level.  This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Possible values: 01 = Shipment Billable Weight 02 = Package Billable Weight
@@ -2761,13 +2761,13 @@ export interface RatedShipmentBillingWeight {
      * @type {BillingWeightUnitOfMeasurement}
      * @memberof RatedShipmentBillingWeight
      */
-    unitOfMeasurement: BillingWeightUnitOfMeasurement;
+    UnitOfMeasurement: BillingWeightUnitOfMeasurement;
     /**
      * The value for the billable weight associated with the package.  When using a negotiated divisor different from the published UPS divisor (139 for inches and 5,000 for cm), the weight returned is based on the published divisor. Rates, however, are based on the negotiated divisor.
      * @type {string}
      * @memberof RatedShipmentBillingWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Disclaimer is used to provide more information to the shipper regarding the processed shipment. It is used to notify the shipper about possible taxes and duties that might have been added or might apply to the shipment. Refer to the Appendix for various disclaimers. This field may be returned only if TaxInformationIndicator is present in the request.
@@ -2780,13 +2780,13 @@ export interface RatedShipmentDisclaimer {
      * @type {string}
      * @memberof RatedShipmentDisclaimer
      */
-    code: string;
+    Code: string;
     /**
      * Disclaimer description. Please refer to Appendix for possible descriptions.
      * @type {string}
      * @memberof RatedShipmentDisclaimer
      */
-    description: string;
+    Description: string;
 }
 /**
  * FRSShipmentData container.  Only returned when the FRSShipmentIIndicator is used. UPS Ground Freight Pricing Only.
@@ -2799,19 +2799,19 @@ export interface RatedShipmentFRSShipmentData {
      * @type {FRSShipmentDataTransportationCharges}
      * @memberof RatedShipmentFRSShipmentData
      */
-    transportationCharges: FRSShipmentDataTransportationCharges;
+    TransportationCharges: FRSShipmentDataTransportationCharges;
     /**
      *
      * @type {FRSShipmentDataFreightDensityRate}
      * @memberof RatedShipmentFRSShipmentData
      */
-    freightDensityRate?: FRSShipmentDataFreightDensityRate;
+    FreightDensityRate?: FRSShipmentDataFreightDensityRate;
     /**
      *
      * @type {FRSShipmentDataHandlingUnits}
      * @memberof RatedShipmentFRSShipmentData
      */
-    handlingUnits?: FRSShipmentDataHandlingUnits;
+    HandlingUnits?: FRSShipmentDataHandlingUnits;
 }
 /**
  * Itemized Charges are returned only when the subversion element is present and greater than or equal to '1601'.  These charges would be returned only when subversion is greater than or equal to 1601
@@ -2824,31 +2824,31 @@ export interface RatedShipmentItemizedCharges {
      * @type {string}
      * @memberof RatedShipmentItemizedCharges
      */
-    code: string;
+    Code: string;
     /**
      * Description of Itemized Charge that had been charged.
      * @type {string}
      * @memberof RatedShipmentItemizedCharges
      */
-    description?: string;
+    Description?: string;
     /**
      * The IATA currency code associated with the Itemized Charge costs for the shipment.
      * @type {string}
      * @memberof RatedShipmentItemizedCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for Itemized Charge costs associated with the shipment.
      * @type {string}
      * @memberof RatedShipmentItemizedCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
     /**
      * The sub-type of Itemized Charge type.
      * @type {string}
      * @memberof RatedShipmentItemizedCharges
      */
-    subType?: string;
+    SubType?: string;
 }
 /**
  * Negotiated Rate Charges Container.  For tiered rates and promotional discounts, if a particular shipment based on zone, origin, destination or even shipment size doesn't qualify for the existing discount then no negotiated rates container will be returned. Published rates will be the applicable rate.
@@ -2861,25 +2861,25 @@ export interface RatedShipmentNegotiatedRateCharges {
      * @type {Array<NegotiatedRateChargesItemizedCharges>}
      * @memberof RatedShipmentNegotiatedRateCharges
      */
-    itemizedCharges?: Array<NegotiatedRateChargesItemizedCharges>;
+    ItemizedCharges?: Array<NegotiatedRateChargesItemizedCharges>;
     /**
      *
      * @type {Array<NegotiatedRateChargesTaxCharges>}
      * @memberof RatedShipmentNegotiatedRateCharges
      */
-    taxCharges?: Array<NegotiatedRateChargesTaxCharges>;
+    TaxCharges?: Array<NegotiatedRateChargesTaxCharges>;
     /**
      *
      * @type {NegotiatedRateChargesTotalCharge}
      * @memberof RatedShipmentNegotiatedRateCharges
      */
-    totalCharge: NegotiatedRateChargesTotalCharge;
+    TotalCharge: NegotiatedRateChargesTotalCharge;
     /**
      *
      * @type {NegotiatedRateChargesTotalChargesWithTaxes}
      * @memberof RatedShipmentNegotiatedRateCharges
      */
-    totalChargesWithTaxes?: NegotiatedRateChargesTotalChargesWithTaxes;
+    TotalChargesWithTaxes?: NegotiatedRateChargesTotalChargesWithTaxes;
 }
 /**
  * Rate Type with which Shipment is rated. Possible RateChart values for different regions will be:  US 48 origin:  1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.  Alaska/Hawaii origin: 1 � Daily Rates  3 � Standard List Rates  4 � Retail Rates.   All Other origins: 1 � Rates  5 - Regional Rates  6 - General List Rates.  3 and 4 do not apply
@@ -2897,61 +2897,61 @@ export interface RatedShipmentRatedPackage {
      * @type {RatedPackageBaseServiceCharge}
      * @memberof RatedShipmentRatedPackage
      */
-    baseServiceCharge?: RatedPackageBaseServiceCharge;
+    BaseServiceCharge?: RatedPackageBaseServiceCharge;
     /**
      *
      * @type {RatedPackageTransportationCharges}
      * @memberof RatedShipmentRatedPackage
      */
-    transportationCharges?: RatedPackageTransportationCharges;
+    TransportationCharges?: RatedPackageTransportationCharges;
     /**
      *
      * @type {RatedPackageServiceOptionsCharges}
      * @memberof RatedShipmentRatedPackage
      */
-    serviceOptionsCharges?: RatedPackageServiceOptionsCharges;
+    ServiceOptionsCharges?: RatedPackageServiceOptionsCharges;
     /**
      *
      * @type {RatedPackageTotalCharges}
      * @memberof RatedShipmentRatedPackage
      */
-    totalCharges?: RatedPackageTotalCharges;
+    TotalCharges?: RatedPackageTotalCharges;
     /**
      * The weight of the package in the rated Package.
      * @type {string}
      * @memberof RatedShipmentRatedPackage
      */
-    weight?: string;
+    Weight?: string;
     /**
      *
      * @type {RatedPackageBillingWeight}
      * @memberof RatedShipmentRatedPackage
      */
-    billingWeight?: RatedPackageBillingWeight;
+    BillingWeight?: RatedPackageBillingWeight;
     /**
      *
      * @type {Array<RatedPackageAccessorial>}
      * @memberof RatedShipmentRatedPackage
      */
-    accessorial?: Array<RatedPackageAccessorial>;
+    Accessorial?: Array<RatedPackageAccessorial>;
     /**
      *
      * @type {Array<RatedPackageItemizedCharges>}
      * @memberof RatedShipmentRatedPackage
      */
-    itemizedCharges?: Array<RatedPackageItemizedCharges>;
+    ItemizedCharges?: Array<RatedPackageItemizedCharges>;
     /**
      *
      * @type {RatedPackageNegotiatedCharges}
      * @memberof RatedShipmentRatedPackage
      */
-    negotiatedCharges?: RatedPackageNegotiatedCharges;
+    NegotiatedCharges?: RatedPackageNegotiatedCharges;
     /**
      *
      * @type {RatedPackageRateModifier}
      * @memberof RatedShipmentRatedPackage
      */
-    rateModifier?: RatedPackageRateModifier;
+    RateModifier?: RatedPackageRateModifier;
 }
 /**
  * Rated Shipment Alert container. There can be zero to many RatedShipmentAlert containers with code and description.
@@ -2964,13 +2964,13 @@ export interface RatedShipmentRatedShipmentAlert {
      * @type {string}
      * @memberof RatedShipmentRatedShipmentAlert
      */
-    code: string;
+    Code: string;
     /**
      * The rated shipment warning Description returned by the system.
      * @type {string}
      * @memberof RatedShipmentRatedShipmentAlert
      */
-    description: string;
+    Description: string;
 }
 /**
  * Indicates whether the Shipment was rated at the shipment-level or the package-level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Possible values: 01 = Shipment level 02 = Package level
@@ -2988,13 +2988,13 @@ export interface RatedShipmentService {
      * @type {string}
      * @memberof RatedShipmentService
      */
-    code: string;
+    Code: string;
     /**
      * Optional. Description of service. Example, UPS Next Day Air, UPS Ground etc, as referenced by the Service Code.
      * @type {string}
      * @memberof RatedShipmentService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Service Options Charges Container.
@@ -3007,13 +3007,13 @@ export interface RatedShipmentServiceOptionsCharges {
      * @type {string}
      * @memberof RatedShipmentServiceOptionsCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the accessorial charges associated with the package.
      * @type {string}
      * @memberof RatedShipmentServiceOptionsCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TaxCharges container are returned only when TaxInformationIndicator is present in request and when Negotiated Rates are not applicable. TaxCharges container contains Tax information for a given shipment.
@@ -3026,13 +3026,13 @@ export interface RatedShipmentTaxCharges {
      * @type {string}
      * @memberof RatedShipmentTaxCharges
      */
-    type: string;
+    Type: string;
     /**
      * Tax Monetary Value represent the Tax amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof RatedShipmentTaxCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Container for returned Time in Transit information.  Will only be returned if request option was either \"ratetimeintransit\" or \"shoptimeintransit\" and DeliveryTimeInformation container was present in request.
@@ -3045,37 +3045,37 @@ export interface RatedShipmentTimeInTransit {
      * @type {string}
      * @memberof RatedShipmentTimeInTransit
      */
-    pickupDate: string;
+    PickupDate: string;
     /**
      * If the indicator is present then the shipment was processed as Document Only.
      * @type {string}
      * @memberof RatedShipmentTimeInTransit
      */
-    documentsOnlyIndicator?: string;
+    DocumentsOnlyIndicator?: string;
     /**
      * Package bill type for the shipment. Valid values: 02 - Document only  03 - Non-Document 04 - Pallet
      * @type {string}
      * @memberof RatedShipmentTimeInTransit
      */
-    packageBillType?: string;
+    PackageBillType?: string;
     /**
      *
      * @type {TimeInTransitServiceSummary}
      * @memberof RatedShipmentTimeInTransit
      */
-    serviceSummary: TimeInTransitServiceSummary;
+    ServiceSummary: TimeInTransitServiceSummary;
     /**
      * Required output for International requests. If Documents indicator is set for Non-document a duty is automatically calculated. The possible values to be returned are:  01 - Dutiable 02 - Non-Dutiable 03 - Low-value 04 - Courier Remission 05 - Gift 06 - Military 07 - Exception 08 - Line Release 09 - Section 321 low value.
      * @type {string}
      * @memberof RatedShipmentTimeInTransit
      */
-    autoDutyCode?: string;
+    AutoDutyCode?: string;
     /**
      * The Disclaimer is provided based upon the origin and destination country or territory codes provided in the request document. The possible disclaimers that can be returned are available in the Service Guaranteed Disclaimers table.
      * @type {string}
      * @memberof RatedShipmentTimeInTransit
      */
-    disclaimer?: string;
+    Disclaimer?: string;
 }
 /**
  * Total Charges Container.
@@ -3088,13 +3088,13 @@ export interface RatedShipmentTotalCharges {
      * @type {string}
      * @memberof RatedShipmentTotalCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the total charges associated with the package.
      * @type {string}
      * @memberof RatedShipmentTotalCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * TotalChargesWithTaxes container would be returned only if TaxInformationIndicator is present in request and when Negotiated Rates are not applicable. TotalChargesWithTaxes contains total charges including total taxes applied to a shipment.
@@ -3107,13 +3107,13 @@ export interface RatedShipmentTotalChargesWithTaxes {
      * @type {string}
      * @memberof RatedShipmentTotalChargesWithTaxes
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * TotalChargesWithTaxes monetary value amount.  Valid values are from 0 to 99999999999999.99
      * @type {string}
      * @memberof RatedShipmentTotalChargesWithTaxes
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Transportation Charges Container.
@@ -3126,13 +3126,13 @@ export interface RatedShipmentTransportationCharges {
      * @type {string}
      * @memberof RatedShipmentTransportationCharges
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * The value for the transportation costs associated with the package.
      * @type {string}
      * @memberof RatedShipmentTransportationCharges
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Used to define the request type.  Valid Values: Rate = The server rates (The default Request option is Rate if a Request Option is not provided).  Shop = The server validates the shipment, and returns rates for all UPS products from the ShipFrom to the ShipTo addresses.  Ratetimeintransit = The server rates with transit time information Shoptimeintransit = The server validates the shipment, and returns rates and transit times for all UPS products from the ShipFrom to the ShipTo addresses. Rate is the only valid request option for UPS Ground Freight Pricing requests.
@@ -3155,7 +3155,7 @@ export interface RequestTransactionReference {
      * @type {string}
      * @memberof RequestTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * Alert container. There can be zero to many alert containers with code and description.
@@ -3168,13 +3168,13 @@ export interface ResponseAlert {
      * @type {string}
      * @memberof ResponseAlert
      */
-    code: string;
+    Code: string;
     /**
      * Warning messages returned by the system.
      * @type {string}
      * @memberof ResponseAlert
      */
-    description: string;
+    Description: string;
 }
 /**
  * Alert Detail Container.  Currently applies to and returned only for request containing HazMat and SubVersion greater than or equal to 1701.
@@ -3187,19 +3187,19 @@ export interface ResponseAlertDetail {
      * @type {string}
      * @memberof ResponseAlertDetail
      */
-    code: string;
+    Code: string;
     /**
      * Warning messages returned by the system.
      * @type {string}
      * @memberof ResponseAlertDetail
      */
-    description: string;
+    Description: string;
     /**
      *
      * @type {AlertDetailElementLevelInformation}
      * @memberof ResponseAlertDetail
      */
-    elementLevelInformation?: AlertDetailElementLevelInformation;
+    ElementLevelInformation?: AlertDetailElementLevelInformation;
 }
 /**
  * Response Status Container.
@@ -3212,13 +3212,13 @@ export interface ResponseResponseStatus {
      * @type {string}
      * @memberof ResponseResponseStatus
      */
-    code: string;
+    Code: string;
     /**
      * Describes Response Status Code.  Returns text of \"Success\" for a valid request.
      * @type {string}
      * @memberof ResponseResponseStatus
      */
-    description: string;
+    Description: string;
 }
 /**
  * Identifies the success or failure of the transaction.   1 = Successful
@@ -3241,7 +3241,7 @@ export interface ResponseTransactionReference {
      * @type {string}
      * @memberof ResponseTransactionReference
      */
-    customerContext?: string;
+    CustomerContext?: string;
 }
 /**
  * This field is a flag to indicate if the package has Alcohol. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
@@ -3344,55 +3344,55 @@ export interface ServiceSummaryEstimatedArrival {
      * @type {EstimatedArrivalArrival}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    arrival: EstimatedArrivalArrival;
+    Arrival: EstimatedArrivalArrival;
     /**
      * Number of business days from Origin to Destination Locations.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    businessDaysInTransit: string;
+    BusinessDaysInTransit: string;
     /**
      *
      * @type {EstimatedArrivalPickup}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    pickup: EstimatedArrivalPickup;
+    Pickup: EstimatedArrivalPickup;
     /**
      * Day of week for arrival. Valid values are:  MON TUE WED THU FRI SAT
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    dayOfWeek: string;
+    DayOfWeek: string;
     /**
      * Customer Service call time. Returned for domestic as well as international requests.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    customerCenterCutoff?: string;
+    CustomerCenterCutoff?: string;
     /**
      * Number of days delayed at customs. Returned for International requests.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    delayCount?: string;
+    DelayCount?: string;
     /**
      * Number of National holidays during transit. Returned for International requests.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    holidayCount?: string;
+    HolidayCount?: string;
     /**
      * Number of rest days, i.e. non movement. Returned for International requests.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    restDays?: string;
+    RestDays?: string;
     /**
      * The total number of days in transit from one location to the next. Returned for International requests.
      * @type {string}
      * @memberof ServiceSummaryEstimatedArrival
      */
-    totalTransitDays?: string;
+    TotalTransitDays?: string;
 }
 /**
  * Empty Tag. Indicates whether the service will be guaranteed or not.  Required for International Requests.
@@ -3420,7 +3420,7 @@ export interface ServiceSummaryService {
      * @type {string}
      * @memberof ServiceSummaryService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Sunday delivery information for a service. Values are 1 - Sunday Delivery Available with additional charges  0 - Sunday Delivery not available or no additional charge, please check Delivery Date to confirm if the Delivery will be Sunday  Please see Saturday Delivery business rules section for more information.   Applies only if SubVersion is greater than or equal to 2007
@@ -3443,31 +3443,31 @@ export interface ShipFromAddress {
      * @type {string}
      * @memberof ShipFromAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * UPS Access Point city.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    city?: string;
+    City?: string;
     /**
      * UPS Access Point State or Province code.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * Postal Code for UPS accounts billing address.  Postal Code  may be present when the FRS Payment Information type = 02 and type = 03.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof ShipFromAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Origin attention name.  Length is not validated.
@@ -3490,37 +3490,37 @@ export interface ShipToAddress {
      * @type {string}
      * @memberof ShipToAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * UPS Access Point city.
      * @type {string}
      * @memberof ShipToAddress
      */
-    city?: string;
+    City?: string;
     /**
      * UPS Access Point State or Province code.
      * @type {string}
      * @memberof ShipToAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * Postal Code for UPS accounts billing address.  Postal Code  may be present when the FRS Payment Information type = 02 and type = 03.
      * @type {string}
      * @memberof ShipToAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof ShipToAddress
      */
-    countryCode: string;
+    CountryCode: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored.This field is a flag to indicate if the Alternate Delivery location is a residential location.  True if ResidentialAddressIndicator tag exists.  For future use.
      * @type {string}
      * @memberof ShipToAddress
      */
-    residentialAddressIndicator?: string;
+    ResidentialAddressIndicator?: string;
 }
 /**
  * Destination attention name.  Length is not validated.
@@ -3543,13 +3543,13 @@ export interface ShipmentAlternateDeliveryAddress {
      * @type {string}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    name?: string;
+    Name?: string;
     /**
      *
      * @type {AlternateDeliveryAddressAddress}
      * @memberof ShipmentAlternateDeliveryAddress
      */
-    address: AlternateDeliveryAddressAddress;
+    Address: AlternateDeliveryAddressAddress;
 }
 /**
  * Container for the BillReceiver billing option.  This element or its sibling element, BillShipper, BillThirdParty or Consignee Billed, must be present but no more than one can be present. For a return shipment, Bill Receiver is invalid for Transportation charges.
@@ -3562,13 +3562,13 @@ export interface ShipmentChargeBillReceiver {
      * @type {string}
      * @memberof ShipmentChargeBillReceiver
      */
-    accountNumber: string;
+    AccountNumber: string;
     /**
      *
      * @type {BillReceiverAddress}
      * @memberof ShipmentChargeBillReceiver
      */
-    address?: BillReceiverAddress;
+    Address?: BillReceiverAddress;
 }
 /**
  * Container for the BillShipper billing option.  This element or its sibling element, BillReceiver, BillThirdParty or ConsigneeBilledIndicator, must be present but no more than one can be present.
@@ -3581,7 +3581,7 @@ export interface ShipmentChargeBillShipper {
      * @type {string}
      * @memberof ShipmentChargeBillShipper
      */
-    accountNumber: string;
+    AccountNumber: string;
 }
 /**
  * Container for the third party billing option.  This element or its sibling element, BillShipper, BillReceiver or Consignee Billed, must be present but no more than one can be present.
@@ -3594,13 +3594,13 @@ export interface ShipmentChargeBillThirdParty {
      * @type {string}
      * @memberof ShipmentChargeBillThirdParty
      */
-    accountNumber: string;
+    AccountNumber: string;
     /**
      *
      * @type {BillThirdPartyAddress}
      * @memberof ShipmentChargeBillThirdParty
      */
-    address: BillThirdPartyAddress;
+    Address: BillThirdPartyAddress;
 }
 /**
  * Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  Empty Tag. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.
@@ -3623,19 +3623,19 @@ export interface ShipmentDeliveryTimeInformation {
      * @type {string}
      * @memberof ShipmentDeliveryTimeInformation
      */
-    packageBillType: string;
+    PackageBillType: string;
     /**
      *
      * @type {DeliveryTimeInformationPickup}
      * @memberof ShipmentDeliveryTimeInformation
      */
-    pickup?: DeliveryTimeInformationPickup;
+    Pickup?: DeliveryTimeInformationPickup;
     /**
      *
      * @type {Array<DeliveryTimeInformationReturnContractServices>}
      * @memberof ShipmentDeliveryTimeInformation
      */
-    returnContractServices?: Array<DeliveryTimeInformationReturnContractServices>;
+    ReturnContractServices?: Array<DeliveryTimeInformationReturnContractServices>;
 }
 /**
  * Valid values are Document and Non-document. If the indicator is present then the value is Document else Non-Document. Note: Not applicable for FRS rating  requests.  Empty Tag.
@@ -3653,19 +3653,19 @@ export interface ShipmentFRSPaymentInformation {
      * @type {FRSPaymentInformationType}
      * @memberof ShipmentFRSPaymentInformation
      */
-    type: FRSPaymentInformationType;
+    Type: FRSPaymentInformationType;
     /**
      * UPS Account Number.
      * @type {string}
      * @memberof ShipmentFRSPaymentInformation
      */
-    accountNumber?: string;
+    AccountNumber?: string;
     /**
      *
      * @type {FRSPaymentInformationAddress}
      * @memberof ShipmentFRSPaymentInformation
      */
-    address?: FRSPaymentInformationAddress;
+    Address?: FRSPaymentInformationAddress;
 }
 /**
  * Container to hold Freight Shipment information.
@@ -3678,13 +3678,13 @@ export interface ShipmentFreightShipmentInformation {
      * @type {FreightShipmentInformationFreightDensityInfo}
      * @memberof ShipmentFreightShipmentInformation
      */
-    freightDensityInfo?: FreightShipmentInformationFreightDensityInfo;
+    FreightDensityInfo?: FreightShipmentInformationFreightDensityInfo;
     /**
      * The presence of the tag indicates that the  rate request is density based. For Density Based Rating (DBR), the customer must have DBR Contract Service.
      * @type {string}
      * @memberof ShipmentFreightShipmentInformation
      */
-    densityEligibleIndicator?: string;
+    DensityEligibleIndicator?: string;
 }
 /**
  * Goods Not In Free Circulation indicator.  This is an empty tag, any value inside is ignored. This indicator is invalid for a package type of UPS Letter and DocumentsOnly.
@@ -3712,13 +3712,13 @@ export interface ShipmentInvoiceLineTotal {
      * @type {string}
      * @memberof ShipmentInvoiceLineTotal
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total amount of the invoice accompanying the shipment. Required when the InvoiceLineTotal container exists in the rate request.  Valid values are from 1 to 99999999.
      * @type {string}
      * @memberof ShipmentInvoiceLineTotal
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. MasterCartonIndicator is an indicator and presence implies that shipment is Master Carton type.  If present, the shipment will be rated as a Master Carton Type. If this indicator is requested with NegotiatedRatesIndicator, rates would be returned only for Negotiated Rates and not for Published Rates.
@@ -3746,67 +3746,67 @@ export interface ShipmentPackage {
      * @type {PackagePackagingType}
      * @memberof ShipmentPackage
      */
-    packagingType?: PackagePackagingType;
+    PackagingType?: PackagePackagingType;
     /**
      *
      * @type {PackageDimensions}
      * @memberof ShipmentPackage
      */
-    dimensions?: PackageDimensions;
+    Dimensions?: PackageDimensions;
     /**
      *
      * @type {PackageDimWeight}
      * @memberof ShipmentPackage
      */
-    dimWeight?: PackageDimWeight;
+    DimWeight?: PackageDimWeight;
     /**
      *
      * @type {PackagePackageWeight}
      * @memberof ShipmentPackage
      */
-    packageWeight?: PackagePackageWeight;
+    PackageWeight?: PackagePackageWeight;
     /**
      *
      * @type {PackageCommodity}
      * @memberof ShipmentPackage
      */
-    commodity?: PackageCommodity;
+    Commodity?: PackageCommodity;
     /**
      * This element does not require a value and if one is entered it will be ignored.  If present, it indicates the shipment will be categorized as a Large Package.
      * @type {string}
      * @memberof ShipmentPackage
      */
-    largePackageIndicator?: string;
+    LargePackageIndicator?: string;
     /**
      *
      * @type {PackagePackageServiceOptions}
      * @memberof ShipmentPackage
      */
-    packageServiceOptions?: PackagePackageServiceOptions;
+    PackageServiceOptions?: PackagePackageServiceOptions;
     /**
      * A flag indicating if the packages require additional handling. True if AdditionalHandlingIndicator tag exists; false otherwise. Additional Handling indicator indicates it�s a non-corrugated package.  Empty Tag.
      * @type {string}
      * @memberof ShipmentPackage
      */
-    additionalHandlingIndicator?: string;
+    AdditionalHandlingIndicator?: string;
     /**
      *
      * @type {PackageUPSPremier}
      * @memberof ShipmentPackage
      */
-    uPSPremier?: PackageUPSPremier;
+    UPSPremier?: PackageUPSPremier;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. It indicates if packge is oversized.  Applicable for UPS Worldwide Economy DDU service
      * @type {string}
      * @memberof ShipmentPackage
      */
-    oversizeIndicator?: string;
+    OversizeIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. It indicates if packge is qualified for minimum billable weight.  Applicable for UPS Worldwide Economy DDU service
      * @type {string}
      * @memberof ShipmentPackage
      */
-    minimumBillableWeightIndicator?: string;
+    MinimumBillableWeightIndicator?: string;
 }
 /**
  * Payment details container for detailed shipment charges. The two shipment charges that are available for specification are Transportation charges and Duties and Taxes.  This container is used for Who Pays What functionality.
@@ -3819,13 +3819,13 @@ export interface ShipmentPaymentDetails {
      * @type {PaymentDetailsShipmentCharge}
      * @memberof ShipmentPaymentDetails
      */
-    shipmentCharge: PaymentDetailsShipmentCharge;
+    ShipmentCharge: PaymentDetailsShipmentCharge;
     /**
      * Split Duty VAT Indicator. The presence indicates the payer specified for Transportation Charges will pay transportation charges and any duties that apply to the shipment. The payer specified for Duties and Taxes will pay the VAT (Value-Added Tax) only.  Empty Tag. The payment method for Transportation charges must be UPS account. The UPS account must be a daily pickup account or an occasional account.
      * @type {string}
      * @memberof ShipmentPaymentDetails
      */
-    splitDutyVATIndicator?: string;
+    SplitDutyVATIndicator?: string;
 }
 /**
  * PromotionalDiscountInformation container. This container contains discount information that the customer wants to request each time while placing a shipment.
@@ -3838,13 +3838,13 @@ export interface ShipmentPromotionalDiscountInformation {
      * @type {string}
      * @memberof ShipmentPromotionalDiscountInformation
      */
-    promoCode: string;
+    PromoCode: string;
     /**
      * Promotion Alias code  Required if PromotionalDiscountInformation container is present.
      * @type {string}
      * @memberof ShipmentPromotionalDiscountInformation
      */
-    promoAliasCode: string;
+    PromoAliasCode: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. RatingMethodRequestedIndicator is an indicator. If present, Billable Weight Calculation method and Rating Method information would be returned in response.
@@ -3887,13 +3887,13 @@ export interface ShipmentService {
      * @type {string}
      * @memberof ShipmentService
      */
-    code: string;
+    Code: string;
     /**
      * Optional. Description of service. Example, UPS Next Day Air, UPS Ground etc, as referenced by the Service Code.
      * @type {string}
      * @memberof ShipmentService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Access Point COD indicates Shipment level Access Point COD is requested for a shipment.  Valid only for \"01 - Hold For Pickup At UPS Access Point\" Shipment Indication type.  Shipment Access Point COD is valid only for countries or territories within E.U.  Not valid with (Shipment) COD.  Not available to shipment with return service.
@@ -3906,13 +3906,13 @@ export interface ShipmentServiceOptionsAccessPointCOD {
      * @type {string}
      * @memberof ShipmentServiceOptionsAccessPointCOD
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Access Point COD Monetary Value.  Required if Access Point COD container is present.
      * @type {string}
      * @memberof ShipmentServiceOptionsAccessPointCOD
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * If we need diferent available services in response, this option is used for shop request option. SaturdayDeliveryIndicator/ SundayDeliveryIndicator will be ignored in that case.  Valid Values: 1- Weekday+Saturday services 2- Weekday+Sunday services 3- Weekday+Sat services+Sun services
@@ -3930,13 +3930,13 @@ export interface ShipmentServiceOptionsCOD {
      * @type {string}
      * @memberof ShipmentServiceOptionsCOD
      */
-    cODFundsCode: string;
+    CODFundsCode: string;
     /**
      *
      * @type {CODCODAmount}
      * @memberof ShipmentServiceOptionsCOD
      */
-    cODAmount: CODCODAmount;
+    CODAmount: CODCODAmount;
 }
 /**
  * The empty tag in request indicates that customer would be using UPS prepared SED form.  Valid for UPS World Wide Express Freight shipments.
@@ -3964,7 +3964,7 @@ export interface ShipmentServiceOptionsDeliveryConfirmation {
      * @type {string}
      * @memberof ShipmentServiceOptionsDeliveryConfirmation
      */
-    dCISType: string;
+    DCISType: string;
 }
 /**
  * Shipment Service Delivery Options Container.  Valid for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday shipments.
@@ -3977,13 +3977,13 @@ export interface ShipmentServiceOptionsDeliveryOptions {
      * @type {string}
      * @memberof ShipmentServiceOptionsDeliveryOptions
      */
-    liftGateAtDeliveryIndicator?: string;
+    LiftGateAtDeliveryIndicator?: string;
     /**
      * The presence of the tag DropOffAtUPSFacilityIndicator indicates the package will be dropped at a UPS facility for shipment.
      * @type {string}
      * @memberof ShipmentServiceOptionsDeliveryOptions
      */
-    dropOffAtUPSFacilityIndicator?: string;
+    DropOffAtUPSFacilityIndicator?: string;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. Direct Delivery Only (DDO) accessorial in a request would ensure that delivery is made only to the Ship To address on the shipping label.  This accessorial is not valid with Shipment Indication Types: 01 - Hold For Pickup At UPS Access Point 02 - UPS Access Point� Delivery\"
@@ -4006,13 +4006,13 @@ export interface ShipmentServiceOptionsImportControl {
      * @type {string}
      * @memberof ShipmentServiceOptionsImportControl
      */
-    code: string;
+    Code: string;
     /**
      * Text description of the code representing the Import Control associated with the shipment.
      * @type {string}
      * @memberof ShipmentServiceOptionsImportControl
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Inside Delivery accessory. Valide values:                                         01- White Glove                        02 - Room of Choice                   03 - Installation  Shippers account needs to have a valid contract for Heavy Goods Service.
@@ -4035,13 +4035,13 @@ export interface ShipmentServiceOptionsPickupOptions {
      * @type {string}
      * @memberof ShipmentServiceOptionsPickupOptions
      */
-    liftGateAtPickupIndicator?: string;
+    LiftGateAtPickupIndicator?: string;
     /**
      * The presence of the tag HoldForPickupIndicator indicates that the user opted to hold the shipment at UPS location for pickup.
      * @type {string}
      * @memberof ShipmentServiceOptionsPickupOptions
      */
-    holdForPickupIndicator?: string;
+    HoldForPickupIndicator?: string;
 }
 /**
  * Restricted Articles container.  Valid for UPS World Wide Express Freight shipments.
@@ -4054,55 +4054,55 @@ export interface ShipmentServiceOptionsRestrictedArticles {
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    alcoholicBeveragesIndicator?: string;
+    AlcoholicBeveragesIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Biological substances. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments. Lane check will happen based on postal code/ city.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    diagnosticSpecimensIndicator?: string;
+    DiagnosticSpecimensIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Perishables. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    perishablesIndicator?: string;
+    PerishablesIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Plants. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    plantsIndicator?: string;
+    PlantsIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Seeds. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    seedsIndicator?: string;
+    SeedsIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Special Exceptions Restricted Materials. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    specialExceptionsIndicator?: string;
+    SpecialExceptionsIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Tobacco. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    tobaccoIndicator?: string;
+    TobaccoIndicator?: string;
     /**
      * This field is a flag to indicate if the package has E-Cigarettes. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    eCigarettesIndicator?: string;
+    ECigarettesIndicator?: string;
     /**
      * This field is a flag to indicate if the package has Hemp/CBD. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentServiceOptionsRestrictedArticles
      */
-    hempCBDIndicator?: string;
+    HempCBDIndicator?: string;
 }
 /**
  * Return of Documents Indicator - If the flag is present, the shipper has requested the ReturnOfDocument accessorial be added to the shipment  Valid for Poland to Poland shipment.
@@ -4120,13 +4120,13 @@ export interface ShipmentServiceOptionsReturnService {
      * @type {string}
      * @memberof ShipmentServiceOptionsReturnService
      */
-    code: string;
+    Code: string;
     /**
      * Description for type of Return Service.
      * @type {string}
      * @memberof ShipmentServiceOptionsReturnService
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Empty Tag means the indicator is present. This field is a flag to indicate if the receiver needs SDL rates in response. True if SDLShipmentIndicator tag exists; false otherwise.  If present, the State Department License (SDL) rates will be returned in the response.  This service requires that the account number is enabled for SDL.
@@ -4169,19 +4169,19 @@ export interface ShipmentShipFrom {
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    name?: string;
+    Name?: string;
     /**
      * Origin attention name.  Length is not validated.
      * @type {string}
      * @memberof ShipmentShipFrom
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      *
      * @type {ShipFromAddress}
      * @memberof ShipmentShipFrom
      */
-    address: ShipFromAddress;
+    Address: ShipFromAddress;
 }
 /**
  * Ship To Container  N/A
@@ -4194,19 +4194,19 @@ export interface ShipmentShipTo {
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    name?: string;
+    Name?: string;
     /**
      * Destination attention name.  Length is not validated.
      * @type {string}
      * @memberof ShipmentShipTo
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      *
      * @type {ShipToAddress}
      * @memberof ShipmentShipTo
      */
-    address: ShipToAddress;
+    Address: ShipToAddress;
 }
 /**
  * Container to hold shipment indication type.
@@ -4219,13 +4219,13 @@ export interface ShipmentShipmentIndicationType {
      * @type {string}
      * @memberof ShipmentShipmentIndicationType
      */
-    code: string;
+    Code: string;
     /**
      * Description for Shipment Indication Type.  Length is not Validated.
      * @type {string}
      * @memberof ShipmentShipmentIndicationType
      */
-    description?: string;
+    Description?: string;
 }
 /**
  * Shipment Rating Options container.  N/A
@@ -4238,31 +4238,31 @@ export interface ShipmentShipmentRatingOptions {
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    negotiatedRatesIndicator?: string;
+    NegotiatedRatesIndicator?: string;
     /**
      * FRS Indicator. The indicator is required to obtain rates for UPS Ground Freight Pricing (GFP).  The account number must be enabled for GFP.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    fRSShipmentIndicator?: string;
+    FRSShipmentIndicator?: string;
     /**
      * RateChartIndicator -  If present in a request, the response will contain a RateChart element.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    rateChartIndicator?: string;
+    RateChartIndicator?: string;
     /**
      * UserLevelDiscountIndicator - required to obtain rates for User Level Promotions.  This is required to obtain User Level Discounts. There must also be no ShipperNumber in the Shipper container.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    userLevelDiscountIndicator?: string;
+    UserLevelDiscountIndicator?: string;
     /**
      * This indicator applies for a third party (3P) / Freight collect (FC) shipment only.   For 3P/FC shipment if the shipper wishes to request for the negotiated rates of the third party then this indicator should be included in the request.   If authorized the 3P/FC negotiated rates will be applied to the shipment and rates will be returned in response.
      * @type {string}
      * @memberof ShipmentShipmentRatingOptions
      */
-    tPFCNegotiatedRatesIndicator?: string;
+    TPFCNegotiatedRatesIndicator?: string;
 }
 /**
  * Shipment level Accessorials are included in this container.  N/A
@@ -4275,43 +4275,43 @@ export interface ShipmentShipmentServiceOptions {
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    saturdayPickupIndicator?: string;
+    SaturdayPickupIndicator?: string;
     /**
      * A flag indicating if a shipment must be delivered on a Saturday. True if SaturdayDeliveryIndicator tag exists; false otherwise  Empty Tag.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    saturdayDeliveryIndicator?: string;
+    SaturdayDeliveryIndicator?: string;
     /**
      * A flag indicating if a shipment must be delivered on a Sunday. True if SundayDeliveryIndicator tag exists; false otherwise  Empty Tag.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    sundayDeliveryIndicator?: string;
+    SundayDeliveryIndicator?: string;
     /**
      * If we need diferent available services in response, this option is used for shop request option. SaturdayDeliveryIndicator/ SundayDeliveryIndicator will be ignored in that case.  Valid Values: 1- Weekday+Saturday services 2- Weekday+Sunday services 3- Weekday+Sat services+Sun services
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    availableServicesOption?: string;
+    AvailableServicesOption?: string;
     /**
      *
      * @type {ShipmentServiceOptionsAccessPointCOD}
      * @memberof ShipmentShipmentServiceOptions
      */
-    accessPointCOD?: ShipmentServiceOptionsAccessPointCOD;
+    AccessPointCOD?: ShipmentServiceOptionsAccessPointCOD;
     /**
      * Presence/Absence Indicator. Any value inside is ignored.   DeliverToAddresseeOnlyIndicator is shipper specified restriction that requires the addressee to be the one who takes final delivery of the \"Hold For PickUp at UPS Access Point\" package.    Presence of indicator means shipper restriction will apply to the shipment.  Only valid for Shipment Indication type \"01 - Hold For PickUp at UPS Access Point\".
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    deliverToAddresseeOnlyIndicator?: string;
+    DeliverToAddresseeOnlyIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. Direct Delivery Only (DDO) accessorial in a request would ensure that delivery is made only to the Ship To address on the shipping label.  This accessorial is not valid with Shipment Indication Types: 01 - Hold For Pickup At UPS Access Point 02 - UPS Access Point� Delivery\"
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    directDeliveryOnlyIndicator?: string;
+    DirectDeliveryOnlyIndicator?: string;
     /**
      *
      * @type {ShipmentServiceOptionsCOD}
@@ -4323,91 +4323,91 @@ export interface ShipmentShipmentServiceOptions {
      * @type {ShipmentServiceOptionsDeliveryConfirmation}
      * @memberof ShipmentShipmentServiceOptions
      */
-    deliveryConfirmation?: ShipmentServiceOptionsDeliveryConfirmation;
+    DeliveryConfirmation?: ShipmentServiceOptionsDeliveryConfirmation;
     /**
      * Return of Documents Indicator - If the flag is present, the shipper has requested the ReturnOfDocument accessorial be added to the shipment  Valid for Poland to Poland shipment.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    returnOfDocumentIndicator?: string;
+    ReturnOfDocumentIndicator?: string;
     /**
      * UPS carbon neutral indicator. Indicates the shipment will be rated as carbon neutral.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    uPScarbonneutralIndicator?: string;
+    UPScarbonneutralIndicator?: string;
     /**
      * The empty tag in request indicates that customer would be using UPS prepared SED form.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    certificateOfOriginIndicator?: string;
+    CertificateOfOriginIndicator?: string;
     /**
      *
      * @type {ShipmentServiceOptionsPickupOptions}
      * @memberof ShipmentShipmentServiceOptions
      */
-    pickupOptions?: ShipmentServiceOptionsPickupOptions;
+    PickupOptions?: ShipmentServiceOptionsPickupOptions;
     /**
      *
      * @type {ShipmentServiceOptionsDeliveryOptions}
      * @memberof ShipmentShipmentServiceOptions
      */
-    deliveryOptions?: ShipmentServiceOptionsDeliveryOptions;
+    DeliveryOptions?: ShipmentServiceOptionsDeliveryOptions;
     /**
      *
      * @type {ShipmentServiceOptionsRestrictedArticles}
      * @memberof ShipmentShipmentServiceOptions
      */
-    restrictedArticles?: ShipmentServiceOptionsRestrictedArticles;
+    RestrictedArticles?: ShipmentServiceOptionsRestrictedArticles;
     /**
      * The empty tag in request indicates that customer would be using UPS prepared SED form.  Valid for UPS World Wide Express Freight shipments.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    shipperExportDeclarationIndicator?: string;
+    ShipperExportDeclarationIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored.  CommercialInvoiceRemovalIndicator - empty tag means indicator is present.  CommercialInvoiceRemovalIndicator allows a shipper to dictate that UPS remove the Commercial Invoice from the user's shipment before the shipment is delivered to the ultimate consignee.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    commercialInvoiceRemovalIndicator?: string;
+    CommercialInvoiceRemovalIndicator?: string;
     /**
      *
      * @type {ShipmentServiceOptionsImportControl}
      * @memberof ShipmentShipmentServiceOptions
      */
-    importControl?: ShipmentServiceOptionsImportControl;
+    ImportControl?: ShipmentServiceOptionsImportControl;
     /**
      *
      * @type {ShipmentServiceOptionsReturnService}
      * @memberof ShipmentShipmentServiceOptions
      */
-    returnService?: ShipmentServiceOptionsReturnService;
+    ReturnService?: ShipmentServiceOptionsReturnService;
     /**
      * Empty Tag means the indicator is present. This field is a flag to indicate if the receiver needs SDL rates in response. True if SDLShipmentIndicator tag exists; false otherwise.  If present, the State Department License (SDL) rates will be returned in the response.  This service requires that the account number is enabled for SDL.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    sDLShipmentIndicator?: string;
+    SDLShipmentIndicator?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. This field is a flag to indicate Package Release Code is requested for shipment.  This accessorial is only valid with ShipmentIndicationType �01� - Hold for Pickup at UPS Access Point�.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    ePRAIndicator?: string;
+    EPRAIndicator?: string;
     /**
      * Inside Delivery accessory. Valide values:                                         01- White Glove                        02 - Room of Choice                   03 - Installation  Shippers account needs to have a valid contract for Heavy Goods Service.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    insideDelivery?: string;
+    InsideDelivery?: string;
     /**
      * Presence/Absence Indicator. Any value inside is ignored. If present, indicates that the customer would like items disposed.   Shippers account needs to have a valid contract for Heavy Goods Service.
      * @type {string}
      * @memberof ShipmentShipmentServiceOptions
      */
-    itemDisposalIndicator?: string;
+    ItemDisposalIndicator?: string;
 }
 /**
  * Shipment Total Weight Container. This container is only applicable for \"ratetimeintransit\" and \"shoptimeintransit\" request options.  Required for all international shipments when retreiving time in transit information, including letters and documents shipments.
@@ -4420,13 +4420,13 @@ export interface ShipmentShipmentTotalWeight {
      * @type {ShipmentTotalWeightUnitOfMeasurement}
      * @memberof ShipmentShipmentTotalWeight
      */
-    unitOfMeasurement: ShipmentTotalWeightUnitOfMeasurement;
+    UnitOfMeasurement: ShipmentTotalWeightUnitOfMeasurement;
     /**
      * Non-zero total weight of all packages in the shipment.
      * @type {string}
      * @memberof ShipmentShipmentTotalWeight
      */
-    weight: string;
+    Weight: string;
 }
 /**
  * Shipper container. Information associated with the UPS account number.
@@ -4439,25 +4439,25 @@ export interface ShipmentShipper {
      * @type {string}
      * @memberof ShipmentShipper
      */
-    name?: string;
+    Name?: string;
     /**
      * Shipper's attention name.  Length is not validated.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    attentionName?: string;
+    AttentionName?: string;
     /**
      * Shipper's UPS account number.  A valid account number is required to receive negotiated rates. Optional otherwise. Cannot be present when requesting UserLevelDiscount.
      * @type {string}
      * @memberof ShipmentShipper
      */
-    shipperNumber?: string;
+    ShipperNumber?: string;
     /**
      *
      * @type {ShipperAddress}
      * @memberof ShipmentShipper
      */
-    address: ShipperAddress;
+    Address: ShipperAddress;
 }
 /**
  * Presence/Absence Indicator. Any value inside is ignored. TaxInformationIndicator is an indicator.   The Tax related information includes any type of Taxes, corresponding Monetary Values, Total Charges with Taxes and disclaimers (if applicable) would be returned in response.  If present, any taxes that may be applicable to a shipment would be returned in response.   If this indicator is requested with NegotiatedRatesIndicator, Tax related information, if applicable, would be returned only for Negotiated Rates and not for Published Rates.
@@ -4475,13 +4475,13 @@ export interface ShipmentTotalWeightUnitOfMeasurement {
      * @type {string}
      * @memberof ShipmentTotalWeightUnitOfMeasurement
      */
-    code: string;
+    Code: string;
     /**
      * The Description for the Unit Of Measurement.
      * @type {string}
      * @memberof ShipmentTotalWeightUnitOfMeasurement
      */
-    description: string;
+    Description: string;
 }
 /**
  * Non-zero total weight of all packages in the shipment.
@@ -4504,31 +4504,31 @@ export interface ShipperAddress {
      * @type {string}
      * @memberof ShipperAddress
      */
-    addressLine: string;
+    AddressLine: string;
     /**
      * UPS Access Point city.
      * @type {string}
      * @memberof ShipperAddress
      */
-    city?: string;
+    City?: string;
     /**
      * UPS Access Point State or Province code.
      * @type {string}
      * @memberof ShipperAddress
      */
-    stateProvinceCode?: string;
+    StateProvinceCode?: string;
     /**
      * Postal Code for UPS accounts billing address.  Postal Code  may be present when the FRS Payment Information type = 02 and type = 03.
      * @type {string}
      * @memberof ShipperAddress
      */
-    postalCode?: string;
+    PostalCode?: string;
     /**
      * Country or Territory code for the  UPS accounts & billing address.  Country or Territory Code is required when the FRS Payment Information type = 02 and type= 03.
      * @type {string}
      * @memberof ShipperAddress
      */
-    countryCode: string;
+    CountryCode: string;
 }
 /**
  * Shipper's attention name.  Length is not validated.
@@ -4611,49 +4611,49 @@ export interface TimeInTransitServiceSummary {
      * @type {ServiceSummaryService}
      * @memberof TimeInTransitServiceSummary
      */
-    service: ServiceSummaryService;
+    Service: ServiceSummaryService;
     /**
      * Empty Tag. Indicates whether the service will be guaranteed or not.  Required for International Requests.
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    guaranteedIndicator?: string;
+    GuaranteedIndicator?: string;
     /**
      * The Disclaimer is provided based upon the origin and destination country or territory codes provided in the request document. The disclaimer is returned as a conditional statement to the validity of the service being guaranteed. The possible disclaimers that can be returned are available in the Service Guaranteed Disclaimers table.
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    disclaimer?: string;
+    Disclaimer?: string;
     /**
      *
      * @type {ServiceSummaryEstimatedArrival}
      * @memberof TimeInTransitServiceSummary
      */
-    estimatedArrival: ServiceSummaryEstimatedArrival;
+    EstimatedArrival: ServiceSummaryEstimatedArrival;
     /**
      * Saturday delivery information for a service. Values are 1 - Saturday Delivery Available with additional charges  0 - Saturday Delivery not available or no additional charge, please check Delivery Date to confirm if the Delivery will be Saturday  Please see Saturday Delivery business rules section for more information.
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    saturdayDelivery?: string;
+    SaturdayDelivery?: string;
     /**
      * Saturday delivery disclaimer message.
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    saturdayDeliveryDisclaimer?: string;
+    SaturdayDeliveryDisclaimer?: string;
     /**
      * Sunday delivery information for a service. Values are 1 - Sunday Delivery Available with additional charges  0 - Sunday Delivery not available or no additional charge, please check Delivery Date to confirm if the Delivery will be Sunday  Please see Saturday Delivery business rules section for more information.   Applies only if SubVersion is greater than or equal to 2007
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    sundayDelivery?: string;
+    SundayDelivery?: string;
     /**
      * Sunday delivery disclaimer message.  Applies only if SubVersion is greater than or equal to 2007
      * @type {string}
      * @memberof TimeInTransitServiceSummary
      */
-    sundayDeliveryDisclaimer?: string;
+    SundayDeliveryDisclaimer?: string;
 }
 /**
  * The IATA currency code associated with the Negotiated Rate total charges for the shipment.
@@ -4706,13 +4706,13 @@ export interface TransportationChargesDiscountAmount {
      * @type {string}
      * @memberof TransportationChargesDiscountAmount
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total charges Monetary value. Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesDiscountAmount
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * Discount Percentage
@@ -4730,13 +4730,13 @@ export interface TransportationChargesGrossCharge {
      * @type {string}
      * @memberof TransportationChargesGrossCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total charges Monetary value. Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesGrossCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The value for the transportation costs associated with the package.
@@ -4754,13 +4754,13 @@ export interface TransportationChargesNetCharge {
      * @type {string}
      * @memberof TransportationChargesNetCharge
      */
-    currencyCode: string;
+    CurrencyCode: string;
     /**
      * Total charges Monetary value. Valid values are from 0 to 9999999999999999.99
      * @type {string}
      * @memberof TransportationChargesNetCharge
      */
-    monetaryValue: string;
+    MonetaryValue: string;
 }
 /**
  * The code associated with Handling Unit Type.  Valid values:  SKD = Skid  CBY = Carboy PLT = Pallet TOT = Totes LOO = Loose OTH = Other
