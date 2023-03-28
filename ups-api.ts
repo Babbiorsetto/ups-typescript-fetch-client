@@ -34,14 +34,14 @@ export class UPSApi {
     _getApi(classConstructor: ApiConstructorsType) {
         let api = this.apis.get(classConstructor);
         if (api) {
-            return api;
+            return { new: false, api: api };
         }
         api = new classConstructor(
             { accessToken: this._getToken.bind(this) },
             this.baseURL
         );
         this.apis.set(classConstructor, api);
-        return api;
+        return { new: true, api: api };
     }
 
     _getToken(): string {
@@ -70,18 +70,28 @@ export class UPSApi {
     }
 
     public rating(): ratingApi.DefaultApi {
-        const api = this._getApi(ratingApi.DefaultApi) as ratingApi.DefaultApi;
-        api.rate = this._wrapWithAuthentication(api.rate);
+        const apiInfo = this._getApi(ratingApi.DefaultApi) as {
+            new: boolean;
+            api: ratingApi.DefaultApi;
+        };
+        const api = apiInfo.api;
+        if (apiInfo.new) {
+            api.rate = this._wrapWithAuthentication(api.rate);
+        }
         return api;
     }
 
     public shipping(): shippingApi.DefaultApi {
-        const api = this._getApi(
-            shippingApi.DefaultApi
-        ) as shippingApi.DefaultApi;
-        api.shipment = this._wrapWithAuthentication(api.shipment);
-        api.voidShipment = this._wrapWithAuthentication(api.voidShipment);
-        api.labelRecovery = this._wrapWithAuthentication(api.labelRecovery);
+        const apiInfo = this._getApi(shippingApi.DefaultApi) as {
+            new: boolean;
+            api: shippingApi.DefaultApi;
+        };
+        const api = apiInfo.api;
+        if (apiInfo.new) {
+            api.shipment = this._wrapWithAuthentication(api.shipment);
+            api.voidShipment = this._wrapWithAuthentication(api.voidShipment);
+            api.labelRecovery = this._wrapWithAuthentication(api.labelRecovery);
+        }
         return api;
     }
 }
