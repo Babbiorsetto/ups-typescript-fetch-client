@@ -2,6 +2,7 @@ import { ClientCredentialsConfigurationParams } from "./configuration";
 import * as authenticationApi from "./authentication";
 import * as ratingApi from "./rating";
 import * as shippingApi from "./shipping";
+import { isTokenExpired } from "./util";
 
 type ApiConstructorsType =
     | typeof ratingApi.DefaultApi
@@ -57,7 +58,16 @@ export class UPSApi {
         };
     }
 
-    async _checkAndRefreshToken() {}
+    async _checkAndRefreshToken() {
+        // first time token is undefined
+        // otherwise check if it's expired or near expiration
+        if (!this.cachedToken || isTokenExpired(this.cachedToken, 10000)) {
+            const tokenResponse = await this.authenticationApi.generateToken(
+                "client_credentials"
+            );
+            this.cachedToken = tokenResponse;
+        }
+    }
 
     public rating(): ratingApi.DefaultApi {
         const api = this._getApi(ratingApi.DefaultApi) as ratingApi.DefaultApi;
