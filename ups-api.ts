@@ -47,11 +47,31 @@ export class UPSApi {
         return this.cachedToken.accessToken!;
     }
 
+    _wrapWithAuthentication<ArgsType extends any[], Return>(
+        func: (...args: ArgsType) => Promise<Return>
+    ): (...args: ArgsType) => Promise<Return> {
+        return async (...params) => {
+            await this._checkAndRefreshToken();
+            // @ts-ignore
+            return func(params);
+        };
+    }
+
+    async _checkAndRefreshToken() {}
+
     public rating(): ratingApi.DefaultApi {
-        return this._getApi(ratingApi.DefaultApi) as ratingApi.DefaultApi;
+        const api = this._getApi(ratingApi.DefaultApi) as ratingApi.DefaultApi;
+        api.rate = this._wrapWithAuthentication(api.rate);
+        return api;
     }
 
     public shipping(): shippingApi.DefaultApi {
-        return this._getApi(shippingApi.DefaultApi) as shippingApi.DefaultApi;
+        const api = this._getApi(
+            shippingApi.DefaultApi
+        ) as shippingApi.DefaultApi;
+        api.shipment = this._wrapWithAuthentication(api.shipment);
+        api.voidShipment = this._wrapWithAuthentication(api.voidShipment);
+        api.labelRecovery = this._wrapWithAuthentication(api.labelRecovery);
+        return api;
     }
 }
