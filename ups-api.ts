@@ -13,6 +13,7 @@ export class UPSApi {
     private baseURL: string;
     private apis = new Map<ApiConstructorsType, ApiType>();
     private authenticationApi: authenticationApi.DefaultApi;
+    private cachedToken: authenticationApi.GenerateTokenSuccessResponse;
 
     constructor(
         configuration: ClientCredentialsConfigurationParams,
@@ -34,9 +35,16 @@ export class UPSApi {
         if (api) {
             return api;
         }
-        api = new classConstructor({ accessToken: () => "abc" }, this.baseURL);
+        api = new classConstructor(
+            { accessToken: this._getToken },
+            this.baseURL
+        );
         this.apis.set(classConstructor, api);
         return api;
+    }
+
+    _getToken(): string {
+        return this.cachedToken.accessToken!;
     }
 
     public rating(): ratingApi.DefaultApi {

@@ -81,11 +81,6 @@ describe("UPSApi", () => {
                 url
             );
         });
-
-        it.todo(
-            "Gives sub-apis an accessToken function that provides access tokens",
-            () => {}
-        );
     });
 
     it("Caches sub-apis to only create one instance", () => {
