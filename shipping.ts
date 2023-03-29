@@ -972,7 +972,8 @@ export type DeliveryConfirmationDCISType = string;
  */
 export interface DimWeightUnitOfMeasurement {
     /**
-     * Code of the billing weight measurement units. Values are: KGS or LBS.
+     * Code of the billing weight measurement units.
+     * Valid values: KGS, LBS
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
@@ -1006,13 +1007,14 @@ export type DimensionsLength = string;
  */
 export interface DimensionsUnitOfMeasurement {
     /**
-     * Code of the billing weight measurement units. Values are: KGS or LBS.
+     * Code of the billing dimensions measurement units.
+     * Valid values: IN, CM
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
     Code: string;
     /**
-     * Description of the billing weight measurement units.
+     * Description of the billing dimensions measurement units.
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */

@@ -498,6 +498,7 @@ export interface DeliveryTimeInformationReturnContractServices {
 export interface DimWeightUnitOfMeasurement {
     /**
      * The code associated with the unit of measure for the billable weight of a package.
+     * Valid values: KGS, LBS
      * @type {string}
      * @memberof DimWeightUnitOfMeasurement
      */
@@ -531,7 +532,8 @@ export type DimensionsLength = string;
  */
 export interface DimensionsUnitOfMeasurement {
     /**
-     * The code associated with the unit of measure for the billable weight of a package.
+     * The code associated with the unit of measure for the billable dimensions of a package.
+     * Valid values: IN, CM
      * @type {string}
      * @memberof DimensionsUnitOfMeasurement
      */
