@@ -124,25 +124,25 @@ export interface GenerateTokenSuccessResponse {
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    tokenType?: string;
+    token_type?: string;
     /**
      * Issue time of requested token.
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    issuedAt?: string;
+    issued_at?: string;
     /**
      * Client id for requested token.
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    clientId?: string;
+    client_id?: string;
     /**
      * Token to be used in API requests.
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    accessToken?: string;
+    access_token?: string;
     /**
      * Scope for requested token.
      * @type {string}
@@ -154,13 +154,13 @@ export interface GenerateTokenSuccessResponse {
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    expiresIn?: string;
+    expires_in?: string;
     /**
      * Number of refreshes for requested token.
      * @type {string}
      * @memberof GenerateTokenSuccessResponse
      */
-    refreshCount?: string;
+    refresh_count?: string;
     /**
      * Status for requested token.
      * @type {string}

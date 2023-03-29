@@ -51,7 +51,7 @@ export class UPSApi {
     }
 
     _getToken(): string {
-        return this.cachedToken.accessToken!;
+        return this.cachedToken.access_token!;
     }
 
     _wrapWithAuthentication<ArgsType extends any[], Return>(

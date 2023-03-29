@@ -5,7 +5,7 @@ export function isTokenExpired(
     deltaMillis = 0
 ) {
     const tokenExpirationMillis =
-        new Date(parseInt(token.issuedAt!)).valueOf() +
-        parseInt(token.expiresIn!) * 1000;
+        new Date(parseInt(token.issued_at!)).valueOf() +
+        parseInt(token.expires_in!) * 1000;
     return tokenExpirationMillis - deltaMillis <= Date.now();
 }
