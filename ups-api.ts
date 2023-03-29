@@ -59,8 +59,7 @@ export class UPSApi {
     ): (...args: ArgsType) => Promise<Return> {
         return async (...params) => {
             await this._checkAndRefreshToken();
-            // @ts-ignore
-            return func(params);
+            return func(...params);
         };
     }
 

@@ -140,31 +140,9 @@ describe("UPSApi", () => {
             const credentials = { client_id: "id", client_secret: "secret" };
             const api = new apiConstructor(credentials, url);
             const rating = api.rating();
-            await rating.rate(
-                {
-                    RateRequest: {
-                        Request: { RequestOption: "Rate" },
-                        Shipment: {
-                            Shipper: {
-                                Address: {
-                                    CountryCode: "IT",
-                                    AddressLine: "Via via",
-                                },
-                            },
-                            ShipTo: {
-                                Address: {
-                                    CountryCode: "IT",
-                                    AddressLine: "Via buona",
-                                },
-                            },
-                            Package: [{}],
-                        },
-                    },
-                },
-                "v1",
-                "Rate"
-            );
+            await rating.rate({} as any, "v1", "Rate");
             expect(mockGenerateToken).toHaveBeenCalledTimes(1);
+            expect(mockRate).toHaveBeenCalledWith({}, "v1", "Rate");
         });
 
         it("Multiple calls to sub-apis reuse the same token", async () => {
