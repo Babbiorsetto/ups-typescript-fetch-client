@@ -140,7 +140,7 @@ describe("UPSApi", () => {
                                     AddressLine: "Via buona",
                                 },
                             },
-                            _Package: [{}],
+                            Package: [{}],
                         },
                     },
                 },

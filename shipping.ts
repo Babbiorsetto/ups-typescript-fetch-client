@@ -6700,7 +6700,7 @@ export interface ShipmentRequestShipment {
      * @type {Array<ShipmentPackage>}
      * @memberof ShipmentRequestShipment
      */
-    _Package: Array<ShipmentPackage>;
+    Package: Array<ShipmentPackage>;
 }
 /**
  * Shipment Response.

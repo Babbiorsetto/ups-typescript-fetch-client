@@ -2283,7 +2283,7 @@ export interface RateRequestShipment {
      * @type {Array<ShipmentPackage>}
      * @memberof RateRequestShipment
      */
-    _Package: Array<ShipmentPackage>;
+    Package: Array<ShipmentPackage>;
     /**
      *
      * @type {ShipmentShipmentServiceOptions}
