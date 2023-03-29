@@ -1,9 +1,12 @@
 # Usage
 
 ```typescript
-import { UPSApi } from "module";
+import {
+    UPSApi,
+    ClientCredentialsConfigurationParams,
+} from "@babbiorsetto/ups-typescript-fetch-client";
 
-const config = {
+const config: ClientCredentialsConfigurationParams = {
     client_id: "abc",
     client_secret: "secret",
 };
