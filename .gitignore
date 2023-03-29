@@ -1,5 +1,6 @@
 wwwroot/*.js
 node_modules
+dist/
 typings
 *.d.ts
 *.js
