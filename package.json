@@ -10,6 +10,11 @@
   },
   "author": "Alessandro Rubino",
   "license": "ISC",
+  "homepage": "https://github.com/Babbiorsetto/ups-typescript-fetch-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Babbiorsetto/ups-typescript-fetch-client.git"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
