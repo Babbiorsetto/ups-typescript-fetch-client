@@ -1,0 +1,19 @@
+# don't include sources
+**/*.ts
+*.ts
+
+# include definitions
+!**/*.d.ts
+!*.d.ts
+
+# don't include tests
+**/*.spec.ts
+**/*.spec.js
+**/*.spec.d.ts
+
+# configuration
+package-lock.json
+tsconfig.json
+.swagger-codegen-ignore
+.swagger-codegen/
+git_push.sh
