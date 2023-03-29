@@ -73,17 +73,34 @@ describe("UPSApi", () => {
             expect(mockedRatingConstructor.mock.calls[0][1]).toBe(url);
         });
 
-        it("Creates authentication with the corect parameters", () => {
+        it("Creates authentication with the correct parameters", () => {
             mockedAuthentication.mockImplementation(() => {});
             const apiConstructor = require("./ups-api").UPSApi as typeof UPSApi;
 
-            const url = "https://hello.com";
+            const url1 = "https://hello.com/api";
+            const url2 = "https://hello.com/api/";
+            const url3 = "https://hello.com/api/whatever";
             const credentials = { client_id: "id", client_secret: "secret" };
-            new apiConstructor(credentials, url);
+            new apiConstructor(credentials, url1);
+            new apiConstructor(credentials, url2);
+            new apiConstructor(credentials, url3);
 
-            expect(mockedAuthentication).toHaveBeenCalledWith(
-                { username: "id", password: "secret" },
-                url
+            const expectedCredentials = { username: "id", password: "secret" };
+            const expectedURL = "https://hello.com";
+            expect(mockedAuthentication).nthCalledWith(
+                1,
+                expectedCredentials,
+                expectedURL
+            );
+            expect(mockedAuthentication).nthCalledWith(
+                2,
+                expectedCredentials,
+                expectedURL
+            );
+            expect(mockedAuthentication).nthCalledWith(
+                3,
+                expectedCredentials,
+                expectedURL
             );
         });
     });

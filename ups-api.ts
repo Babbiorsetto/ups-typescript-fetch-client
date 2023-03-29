@@ -3,6 +3,7 @@ import * as authenticationApi from "./authentication";
 import * as ratingApi from "./rating";
 import * as shippingApi from "./shipping";
 import { isTokenExpired } from "./util";
+import { URL } from "node:url";
 
 type ApiConstructorsType =
     | typeof ratingApi.DefaultApi
@@ -16,18 +17,23 @@ export class UPSApi {
     private authenticationApi: authenticationApi.DefaultApi;
     private cachedToken: authenticationApi.GenerateTokenSuccessResponse;
 
+    /**
+     * The URL for the authentication service is obtained automatically by removing the path from baseURL
+     * @param baseURL You probably want https://wwwcie.ups.com/api for testing and https://onlinetools.ups.com/api for production
+     */
     constructor(
         configuration: ClientCredentialsConfigurationParams,
         baseURL: string
     ) {
         this.configuration = configuration;
         this.baseURL = baseURL;
+        const urlObject = new URL(baseURL);
         this.authenticationApi = new authenticationApi.DefaultApi(
             {
                 username: configuration.client_id,
                 password: configuration.client_secret,
             },
-            baseURL
+            urlObject.origin
         );
     }
 
