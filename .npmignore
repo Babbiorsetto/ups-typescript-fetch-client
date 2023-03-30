@@ -17,3 +17,4 @@ tsconfig.json
 .swagger-codegen-ignore
 .swagger-codegen/
 git_push.sh
+.vscode/
