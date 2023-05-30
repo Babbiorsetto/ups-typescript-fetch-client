@@ -2,13 +2,15 @@ import { ClientCredentialsConfigurationParams } from "./configuration";
 import * as authenticationApi from "./authentication";
 import * as ratingApi from "./rating";
 import * as shippingApi from "./shipping";
+import * as timeInTransitApi from './time-in-transit'
 import { isTokenExpired } from "./util";
 import { URL } from "node:url";
 
 type ApiConstructorsType =
     | typeof ratingApi.DefaultApi
-    | typeof shippingApi.DefaultApi;
-type ApiType = ratingApi.DefaultApi | shippingApi.DefaultApi;
+    | typeof shippingApi.DefaultApi
+    | typeof timeInTransitApi.DefaultApi;
+type ApiType = ratingApi.DefaultApi | shippingApi.DefaultApi | timeInTransitApi.DefaultApi;
 
 export class UPSApi {
     private configuration: ClientCredentialsConfigurationParams;
@@ -100,6 +102,18 @@ export class UPSApi {
             api.labelRecovery = this._wrapWithAuthentication(
                 api.labelRecovery.bind(api)
             );
+        }
+        return api;
+    }
+
+    public timeInTransit(): timeInTransitApi.DefaultApi {
+        const apiInfo = this._getApi(timeInTransitApi.DefaultApi) as {
+            new: boolean;
+            api: timeInTransitApi.DefaultApi;
+        }
+        const api = apiInfo.api;
+        if(apiInfo.new) {
+            api.timeInTransit = this._wrapWithAuthentication(api.timeInTransit.bind(api))
         }
         return api;
     }

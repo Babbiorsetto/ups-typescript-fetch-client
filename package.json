@@ -1,6 +1,6 @@
 {
   "name": "@babbiorsetto/ups-typescript-fetch-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Client for the UPS API auto-generated from the OpenAPI definition",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

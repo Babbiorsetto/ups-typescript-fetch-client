@@ -26,3 +26,9 @@ try {
 ```
 
 Full description of the API in the [official documentation](https://developer.ups.com/en-us)
+
+
+## Changelog
+
+### v0.0.2
+* Add Time in transit api
