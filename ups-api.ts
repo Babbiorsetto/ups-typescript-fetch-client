@@ -3,14 +3,20 @@ import * as authenticationApi from "./authentication";
 import * as ratingApi from "./rating";
 import * as shippingApi from "./shipping";
 import * as timeInTransitApi from './time-in-transit'
+import * as paperlessDocument from './paperless-document'
 import { isTokenExpired } from "./util";
 import { URL } from "node:url";
 
 type ApiConstructorsType =
     | typeof ratingApi.DefaultApi
     | typeof shippingApi.DefaultApi
-    | typeof timeInTransitApi.DefaultApi;
-type ApiType = ratingApi.DefaultApi | shippingApi.DefaultApi | timeInTransitApi.DefaultApi;
+    | typeof timeInTransitApi.DefaultApi
+    | typeof paperlessDocument.DefaultApi;
+type ApiType =
+  | ratingApi.DefaultApi
+  | shippingApi.DefaultApi
+  | timeInTransitApi.DefaultApi
+  | paperlessDocument.DefaultApi;
 
 export class UPSApi {
     private configuration: ClientCredentialsConfigurationParams;
@@ -114,6 +120,22 @@ export class UPSApi {
         const api = apiInfo.api;
         if(apiInfo.new) {
             api.timeInTransit = this._wrapWithAuthentication(api.timeInTransit.bind(api))
+        }
+        return api;
+    }
+
+    public paperlessDocument(): paperlessDocument.DefaultApi {
+        const apiInfo = this._getApi(paperlessDocument.DefaultApi) as {
+            new: boolean;
+            api: paperlessDocument.DefaultApi
+        }
+        const api = apiInfo.api;
+        if (apiInfo.new) {
+            api._delete = this._wrapWithAuthentication(api._delete.bind(api));
+            api.pushToImageRepository = this._wrapWithAuthentication(
+              api.pushToImageRepository.bind(api)
+            );
+            api.upload = this._wrapWithAuthentication(api.upload.bind(api));
         }
         return api;
     }
