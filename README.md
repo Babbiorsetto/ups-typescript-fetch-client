@@ -30,5 +30,8 @@ Full description of the API in the [official documentation](https://developer.up
 
 ## Changelog
 
+### v0.0.3
+* Add Paperless document api
+
 ### v0.0.2
 * Add Time in transit api
